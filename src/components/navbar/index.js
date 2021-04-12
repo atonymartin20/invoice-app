@@ -39,31 +39,61 @@ class MyNavbar extends React.Component {
     }
 
     render() {
-        return(
-            <Navbar className='light-navbar'>
-                {this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
+        if (this.context.state.darkMode === true || this.state.darkMode === true) {
+            return(
+                <Navbar className='dark-navbar'>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
+    
+                    <div className='button-box'>
+                        <Button className='button' onClick={this.handleRedirect}>
+                            <img src={Logo} alt='Logo' className='logo' />
+                            <div className='box' />
+                        </Button>
+                    </div>
+                    
+                    <div className='second-box'>
+                        {this.state.darkMode ? 
+                            <img src={SunIcon} alt='Sun Icon' className='sun-icon' onClick={this.switchToLightMode} />
+                            : 
+                            <img src={MoonIcon} alt='Moon Icon' className='moon-icon' onClick={this.switchToDarkMode} />
+                        }
+    
+                        <div className='second-box-line' />
+    
+                        <img src={ProfileImg} alt='Profile Img' className='profile-img' />
+                    </div>
+    
+                </Navbar>
+            )
+        }
 
-                <div className='button-box'>
-                    <Button className='button' onClick={this.handleRedirect}>
-                        <img src={Logo} alt='Logo' className='logo' />
-                        <div className='box' />
-                    </Button>
-                </div>
-                
-                <div className='second-box'>
-                    {this.state.darkMode ? 
-                        <img src={SunIcon} alt='Sun Icon' className='sun-icon' onClick={this.switchToLightMode} />
-                        : 
-                        <img src={MoonIcon} alt='Moon Icon' className='moon-icon' onClick={this.switchToDarkMode} />
-                    }
-
-                    <div className='second-box-line' />
-
-                    <img src={ProfileImg} alt='Profile Img' className='profile-img' />
-                </div>
-
-            </Navbar>
-        )
+        else {
+            return(
+                <Navbar className='light-navbar'>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
+    
+                    <div className='button-box'>
+                        <Button className='button' onClick={this.handleRedirect}>
+                            <img src={Logo} alt='Logo' className='logo' />
+                            <div className='box' />
+                        </Button>
+                    </div>
+                    
+                    <div className='second-box'>
+                        {this.state.darkMode ? 
+                            <img src={SunIcon} alt='Sun Icon' className='sun-icon' onClick={this.switchToLightMode} />
+                            : 
+                            <img src={MoonIcon} alt='Moon Icon' className='moon-icon' onClick={this.switchToDarkMode} />
+                        }
+    
+                        <div className='second-box-line' />
+    
+                        <img src={ProfileImg} alt='Profile Img' className='profile-img' />
+                    </div>
+    
+                </Navbar>
+            )
+        }
     }
 }
 
