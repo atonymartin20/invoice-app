@@ -1,13 +1,27 @@
-.navbar {
+.light-navbar {
     width: 103px;
     height: 800px;
     background: #373B53;
     border-radius: 0px 20px 20px 0px;
     display: flex;
+    flex-direction: column;
     padding: 0px;
     padding-bottom: 24px;
-    justify-content: flex-start;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-navbar {
+    width: 103px;
+    height: 800px;
+    background: #1E2139;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .button-box {
@@ -25,6 +39,20 @@
     background: #7C5DFA;
     border-radius: 0px 20px 20px 0px;
     z-index: 1;
+}
+
+.button:focus {
+    background: #7C5DFA;
+    box-shadow: none;
+}
+
+.button:active {
+    box-shadow: none;
+}
+
+.button:hover {
+    background: #7C5DFA;
+    box-shadow: none;
 }
 
 .box {
@@ -45,4 +73,45 @@
     left: calc(50% - 40px/2 + 0.5px);
     top: 32.29px;
     z-index: 1000;
+}
+
+.second-box {
+    width: 103px;
+    height: 117px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sun-icon {
+    width: 20px;
+    height: 20px;
+    /* left: calc(50% - 20px/2 - 0.5px);
+    bottom: 117px; */
+
+}
+
+.moon-icon {
+    width: 19.99px;
+    height: 19.9px;
+    left: calc(50% - 19.99px/2 - 0.51px);
+    /* bottom: 121.1px; */
+}
+
+.second-box-line {
+    width: 103px;
+    height: 1px;
+    padding: 0px;
+    /* bottom: 88px; */
+    background: #494E6E;
+    margin-top: 7px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* bottom: 24px; */
 }
