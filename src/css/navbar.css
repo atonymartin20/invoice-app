@@ -1,0 +1,48 @@
+.navbar {
+    width: 103px;
+    height: 800px;
+    background: #373B53;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    padding: 0px;
+    padding-bottom: 24px;
+    justify-content: flex-start;
+    align-items: space-between;
+}
+
+.button-box {
+    width: 103px;
+    height: 103px;
+    padding: 0px;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+}
+
+.button {
+    position: relative;
+    width: 103px;
+    height: 103px;
+    background: #7C5DFA;
+    border-radius: 0px 20px 20px 0px;
+    z-index: 1;
+}
+
+.box {
+    position: relative;
+    width: 103px;
+    height: 103px;
+    background: #9277FF;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 47px;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    width: 40px;
+    height: 37.71px;
+    left: calc(50% - 40px/2 + 0.5px);
+    top: 32.29px;
+    z-index: 1000;
+}
