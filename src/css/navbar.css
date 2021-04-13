@@ -168,3 +168,53 @@
         height: 32px;
     }
 }
+
+@media (max-width: 375px) {
+    .light-navbar {
+        height: 72px;
+    }
+
+    .dark-navbar {
+        height: 72px;
+    }
+
+    .button-box {
+        width: 72px;
+        height: 72px;
+    }
+
+    .button {
+        width: 72px;
+        height: 72px;
+    }
+
+    .box {
+        position: relative;
+        width: 72px;
+        height: 72px;
+        margin-top: 32px;
+    }
+    
+    .logo {
+        width: 28px;
+        height: 26px;
+        left: calc(50% - 28px/2 + 0.5px);
+        top: 23px;
+    }
+    
+    .second-box {
+        width: 125px;
+        height: 72px;
+        flex-direction: row;
+        padding-right: 24px;
+    }
+    
+    .second-box-line {
+        height: 72px;
+    }
+
+    .profile-img {
+        width: 32px;
+        height: 32px;
+    }
+}
