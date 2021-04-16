@@ -1,0 +1,10 @@
+.app-outside-container {
+    width: 100%;
+    background-color: #e2e2e2;
+}
+
+.app-inside-container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
