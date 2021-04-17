@@ -10,11 +10,14 @@ class Homepage extends React.Component {
             <div className='homepage-container-div'>
                 <Navbar />
                 {this.context.state.darkMode === true ?
-                 :
+                    <div className='homepage-inside-container-div'>
+                        
+                    </div>
+                :
+                    <div className='homepage-inside-container-div-dark-mode'>
+                            
+                    </div>
                 }
-                <div className='homepage-inside-container-div'>
-                    
-                </div>
             </div>
         )
     }
