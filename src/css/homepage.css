@@ -1,3 +1,8 @@
 .homepage-container-div {
     display: flex;
 }
+
+.homepage-inside-container-div {
+    display: flex;
+    flex-direction: column;
+}
