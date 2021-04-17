@@ -6,3 +6,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.homepage-inside-container-div-dark-mode {
+    display: flex;
+    flex-direction: column;
+}
