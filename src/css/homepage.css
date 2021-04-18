@@ -1,0 +1,13 @@
+.homepage-container-div {
+    display: flex;
+}
+
+.homepage-inside-container-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-inside-container-div-dark-mode {
+    display: flex;
+    flex-direction: column;
+}
