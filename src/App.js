@@ -11,7 +11,7 @@ class App extends React.Component {
 		if (this.context.state.darkMode === true) {
 			return (
 				<div className='app-outside-container-dark-mode'>
-					<div className="app-inside-container">
+					<div className="app-inside-container-dark-mode">
 						<Switch>
 							<Route exact path="">
 								<Homepage />
