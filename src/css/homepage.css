@@ -5,9 +5,13 @@
 .homepage-inside-container-div {
     display: flex;
     flex-direction: column;
+    background-color: #F8F8F8;
+    width: 100%;
 }
 
 .homepage-inside-container-div-dark-mode {
     display: flex;
     flex-direction: column;
+    background-color: #141625;
+    width: 100%;
 }
