@@ -1,6 +1,13 @@
 .app-outside-container {
     width: 100%;
-    background-color: #e2e2e2;
+    height: 100vh;
+    background-color: #F8F8F8;
+}
+
+.app-outside-container-dark-mode {
+    width: 100%;
+    height: 100vh;
+    background-color: #141625;
 }
 
 .app-inside-container {
