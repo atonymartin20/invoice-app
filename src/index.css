@@ -55,3 +55,48 @@ html {
     font-style: normal;
     font-weight: 500;
 }
+
+h1 {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.0rem;
+    line-height: 22px;
+    letter-spacing: -0.63px;
+}
+
+h3 {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 24px;
+    letter-spacing: -0.8px;
+}
+
+h4 {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
