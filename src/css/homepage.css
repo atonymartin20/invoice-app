@@ -5,9 +5,31 @@
 .homepage-inside-container-div {
     display: flex;
     flex-direction: column;
+    background-color: #F8F8F8;
+    width: 100%;
+    align-items: center;
 }
 
 .homepage-inside-container-div-dark-mode {
     display: flex;
     flex-direction: column;
+    background-color: #141625;
+    width: 100%;
+}
+
+.invoices-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 730px;
+    height: 59px;
+    border: 1px solid blue;
+    margin-top: 72px;
+}
+
+.invoices-header-left-side {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 59px;
 }
