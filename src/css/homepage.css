@@ -20,6 +20,8 @@
 .invoices-header {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 730px;
     height: 59px;
@@ -32,4 +34,52 @@
     flex-direction: column;
     width: 170px;
     height: 59px;
+    justify-content: space-between;
+
+}
+
+.invoices-header-left-side body {
+    background-color: #F8F8F8;
+}
+
+.header-button {
+    width: 150px;
+    height: 48px;
+    background: #7C5DFA;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.icon-div {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-icon {
+    /* width: 32px;
+    height: 32px;
+    background: #FFFFFF; */
+}
+
+.header-span {
+    margin-left: auto;
+    margin-right: 6%;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height, or 125% */
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
 }
