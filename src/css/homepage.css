@@ -92,12 +92,6 @@
     align-items: center;
 }
 
-.plus-icon {
-    /* width: 32px;
-    height: 32px;
-    background: #FFFFFF; */
-}
-
 .header-span {
     margin-left: auto;
     margin-right: 6%;
@@ -107,7 +101,6 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height, or 125% */
     letter-spacing: -0.25px;
     color: #FFFFFF;
 }
