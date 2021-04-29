@@ -51,6 +51,13 @@ class InvoicesHeader extends React.Component {
                     }
                 </div>
                 
+                <div className='filter-div'>
+                    <div className='filter-span'>
+                        Filter by status
+                    </div>
+                    <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
+                </div>
+
                 <Button className='header-button'>
                     <div className='icon-div'>
                         <img src={PlusIcon} alt='Plus Icon' className='plus-icon' />
