@@ -60,7 +60,7 @@ class InvoicesHeader extends React.Component {
 
                 <Button className='header-button'>
                     <div className='icon-div'>
-                        <img src={PlusIcon} alt='Plus Icon' className='plus-icon' />
+                        <img src={PlusIcon} alt='Plus Icon' />
                     </div>
                     <span className='header-span'>New Invoice</span>
                 </Button>
