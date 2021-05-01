@@ -3,6 +3,10 @@ import { AppContext } from '../context/appContext.js';
 import { Redirect } from 'react-router-dom';
 import '../../css/homepage.css';
 
+import  { Button } from 'reactstrap';
+import PlusIcon from '../../assets/icon-plus.svg';
+import DownArrowIcon from '../../assets/icon-arrow-down.svg';
+
 class InvoicesHeader extends React.Component {
     state = {
         redirect: false,
@@ -46,6 +50,21 @@ class InvoicesHeader extends React.Component {
                         null
                     }
                 </div>
+                
+                <div className='filter-div'>
+                    <div className='filter-span'>
+                        Filter by status
+                    </div>
+                    <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
+                </div>
+
+                <Button className='header-button'>
+                    <div className='icon-div'>
+                        <img src={PlusIcon} alt='Plus Icon' />
+                    </div>
+                    <span className='header-span'>New Invoice</span>
+                </Button>
+
 
                 
             </div>
