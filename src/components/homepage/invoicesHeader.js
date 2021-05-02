@@ -74,7 +74,7 @@ class InvoicesHeader extends React.Component {
         else {
             return(
                 <div className='invoices-header'>
-                    <div className='invoices-header-left-side'>
+                    <div className='invoices-header-left-side-dark-mode'>
                         <h1>Invoices</h1>
                         {this.context.state.invoiceCount === 0 ? 
                             <body>
