@@ -35,7 +35,10 @@
     width: 170px;
     height: 59px;
     justify-content: space-between;
+}
 
+.invoices-header-left-side-dark-mode {
+    
 }
 
 .invoices-header-left-side body {
