@@ -12,11 +12,11 @@ class Homepage extends React.Component {
                 <Navbar />
                 {this.context.state.darkMode === true ?
                     <div className='homepage-inside-container-div-dark-mode'>
-                        <InvoicesHeader />
+                        <InvoicesHeader type='dark' />
                     </div>
                 :
                     <div className='homepage-inside-container-div'>
-                        <InvoicesHeader />
+                        <InvoicesHeader type='light' />
                     </div>
                 }
             </div>
