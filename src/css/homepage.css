@@ -38,11 +38,24 @@
 }
 
 .invoices-header-left-side-dark-mode {
-    
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 59px;
+    justify-content: space-between;
 }
 
 .invoices-header-left-side body {
     background: inherit;
+}
+
+.invoices-header-left-side-dark-mode h1 {
+    color: #FFFFFF;
+}
+
+.invoices-header-left-side-dark-mode body {
+    background: inherit;
+    color: #DFE3FA;
 }
 
 .filter-div {
@@ -67,6 +80,8 @@
     letter-spacing: -0.25px;
     color: #0C0E16;
 }
+
+
 
 .down-arrow-icon {
     width: 10px;
