@@ -81,11 +81,21 @@
     color: #0C0E16;
 }
 
-
+.filter-span-dark-mode {
+    width: 93px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+}
 
 .down-arrow-icon {
-    width: 10px;
-    height: 6px;
+    width: 12px;
+    height: 8px;
 }
 
 .header-button {
