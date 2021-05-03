@@ -102,7 +102,7 @@ class InvoicesHeader extends React.Component {
                     </div>
                     
                     <div className='filter-div'>
-                        <div className='filter-span'>
+                        <div className='filter-span-dark-mode'>
                             Filter by status
                         </div>
                         <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
