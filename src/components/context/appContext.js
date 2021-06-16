@@ -283,10 +283,21 @@ export default class AppProvider extends Component {
 						})
 					},
 
-					// draftInvoices: [],
-					// paidInvoices: [],
-					// pendingInvoices: [],
-
+					grabDraftInvoices: (newDraftInvoices) => {
+						this.setState({
+							draftInvoices: newDraftInvoices
+						})
+					},
+					grabPaidInvoices: (newPaidInvoices) => {
+						this.setState({
+							paidInvoices: newPaidInvoices
+						})
+					},
+					grabPendingInvoices: (newPendingInvoices) => {
+						this.setState({
+							pendingInvoices: newPendingInvoices
+						})
+					},
 				}}
 			>
 				{this.props.children}
