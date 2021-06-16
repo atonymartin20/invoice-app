@@ -261,6 +261,32 @@ export default class AppProvider extends Component {
 							darkMode: false,
 						});
 					},
+
+					setInvoiceCount: (newInvoiceCount) => {
+						this.setState({
+							invoiceCount: newInvoiceCount
+						})
+					},
+					setDraftInvoiceCount: (newDraftInvoiceCount) => {
+						this.setState({
+							draftInvoiceCount: newDraftInvoiceCount
+						})
+					},
+					setPaidInvoiceCount: (newPaidInvoiceCount) => {
+						this.setState({
+							paidInvoiceCount: newPaidInvoiceCount
+						})
+					},
+					setPendingInvoiceCount: (newPendingInvoiceCount) => {
+						this.setState({
+							pendingInvoiceCount: newPendingInvoiceCount
+						})
+					},
+
+					// draftInvoices: [],
+					// paidInvoices: [],
+					// pendingInvoices: [],
+
 				}}
 			>
 				{this.props.children}
