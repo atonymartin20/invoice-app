@@ -6,6 +6,12 @@ export default class AppProvider extends Component {
 	state = {
 		darkMode: false,
 		invoiceCount: 7,
+		draftInvoiceCount: 0,
+		paidInvoiceCount: 0,
+		pendingInvoiceCount: 0,
+		draftInvoices: [],
+		paidInvoices: [],
+		pendingInvoices: [],
 		invoices: [
 			{
 				id: 'RT3080',
