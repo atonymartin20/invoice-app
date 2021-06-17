@@ -261,7 +261,6 @@ export default class AppProvider extends Component {
 							darkMode: false,
 						});
 					},
-
 					setInvoiceCount: (newInvoiceCount) => {
 						this.setState({
 							invoiceCount: newInvoiceCount
@@ -282,7 +281,6 @@ export default class AppProvider extends Component {
 							pendingInvoiceCount: newPendingInvoiceCount
 						})
 					},
-
 					grabDraftInvoices: (newDraftInvoices) => {
 						this.setState({
 							draftInvoices: newDraftInvoices
@@ -294,6 +292,26 @@ export default class AppProvider extends Component {
 						})
 					},
 					grabPendingInvoices: (newPendingInvoices) => {
+						this.setState({
+							pendingInvoices: newPendingInvoices
+						})
+					},
+					updateInvoices: (newInvoices) => {
+						this.setState({
+							invoices: newInvoices
+						})
+					},
+					updateDraftInvoices: (newDraftInvoices) => {
+						this.setState({
+							draftInvoices: newDraftInvoices
+						})
+					},
+					updatePaidInvoices: (newPaidInvoices) => {
+						this.setState({
+							paidInvoices: newPaidInvoices
+						})
+					},
+					updatePendingInvoices: (newPendingInvoices) => {
 						this.setState({
 							pendingInvoices: newPendingInvoices
 						})
