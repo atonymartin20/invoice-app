@@ -22,23 +22,33 @@ class App extends React.Component {
 				if(invoice.status === 'paid') {
 					paidInvoices = [...paidInvoices, invoice]
 					paidInvoiceCount ++
+					invoiceCount ++
 				}
 
 				else if(invoice.status === 'pending') {
 					pendingInvoices = [...pendingInvoices, invoice]
 					pendingInvoiceCount ++
+					invoiceCount ++
 				}
 
 				else if(invoice.status === 'draft') {
 					draftInvoices = [...draftInvoices, invoice]
 					draftInvoiceCount ++
+					invoiceCount ++
 				}
 
 				else {
 					console.log(invoice)
 				}
 				
-				console.log(invoice, invoice.status, index)
+				this.context.setInvoiceCount(invoiceCount);
+				this.context.setDraftInvoiceCount(draftInvoiceCount);
+				this.context.setPaidInvoiceCount(paidInvoiceCount);
+				this.context.setPendingInvoiceCount(pendingInvoiceCount);
+				this.context.grabDraftInvoices(draftInvoices);
+				this.context.grabPaidInvoices(paidInvoices);
+				this.context.grabPendingInvoices(pendingInvoices);
+				return null;
 			})
 		}
 	}
