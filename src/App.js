@@ -7,6 +7,42 @@ import { AppContext } from './components/context/appContext.js';
 import Homepage from './components/homepage';
 
 class App extends React.Component {
+
+	componentDidMount() {
+		if(this.context.state.invoices.length > 0) {
+			let invoiceCount = 0;
+			let draftInvoiceCount = 0;
+			let paidInvoiceCount = 0;
+			let pendingInvoiceCount = 0;
+			let draftInvoices = [];
+			let paidInvoices = [];
+			let pendingInvoices = [];
+
+			this.context.state.invoices.map((invoice, index) => {
+				if(invoice.status === 'paid') {
+					paidInvoices = [...paidInvoices, invoice]
+					paidInvoiceCount ++
+				}
+
+				else if(invoice.status === 'pending') {
+					pendingInvoices = [...pendingInvoices, invoice]
+					pendingInvoiceCount ++
+				}
+
+				else if(invoice.status === 'draft') {
+					draftInvoices = [...draftInvoices, invoice]
+					draftInvoiceCount ++
+				}
+
+				else {
+					console.log(invoice)
+				}
+				
+				console.log(invoice, invoice.status, index)
+			})
+		}
+	}
+
 	render() {
 		if (this.context.state.darkMode === true) {
 			return (
