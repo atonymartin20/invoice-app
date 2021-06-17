@@ -316,6 +316,26 @@ export default class AppProvider extends Component {
 							pendingInvoices: newPendingInvoices
 						})
 					},
+					updateInvoiceCount: (newInvoiceCount) => {
+						this.setState({
+							invoiceCount: newInvoiceCount
+						})
+					},
+					updateDraftInvoiceCount: (newDraftInvoiceCount) => {
+						this.setState({
+							draftInvoiceCount: newDraftInvoiceCount
+						})
+					},
+					updatePaidInvoiceCount: (newPaidInvoiceCount) => {
+						this.setState({
+							paidInvoiceCount: newPaidInvoiceCount
+						})
+					},
+					updatePendingInvoiceCount: (newPendingInvoiceCount) => {
+						this.setState({
+							pendingInvoiceCount: newPendingInvoiceCount
+						})
+					},
 				}}
 			>
 				{this.props.children}
