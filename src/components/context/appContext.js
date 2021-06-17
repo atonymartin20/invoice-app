@@ -5,7 +5,7 @@ export const AppContext = React.createContext();
 export default class AppProvider extends Component {
 	state = {
 		darkMode: false,
-		invoiceCount: 7,
+		invoiceCount: 0,
 		draftInvoiceCount: 0,
 		paidInvoiceCount: 0,
 		pendingInvoiceCount: 0,
