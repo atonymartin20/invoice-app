@@ -11,6 +11,7 @@ class Homepage extends React.Component {
         draftFilter: false,
         paidFilter: false,
         pendingFilter: false,
+        activeFilter: false,
     }
 
     openFilterStatusMenu = (event) => {
@@ -30,6 +31,7 @@ class Homepage extends React.Component {
     filterByStatusDraft = (event) => {
         event.preventDefault();
         this.setState({
+            activeFilter: true,
             draftFilter: !this.state.draftFilter
         })
     }
