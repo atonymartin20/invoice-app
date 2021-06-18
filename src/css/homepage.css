@@ -32,7 +32,7 @@
 .invoices-header-left-side {
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 200px;
     height: 59px;
     justify-content: space-between;
 }
@@ -40,7 +40,7 @@
 .invoices-header-left-side-dark-mode {
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 200px;
     height: 59px;
     justify-content: space-between;
 }
