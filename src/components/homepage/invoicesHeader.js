@@ -39,7 +39,7 @@ class InvoicesHeader extends React.Component {
 
                                     {this.context.state.draftInvoiceCount === 1 ?
                                         <body>
-                                            There is 1 total invoice
+                                            There is 1 draft invoice
                                         </body>
                                     : 
                                         null
@@ -69,7 +69,7 @@ class InvoicesHeader extends React.Component {
 
                                     {this.context.state.paidInvoiceCount === 1 ?
                                         <body>
-                                            There is 1 total invoice
+                                            There is 1 paid invoice
                                         </body>
                                     : 
                                         null
@@ -99,7 +99,7 @@ class InvoicesHeader extends React.Component {
 
                                     {this.context.state.pendingInvoiceCount === 1 ?
                                         <body>
-                                            There is 1 total invoice
+                                            There is 1 pending invoice
                                         </body>
                                     : 
                                         null
@@ -144,7 +144,6 @@ class InvoicesHeader extends React.Component {
                                 }
                             </>
                         }
-
                     </div>
                     
                     <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
@@ -171,29 +170,124 @@ class InvoicesHeader extends React.Component {
                 <div className='invoices-header'>
                     <div className='invoices-header-left-side-dark-mode'>
                         <h1>Invoices</h1>
-                        
-                        {this.context.state.invoiceCount === 0 ? 
-                            <body>
-                                No invoices
-                            </body>
+                        {this.props.activeFilter === true ? 
+                            <>
+                            {this.props.draftFilter === true ? 
+                                <>
+                                    {this.context.state.draftInvoiceCount === 0 ?
+                                        <body>
+                                            No invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount === 1 ?
+                                        <body>
+                                            There is 1 draft invoice
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount > 1 ?
+                                        <body>
+                                        There are {this.context.state.draftInvoiceCount} draft invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.paidFilter === true ? 
+                                <>
+                                    {this.context.state.paidInvoiceCount === 0 ?
+                                        <body>
+                                            No invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount === 1 ?
+                                        <body>
+                                            There is 1 paid invoice
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount > 1 ?
+                                        <body>
+                                        There are {this.context.state.paidInvoiceCount} paid invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.pendingFilter === true ? 
+                                <>
+                                    {this.context.state.pendingInvoiceCount === 0 ?
+                                        <body>
+                                            No invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount === 1 ?
+                                        <body>
+                                            There is 1 pending invoice
+                                        </body>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount > 1 ?
+                                        <body>
+                                        There are {this.context.state.pendingInvoiceCount} pending invoices
+                                        </body>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+                            </>
                         : 
-                            null
-                        }
-    
-                        {this.context.state.invoiceCount === 1 ?
-                            <body>
-                                There is 1 total invoice
-                            </body>
-                        : 
-                            null
-                        }
-    
-                        {this.context.state.invoiceCount > 1 ?
-                            <body>
-                                There are {this.context.state.invoiceCount} total invoices
-                            </body>
-                        :
-                            null
+                            <>
+                                {this.context.state.invoiceCount === 0 ? 
+                                    <body>
+                                        No invoices
+                                    </body>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount === 1 ?
+                                    <body>
+                                        There is 1 total invoice
+                                    </body>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount > 1 ?
+                                    <body>
+                                        There are {this.context.state.invoiceCount} total invoices
+                                    </body>
+                                :
+                                    null
+                                }
+                            </>
                         }
                     </div>
                     
