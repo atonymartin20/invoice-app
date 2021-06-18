@@ -36,6 +36,22 @@ class Homepage extends React.Component {
         })
     }
 
+    filterByStatusPaid = (event) => {
+        event.preventDefault();
+        this.setState({
+            activeFilter: true,
+            paidFilter: !this.state.paidFilter
+        })
+    }
+
+    filterByStatusPending = (event) => {
+        event.preventDefault();
+        this.setState({
+            activeFilter: true,
+            pendingFilter: !this.state.pendingFilter
+        })
+    }
+
     render() {
         return(
             <div className='homepage-container-div'>
