@@ -58,11 +58,11 @@ class Homepage extends React.Component {
                 <Navbar />
                 {this.context.state.darkMode === true ?
                     <div className='homepage-inside-container-div-dark-mode'>
-                        <InvoicesHeader type='dark' openFilterStatusMenu={this.openFilterStatusMenu} closeFilterStatusMenu={this.closeFilterStatusMenu} filterStatusContainerOpen={this.state.filterStatusContainerOpen} />
+                        <InvoicesHeader type='dark' openFilterStatusMenu={this.openFilterStatusMenu} closeFilterStatusMenu={this.closeFilterStatusMenu} filterStatusContainerOpen={this.state.filterStatusContainerOpen} activeFilter={this.state.activeFilter} draftFilter={this.state.draftFilter} paidFilter={this.state.paidFilter} pendingFilter={this.state.pendingFilter} />
                     </div>
                 :
                     <div className='homepage-inside-container-div'>
-                        <InvoicesHeader type='light' openFilterStatusMenu={this.openFilterStatusMenu} closeFilterStatusMenu={this.closeFilterStatusMenu} filterStatusContainerOpen={this.state.filterStatusContainerOpen} />
+                        <InvoicesHeader type='light' openFilterStatusMenu={this.openFilterStatusMenu} closeFilterStatusMenu={this.closeFilterStatusMenu} filterStatusContainerOpen={this.state.filterStatusContainerOpen} activeFilter={this.state.activeFilter} draftFilter={this.state.draftFilter} paidFilter={this.state.paidFilter} pendingFilter={this.state.pendingFilter} />
                     </div>
                 }
             </div>
