@@ -8,10 +8,10 @@ import InvoicesHeader from './invoicesHeader.js';
 class Homepage extends React.Component {
 	state = {
 		filterStatusContainerOpen: false,
+		activeFilter: false,
 		draftFilter: false,
 		paidFilter: false,
 		pendingFilter: false,
-		activeFilter: false,
 	};
 
 	openFilterStatusMenu = (event) => {
@@ -95,6 +95,9 @@ class Homepage extends React.Component {
 							type="dark"
 							openFilterStatusMenu={this.openFilterStatusMenu}
 							closeFilterStatusMenu={this.closeFilterStatusMenu}
+                            filterByStatusDraft={this.filterByStatusDraft}
+                            filterByStatusPaid={this.filterByStatusPaid}
+                            filterByStatusPending={this.filterByStatusPending}
 							filterStatusContainerOpen={
 								this.state.filterStatusContainerOpen
 							}
@@ -110,6 +113,9 @@ class Homepage extends React.Component {
 							type="light"
 							openFilterStatusMenu={this.openFilterStatusMenu}
 							closeFilterStatusMenu={this.closeFilterStatusMenu}
+                            filterByStatusDraft={this.filterByStatusDraft}
+                            filterByStatusPaid={this.filterByStatusPaid}
+                            filterByStatusPending={this.filterByStatusPending}
 							filterStatusContainerOpen={
 								this.state.filterStatusContainerOpen
 							}
