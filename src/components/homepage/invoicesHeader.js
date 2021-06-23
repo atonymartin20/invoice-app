@@ -146,12 +146,21 @@ class InvoicesHeader extends React.Component {
                         }
                     </div>
                     
-                    <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
-                        <div className='filter-span'>
-                            Filter by status
+                    {this.props.activeFilter === true ? 
+                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span'>
+                                Filter by status
+                            </div>
+                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
                         </div>
-                        <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
-                    </div>
+                    : 
+                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span'>
+                                Filter by status
+                            </div>
+                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
+                        </div>         
+                    }
     
                     <Button className='header-button'>
                         <div className='icon-div'>
@@ -291,12 +300,21 @@ class InvoicesHeader extends React.Component {
                         }
                     </div>
                     
-                    <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
-                        <div className='filter-span-dark-mode'>
-                            Filter by status
+                    {this.props.activeFilter === true ? 
+                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span-dark-mode'>
+                                Filter by status
+                            </div>
+                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
                         </div>
-                        <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
-                    </div>
+                    : 
+                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span-dark-mode'>
+                                Filter by status
+                            </div>
+                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
+                        </div>      
+                    }
     
                     <Button className='header-button'>
                         <div className='icon-div'>
