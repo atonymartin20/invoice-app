@@ -30,26 +30,65 @@ class Homepage extends React.Component {
 
     filterByStatusDraft = (event) => {
         event.preventDefault();
-        this.setState({
-            activeFilter: true,
-            draftFilter: !this.state.draftFilter
-        })
+        if(this.state.pendingFilter === true) {
+            this.setState({
+                activeFilter: false,
+                draftFilter: !this.state.draftFilter,
+                paidFilter: false,
+                pendingFilter: false,
+            })
+        }
+
+        else {
+            this.setState({
+                activeFilter: true,
+                draftFilter: !this.state.draftFilter,
+                paidFilter: false,
+                pendingFilter: false,
+            })
+        }
     }
 
     filterByStatusPaid = (event) => {
         event.preventDefault();
-        this.setState({
-            activeFilter: true,
-            paidFilter: !this.state.paidFilter
-        })
+        if(this.state.pendingFilter === true) {
+            this.setState({
+                activeFilter: false,
+                draftFilter: false,
+                paidFilter: !this.state.paidFilter,
+                pendingFilter: false,
+            })
+        }
+
+        else {
+            this.setState({
+                activeFilter: true,
+                draftFilter: false,
+                paidFilter: !this.state.paidFilter,
+                pendingFilter: false,
+            })
+        }
     }
 
     filterByStatusPending = (event) => {
         event.preventDefault();
-        this.setState({
-            activeFilter: true,
-            pendingFilter: !this.state.pendingFilter
-        })
+        if(this.state.pendingFilter === true) {
+            this.setState({
+                activeFilter: false,
+                draftFilter: false,
+                paidFilter: false,
+                pendingFilter: !this.state.pendingFilter
+            })
+        }
+
+        else {
+            this.setState({
+                activeFilter: true,
+                draftFilter: false,
+                paidFilter: false,
+                pendingFilter: !this.state.pendingFilter
+            })
+        }
     }
 
     render() {
