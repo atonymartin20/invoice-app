@@ -15,6 +15,7 @@
     flex-direction: column;
     background-color: #141625;
     width: 100%;
+    align-items: center;
 }
 
 .invoices-header {
@@ -25,21 +26,36 @@
     width: 100%;
     max-width: 730px;
     height: 59px;
-    border: 1px solid blue;
     margin-top: 72px;
 }
 
 .invoices-header-left-side {
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 200px;
     height: 59px;
     justify-content: space-between;
+}
 
+.invoices-header-left-side-dark-mode {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 59px;
+    justify-content: space-between;
 }
 
 .invoices-header-left-side body {
-    background-color: #F8F8F8;
+    background: inherit;
+}
+
+.invoices-header-left-side-dark-mode h1 {
+    color: #FFFFFF;
+}
+
+.invoices-header-left-side-dark-mode body {
+    background: inherit;
+    color: #DFE3FA;
 }
 
 .filter-div {
@@ -50,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
 }
 
@@ -65,9 +82,31 @@
     color: #0C0E16;
 }
 
+.filter-span-dark-mode {
+    width: 93px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+}
+
 .down-arrow-icon {
-    width: 10px;
-    height: 6px;
+    width: 12px;
+    height: 8px;
+}
+
+.down-arrow-icon-reversed {
+    width: 12px;
+    height: 8px;
+    -webkit-transform:rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .header-button {
@@ -79,7 +118,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
 
+.header-button:hover {
+    background: #9277FF;
 }
 
 .icon-div {

@@ -5,7 +5,13 @@ export const AppContext = React.createContext();
 export default class AppProvider extends Component {
 	state = {
 		darkMode: false,
-		invoiceCount: 7,
+		invoiceCount: 0,
+		draftInvoiceCount: 0,
+		paidInvoiceCount: 0,
+		pendingInvoiceCount: 0,
+		draftInvoices: [],
+		paidInvoices: [],
+		pendingInvoices: [],
 		invoices: [
 			{
 				id: 'RT3080',
@@ -254,6 +260,81 @@ export default class AppProvider extends Component {
 						this.setState({
 							darkMode: false,
 						});
+					},
+					setInvoiceCount: (newInvoiceCount) => {
+						this.setState({
+							invoiceCount: newInvoiceCount
+						})
+					},
+					setDraftInvoiceCount: (newDraftInvoiceCount) => {
+						this.setState({
+							draftInvoiceCount: newDraftInvoiceCount
+						})
+					},
+					setPaidInvoiceCount: (newPaidInvoiceCount) => {
+						this.setState({
+							paidInvoiceCount: newPaidInvoiceCount
+						})
+					},
+					setPendingInvoiceCount: (newPendingInvoiceCount) => {
+						this.setState({
+							pendingInvoiceCount: newPendingInvoiceCount
+						})
+					},
+					grabDraftInvoices: (newDraftInvoices) => {
+						this.setState({
+							draftInvoices: newDraftInvoices
+						})
+					},
+					grabPaidInvoices: (newPaidInvoices) => {
+						this.setState({
+							paidInvoices: newPaidInvoices
+						})
+					},
+					grabPendingInvoices: (newPendingInvoices) => {
+						this.setState({
+							pendingInvoices: newPendingInvoices
+						})
+					},
+					updateInvoices: (newInvoices) => {
+						this.setState({
+							invoices: newInvoices
+						})
+					},
+					updateDraftInvoices: (newDraftInvoices) => {
+						this.setState({
+							draftInvoices: newDraftInvoices
+						})
+					},
+					updatePaidInvoices: (newPaidInvoices) => {
+						this.setState({
+							paidInvoices: newPaidInvoices
+						})
+					},
+					updatePendingInvoices: (newPendingInvoices) => {
+						this.setState({
+							pendingInvoices: newPendingInvoices
+						})
+					},
+					updateInvoiceCount: (newInvoiceCount) => {
+						this.setState({
+							invoiceCount: newInvoiceCount
+						})
+					},
+					updateDraftInvoiceCount: (newDraftInvoiceCount) => {
+						this.setState({
+							draftInvoiceCount: newDraftInvoiceCount
+						})
+					},
+					updatePaidInvoiceCount: (newPaidInvoiceCount) => {
+						this.setState({
+							paidInvoiceCount: newPaidInvoiceCount
+						})
+					},
+					updatePendingInvoiceCount: (newPendingInvoiceCount) => {
+						this.setState({
+							pendingInvoiceCount: newPendingInvoiceCount
+						})
 					},
 				}}
 			>
