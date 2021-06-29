@@ -146,12 +146,12 @@ class InvoicesHeader extends React.Component {
                         }
                     </div>
                     
-                    {this.props.activeFilter === true ? 
-                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                    {this.props.filterStatusContainerOpen === true ? 
+                        <div className='filter-div' onClick={this.props.closeFilterStatusMenu}>
                             <div className='filter-span'>
                                 Filter by status
                             </div>
-                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
+                            <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
                         </div>
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
@@ -300,13 +300,19 @@ class InvoicesHeader extends React.Component {
                         }
                     </div>
                     
-                    {this.props.activeFilter === true ? 
-                        <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
-                            <div className='filter-span-dark-mode'>
-                                Filter by status
+                    {this.props.filterStatusContainerOpen === true ? 
+                        <>
+                            <div className='filter-div' onClick={this.props.closeFilterStatusMenu}>
+                                <div className='filter-span-dark-mode'>
+                                    Filter by status
+                                </div>
+                                <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
                             </div>
-                            <img src={DownArrowIcon} alt='Down Arrow' className='down-arrow-icon' />
-                        </div>
+                            
+                            <div>
+                                
+                            </div>
+                        </>
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
                             <div className='filter-span-dark-mode'>
