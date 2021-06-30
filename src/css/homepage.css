@@ -58,6 +58,27 @@
     color: #DFE3FA;
 }
 
+.filtered-container-div {
+    display: flex;
+    width: 118px;
+    height: 59px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 40px;
+
+}
+
+.filter-div-true {
+    width: 118px;
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
 .filter-div {
     width: 118px;
     height: 15px;
@@ -68,6 +89,22 @@
     align-items: center;
     cursor: pointer;
 
+}
+
+.filter-option-div {
+    position: absolute;
+    width: 192px;
+    height: 128px;
+    z-index: 7;
+    top: 132px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    padding: 24px;
 }
 
 .filter-span {
