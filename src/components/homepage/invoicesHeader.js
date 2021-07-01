@@ -10,6 +10,10 @@ import DownArrowIcon from '../../assets/icon-arrow-down.svg';
 class InvoicesHeader extends React.Component {
     state = {
         redirect: false,
+		activeFilter: this.props.activeFilter,
+		draftFilter: this.props.draftFilter,
+		paidFilter: this.props.paidFilter,
+		pendingFilter: this.props.pendingFilter,        
     }
 
     handleRedirect = (event) => {
@@ -301,18 +305,20 @@ class InvoicesHeader extends React.Component {
                     </div>
                     
                     {this.props.filterStatusContainerOpen === true ? 
-                        <>
-                            <div className='filter-div' onClick={this.props.closeFilterStatusMenu}>
+                        <div className='filtered-container-div'>
+                            <div className='filter-div-true' onClick={this.props.closeFilterStatusMenu}>
                                 <div className='filter-span-dark-mode'>
                                     Filter by status
                                 </div>
                                 <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
                             </div>
                             
-                            <div>
-                                
+                            <div className='filter-option-div'>
+                                <span><input type='checkbox' id='draft' name='draft' value='this.props.draftFilter' /> Draft</span>    
+                                <span><input type='checkbox' id='pending' name='pending' value='this.props.pendingFilter' /> Pending</span>
+                                <span><input type='checkbox' id='paid' name='paid' value='this.props.paidFilter' /> Paid</span>
                             </div>
-                        </>
+                        </div>
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
                             <div className='filter-span-dark-mode'>
