@@ -102,8 +102,8 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 24px;
 }
 
