@@ -28,9 +28,8 @@ class Homepage extends React.Component {
 		});
 	};
 
-	filterByStatusDraft = (event) => {
-		event.preventDefault();
-		if (this.state.pendingFilter === true) {
+	filterByStatusDraft = () => {
+		if (this.state.draftFilter === true) {
 			this.setState({
 				activeFilter: false,
 				draftFilter: !this.state.draftFilter,
@@ -47,9 +46,8 @@ class Homepage extends React.Component {
 		}
 	};
 
-	filterByStatusPaid = (event) => {
-		event.preventDefault();
-		if (this.state.pendingFilter === true) {
+	filterByStatusPaid = () => {
+		if (this.state.paidFilter === true) {
 			this.setState({
 				activeFilter: false,
 				draftFilter: false,
@@ -66,8 +64,7 @@ class Homepage extends React.Component {
 		}
 	};
 
-	filterByStatusPending = (event) => {
-		event.preventDefault();
+	filterByStatusPending = () => {
 		if (this.state.pendingFilter === true) {
 			this.setState({
 				activeFilter: false,
