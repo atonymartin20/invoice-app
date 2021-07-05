@@ -107,6 +107,40 @@
     padding: 24px;
 }
 
+.filter-checkbox { 
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 13px;
+    background: #DFE3FA;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #DFE3FA;
+}
+
+.filter-checkbox:hover {
+    background: #DFE3FA;
+}
+
+.filter-option-span {
+    display: flex;
+    align-items: center;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    cursor: pointer;
+}
+
+.filter-option-span:hover .filter-checkbox {
+    background: #DFE3FA;
+    border: 1px solid #7C5DFA;
+}
+
 .filter-span {
     width: 93px;
     height: 15px;
