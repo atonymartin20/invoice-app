@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppContext } from '../context/appContext.js';
 
-import '../../css/invoicesContainer.css';
+import '../../css/showInvoices.css';
 import InvoiceCard from './invoiceCard.js';
 
 class InvoicesContainer extends React.Component {
@@ -19,7 +19,64 @@ class InvoicesContainer extends React.Component {
 					<div className="invoices-inside-container-div">
                         {this.props.activeFilter === false ? 
                             <div>
-                                {this.context.state.invoices}
+                                {this.context.state.invoices.map(invoice => (
+									<InvoiceCard
+										key={invoice.id}
+										id={invoice.id}
+										paymentDue={invoice.paymentDue}
+										clientName={invoice.clientName}
+										total={invoice.total}
+										status={invoice.status}
+									/>
+								))}
+                            </div>
+                        : 
+                            null
+                        } 
+
+						{this.props.activeFilter === true && this.props.draftFilter === true ? 
+                            <div>
+                                {this.context.state.draftInvoices.map(invoice => (
+									<InvoiceCard
+										id={invoice.id}
+										paymentDue={invoice.paymentDue}
+										clientName={invoice.clientName}
+										total={invoice.total}
+										status={invoice.status}
+									/>
+								))}
+                            </div>
+                        : 
+                            null
+                        } 
+
+						{this.props.activeFilter === true && this.props.pendingFilter === true ? 
+                            <div>
+                                {this.context.state.pendingInvoices.map(invoice => (
+									<InvoiceCard
+										id={invoice.id}
+										paymentDue={invoice.paymentDue}
+										clientName={invoice.clientName}
+										total={invoice.total}
+										status={invoice.status}
+									/>
+								))}
+                            </div>
+                        : 
+                            null
+                        } 
+
+						{this.props.activeFilter === true && this.props.paidFilter === true ? 
+                            <div>
+                                {this.context.state.paidInvoices.map(invoice => (
+									<InvoiceCard
+										id={invoice.id}
+										paymentDue={invoice.paymentDue}
+										clientName={invoice.clientName}
+										total={invoice.total}
+										status={invoice.status}
+									/>
+								))}
                             </div>
                         : 
                             null
