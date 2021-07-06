@@ -152,12 +152,35 @@ class InvoicesHeader extends React.Component {
                     </div>
                     
                     {this.props.filterStatusContainerOpen === true ? 
-                        <div className='filter-div' onClick={this.props.closeFilterStatusMenu}>
-                            <div className='filter-span'>
-                                Filter by status
+                        <div className='filtered-container-div'>
+                            <div className='filter-div-true' onClick={this.props.closeFilterStatusMenu}>
+                                <div className='filter-span'>
+                                    Filter by status
+                                </div>
+                                <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
                             </div>
-                            <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
+                            
+                            <div className='filter-option-div'>
+                                {this.props.draftFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Draft</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox'/> Draft</span>
+                                }
+
+                                {this.props.pendingFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Pending</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox'/> Pending</span>
+                                }
+
+                                {this.props.paidFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Paid</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox'/> Paid</span>
+                                }
+                            </div>
                         </div>
+                        
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
                             <div className='filter-span'>
@@ -332,8 +355,6 @@ class InvoicesHeader extends React.Component {
                                 :
                                     <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox'/> Paid</span>
                                 }
-                                {/* <span className='filter-option-span' onClick={this.props.filterByStatusPending}><input type='checkbox' id='pending' name='pending' value={this.props.pendingFilter} className='filter-checkbox' checked={this.props.pendingFilter} readOnly /> Pending</span> */}
-                                {/* <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><input type='checkbox' id='paid' name='paid' value={this.props.paidFilter} className='filter-checkbox' checked={this.props.paidFilter} readOnly /> Paid</span> */}
                             </div>
                         </div>
                     : 
