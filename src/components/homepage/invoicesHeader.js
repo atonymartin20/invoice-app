@@ -337,23 +337,23 @@ class InvoicesHeader extends React.Component {
                                 <img src={DownArrowIcon} alt='Up Arrow' className='down-arrow-icon-reversed' />
                             </div>
                             
-                            <div className='filter-option-div'>
+                            <div className='filter-option-div-dark-mode'>
                                 {this.props.draftFilter === true ? 
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Draft</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox-checked-dark-mode'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Draft</span>
                                 :
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox'/> Draft</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox-dark-mode'/> Draft</span>
                                 }
 
                                 {this.props.pendingFilter === true ? 
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Pending</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusPending}><div className='filter-checkbox-checked-dark-mode'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Pending</span>
                                 :
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox'/> Pending</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusPending}><div className='filter-checkbox-dark-mode'/> Pending</span>
                                 }
 
                                 {this.props.paidFilter === true ? 
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Paid</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox-checked-dark-mode'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Paid</span>
                                 :
-                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox'/> Paid</span>
+                                    <span className='filter-option-span-dark-mode' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox-dark-mode'/> Paid</span>
                                 }
                             </div>
                         </div>
