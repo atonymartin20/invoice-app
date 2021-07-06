@@ -6,6 +6,7 @@ import '../../css/homepage.css';
 import  { Button } from 'reactstrap';
 import PlusIcon from '../../assets/icon-plus.svg';
 import DownArrowIcon from '../../assets/icon-arrow-down.svg';
+import CheckIcon from '../../assets/icon-check.svg';
 
 class InvoicesHeader extends React.Component {
     state = {
@@ -314,9 +315,25 @@ class InvoicesHeader extends React.Component {
                             </div>
                             
                             <div className='filter-option-div'>
-                                <span><input type='checkbox' id='draft' name='draft' value='this.props.draftFilter' /> Draft</span>    
-                                <span><input type='checkbox' id='pending' name='pending' value='this.props.pendingFilter' /> Pending</span>
-                                <span><input type='checkbox' id='paid' name='paid' value='this.props.paidFilter' /> Paid</span>
+                                {this.props.draftFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Draft</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusDraft}><div className='filter-checkbox'/> Draft</span>
+                                }
+
+                                {this.props.pendingFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Pending</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPending}><div className='filter-checkbox'/> Pending</span>
+                                }
+
+                                {this.props.paidFilter === true ? 
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox-checked'><img src={CheckIcon} alt='checkmark' className='check-icon' /></div> Paid</span>
+                                :
+                                    <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><div className='filter-checkbox'/> Paid</span>
+                                }
+                                {/* <span className='filter-option-span' onClick={this.props.filterByStatusPending}><input type='checkbox' id='pending' name='pending' value={this.props.pendingFilter} className='filter-checkbox' checked={this.props.pendingFilter} readOnly /> Pending</span> */}
+                                {/* <span className='filter-option-span' onClick={this.props.filterByStatusPaid}><input type='checkbox' id='paid' name='paid' value={this.props.paidFilter} className='filter-checkbox' checked={this.props.paidFilter} readOnly /> Paid</span> */}
                             </div>
                         </div>
                     : 
