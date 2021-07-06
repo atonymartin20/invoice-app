@@ -88,7 +88,6 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
 }
 
 .filter-option-div {
@@ -99,6 +98,22 @@
     top: 132px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(72, 84, 159, 0.25);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.filter-option-div-dark-mode {
+    position: absolute;
+    width: 192px;
+    height: 128px;
+    z-index: 7;
+    top: 132px;
+    background: #252945;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -120,7 +135,32 @@
     border: 1px solid #DFE3FA;
 }
 
+.filter-checkbox-dark-mode { 
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    background: #1E2139;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 1px solid #1E2139;
+}
+
 .filter-checkbox-checked {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    background: #7C5DFA;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.filter-checkbox-checked-dark-mode {
     width: 16px;
     height: 16px;
     display: flex;
@@ -147,6 +187,24 @@
 
 .filter-option-span:hover .filter-checkbox {
     background: #DFE3FA;
+    border: 1px solid #7C5DFA;
+}
+
+.filter-option-span-dark-mode {
+    display: flex;
+    align-items: center;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.filter-option-span-dark-mode:hover .filter-checkbox-dark-mode {
+    background: #1E2139;
     border: 1px solid #7C5DFA;
 }
 
