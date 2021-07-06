@@ -108,10 +108,11 @@
 }
 
 .filter-checkbox { 
-    -webkit-appearance: none;
-    appearance: none;
     width: 16px;
     height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 13px;
     background: #DFE3FA;
     border-radius: 2px;
@@ -119,8 +120,16 @@
     border: 1px solid #DFE3FA;
 }
 
-.filter-checkbox:hover {
-    background: #DFE3FA;
+.filter-checkbox-checked {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+    background: #7C5DFA;
+    border-radius: 2px;
+    box-sizing: border-box;
 }
 
 .filter-option-span {
