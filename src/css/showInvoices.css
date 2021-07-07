@@ -1,0 +1,214 @@
+.invoices-container-div {
+    width: 730px;
+    height: 600px;
+    box-sizing: border-box;
+    background-color: inherit;
+}
+
+.invoices-inside-container-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-outside-div {
+    width: 730px;
+    height: 72px;
+}
+
+.card-inside-div {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    padding-left: 32px;
+    padding-right: 24px;
+    border-radius: 8px;
+}
+
+.id-span {
+    width: 60px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+    text-align: left;
+}
+
+.black-font-span {
+    color: #0C0E16;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.due-date-span {
+    width: 110px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+    text-align: left;
+}
+
+.client-name-span {
+    width: 110px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #858BB2;
+    text-align: left;
+}
+
+.totals-span {
+    width: 99px;
+    height: 24px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.8px;
+    color: #0C0E16;
+    text-align: right;
+}
+
+.british-pound-span {
+    font-family: Spartan;
+    font-style: normal;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.draft-status-div {
+    width: 104px;
+    height: 40px;
+    background: rgba(55, 59, 83, 0.06);
+    mix-blend-mode: normal;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -22px;
+}
+
+.status-span-draft {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #373B53;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draft-ball-div {
+    width: 8px;
+    height: 8px;
+    background: #373B53;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.pending-status-div {
+    width: 104px;
+    height: 40px;
+    background: rgba(255, 133, 0, 0.06);
+    mix-blend-mode: normal;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -22px;
+}
+
+.status-span-pending {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FF8F00;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pending-ball-div {
+    width: 8px;
+    height: 8px;
+    background: #FF8F00;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.paid-status-div {
+    width: 104px;
+    height: 40px;
+    background: rgba(51, 214, 159, 0.06);
+    mix-blend-mode: normal;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -22px;
+}
+
+.status-span-paid {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #33D69F;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paid-ball-div {
+    width: 8px;
+    height: 8px;
+    background: #33D69F;
+    border-radius: 50%;
+    margin-right: 8px;
+}
