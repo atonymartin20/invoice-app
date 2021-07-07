@@ -9,7 +9,6 @@ class InvoicesContainer extends React.Component {
 	};
 
 	render() {
-        console.log(this.props)
 		return (
 			<div className="invoices-container-div">
 				{this.props.type === 'dark' ? (
@@ -18,7 +17,7 @@ class InvoicesContainer extends React.Component {
 				) : (
 					<div className="invoices-inside-container-div">
                         {this.props.activeFilter === false ? 
-                            <div>
+                            <div className='card-container-div'>
                                 {this.context.state.invoices.map(invoice => (
 									<InvoiceCard
 										key={invoice.id}
