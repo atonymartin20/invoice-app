@@ -4,6 +4,7 @@ import { AppContext } from '../context/appContext.js';
 import Navbar from '../navbar';
 import '../../css/homepage.css';
 import InvoicesHeader from './invoicesHeader.js';
+import InvoicesContainer from '../showInvoices/invoicesContainer.js';
 
 class Homepage extends React.Component {
 	state = {
@@ -28,9 +29,8 @@ class Homepage extends React.Component {
 		});
 	};
 
-	filterByStatusDraft = (event) => {
-		event.preventDefault();
-		if (this.state.pendingFilter === true) {
+	filterByStatusDraft = () => {
+		if (this.state.draftFilter === true) {
 			this.setState({
 				activeFilter: false,
 				draftFilter: !this.state.draftFilter,
@@ -47,9 +47,8 @@ class Homepage extends React.Component {
 		}
 	};
 
-	filterByStatusPaid = (event) => {
-		event.preventDefault();
-		if (this.state.pendingFilter === true) {
+	filterByStatusPaid = () => {
+		if (this.state.paidFilter === true) {
 			this.setState({
 				activeFilter: false,
 				draftFilter: false,
@@ -66,8 +65,7 @@ class Homepage extends React.Component {
 		}
 	};
 
-	filterByStatusPending = (event) => {
-		event.preventDefault();
+	filterByStatusPending = () => {
 		if (this.state.pendingFilter === true) {
 			this.setState({
 				activeFilter: false,
@@ -106,6 +104,14 @@ class Homepage extends React.Component {
 							paidFilter={this.state.paidFilter}
 							pendingFilter={this.state.pendingFilter}
 						/>
+
+						<InvoicesContainer 
+							type="dark"
+							activeFilter={this.state.activeFilter}
+							draftFilter={this.state.draftFilter}
+							paidFilter={this.state.paidFilter}
+							pendingFilter={this.state.pendingFilter}
+						/>
 					</div>
 				) : (
 					<div className="homepage-inside-container-div">
@@ -119,6 +125,14 @@ class Homepage extends React.Component {
 							filterStatusContainerOpen={
 								this.state.filterStatusContainerOpen
 							}
+							activeFilter={this.state.activeFilter}
+							draftFilter={this.state.draftFilter}
+							paidFilter={this.state.paidFilter}
+							pendingFilter={this.state.pendingFilter}
+						/>
+
+						<InvoicesContainer
+							type="light"
 							activeFilter={this.state.activeFilter}
 							draftFilter={this.state.draftFilter}
 							paidFilter={this.state.paidFilter}
