@@ -335,3 +335,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.empty-invoices-inside-container-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 242px;
+    height: 341px;
+}
