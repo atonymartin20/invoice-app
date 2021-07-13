@@ -366,6 +366,19 @@
     margin-bottom: 24px;
 }
 
+.empty-invoices-h5-dark-mode {
+    height: 22px;
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+
 .empty-invoices-p {
     width: 220px;
     height: 31px;
@@ -379,6 +392,19 @@
     color: #888EB0;
 }
 
+.empty-invoices-p-dark-mode {
+    width: 220px;
+    height: 31px;
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #dfe3fa;
+}
+
 .empty-invoices-p span {
     font-family: 'Spartan', sans-serif;
     font-style: normal;
@@ -388,4 +414,15 @@
     text-align: center;
     letter-spacing: -0.25px;
     color: #888EB0;
+}
+
+.empty-invoices-p-dark-mode span {
+    font-family: 'Spartan', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #dfe3fa;
 }
