@@ -3,6 +3,7 @@ import { AppContext } from '../context/appContext.js';
 
 import '../../css/showInvoices.css';
 import InvoiceCard from './invoiceCard.js';
+import EmptyInvoiceIMG from '../../assets/illustration-empty.svg';
 
 class InvoicesContainer extends React.Component {
 	state = {
@@ -33,7 +34,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</div>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
 							</>
@@ -59,7 +67,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
@@ -84,7 +99,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
@@ -109,7 +131,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
@@ -138,6 +167,13 @@ class InvoicesContainer extends React.Component {
 									</div>
 								: 
 									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
 							</>
@@ -163,7 +199,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
@@ -188,7 +231,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
@@ -213,7 +263,14 @@ class InvoicesContainer extends React.Component {
 										))}
 									</>
 								: 
-									<div>
+									<div className='empty-invoices-container-div'>
+										<div className='empty-invoices-inside-container-div'>
+											<img className='empty-invoices-empty' src={EmptyInvoiceIMG} alt='Woman in enevelope holding megaphone' />
+											<div className='empty-invoices-text-container-div'>
+												<h5 className='empty-invoices-h5'>There is nothing here</h5>
+												<p className='empty-invoices-p'>Create an invoice by clicking the <span>New Invoice</span>button and get started</p>
+											</div>
+										</div>
 									</div>
 								}
                             </div>
