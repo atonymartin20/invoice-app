@@ -88,11 +88,13 @@
 .sun-icon {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .moon-icon {
     width: 19.99px;
     height: 19.9px;
+    cursor: pointer;
 }
 
 .second-box-line {
