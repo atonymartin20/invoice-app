@@ -5,6 +5,7 @@ import { AppContext } from './components/context/appContext.js';
 
 // Components
 import Homepage from './components/homepage';
+import ViewInvoice from './components/viewInvoice';
 
 class App extends React.Component {
 
@@ -59,9 +60,13 @@ class App extends React.Component {
 				<div className='app-outside-container-dark-mode'>
 					<div className="app-inside-container-dark-mode">
 						<Switch>
-							<Route exact path="">
+							<Route exact path="/">
 								<Homepage />
 							</Route>
+							<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+							{/* <Route path='/view'>
+								<ViewInvoice />
+							</Route> */}
 							<Route>
 								<Homepage />
 							</Route>
@@ -76,9 +81,13 @@ class App extends React.Component {
 				<div className='app-outside-container'>
 					<div className="app-inside-container">
 						<Switch>
-							<Route exact path="">
+							<Route exact path="/">
 								<Homepage />
 							</Route>
+							<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+							{/* <Route path='/view'>
+								<ViewInvoice />
+							</Route> */}
 							<Route>
 								<Homepage />
 							</Route>
