@@ -3,6 +3,8 @@ import { AppContext } from '../context/appContext.js';
 
 import Navbar from '../navbar';
 import '../../css/viewInvoice.css';
+import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
+
 
 class ViewInvoice extends React.Component {
 	state = {
@@ -24,14 +26,20 @@ class ViewInvoice extends React.Component {
 	render() {
         console.log(this.state.invoice)
 		return (
-			<div className="view-invoice-container-div">
+			<div className="view-invoice-outside-div">
 				<Navbar />
 				{this.context.state.darkMode === true ? (
-					<div className="view-invoice-inside-container-div-dark-mode">
+					<div className="view-invoice-outside-container-div-dark-mode">
                         test text
 					</div>
 				) : (
-					<div className="view-invoice-inside-container-div">
+					<div className="view-invoice-outside-container-div">
+						<div className='view-invoice-inside-container-div'>
+							<span className='' onClick={this.handleRedirect}><img src={LeftArrowIcon} alt='left arrow' /> Go Back</span>
+							
+						</div>
+						
+
 					</div>
 				)}
 			</div>
