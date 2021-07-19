@@ -6,11 +6,23 @@ import '../../css/viewInvoice.css';
 
 class ViewInvoice extends React.Component {
 	state = {
-
+        invoice: {}
 	};
 
+    componentDidMount() {
+        this.context.state.invoices.map((invoice, index) => {
+            if(invoice.id === this.props.location.state.id) {
+                this.setState({
+                    invoice
+                });
+            }
+            return null;
+        })
+
+    }
+
 	render() {
-        console.log(this.props.location.state)
+        console.log(this.state.invoice)
 		return (
 			<div className="view-invoice-container-div">
 				<Navbar />
