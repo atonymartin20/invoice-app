@@ -1,0 +1,35 @@
+.view-invoice-outside-div {
+    display: flex;
+    height: 908px;
+}
+
+.view-invoice-outside-container-div {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.view-invoice-outside-container-div-dark-mode {
+    display: flex;
+    flex-direction: column;
+    background-color: #141625;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.view-invoice-inside-container-div {
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 730px;
+    height: 790px;
+}
