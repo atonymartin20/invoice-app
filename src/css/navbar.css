@@ -1,6 +1,7 @@
 .light-navbar {
     width: 103px;
-    height: 800px;
+    height: 100%;
+    min-height: 800px;
     background: #373B53;
     border-radius: 0px 20px 20px 0px;
     display: flex;
@@ -13,7 +14,8 @@
 
 .dark-navbar {
     width: 103px;
-    height: 800px;
+    height: 100%;
+    min-height: 800px;
     background: #1E2139;
     border-radius: 0px 20px 20px 0px;
     display: flex;
