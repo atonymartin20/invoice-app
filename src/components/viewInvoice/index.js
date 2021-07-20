@@ -8,15 +8,56 @@ import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
 
 class ViewInvoice extends React.Component {
 	state = {
-        invoice: {}
+        invoice: {},
+		months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+		createdAtDateDay: null,
+		createdAtDateMonth: null,
+		createdAtDateYear: null,
+		paymentDueDateDay: null,
+		paymentDueDateMonth: null,
+		paymentDueDateYear: null,
+		clientAddress: {},
+		clientEmail: '',
+		clientName: '',
+		description: '',
+		id: '',
+		items: {},
+		paymentTerms: 0,
+		senderAddress: {},
+		status: '',
+		total: 0,
 	};
 
     componentDidMount() {
         this.context.state.invoices.map((invoice, index) => {
             if(invoice.id === this.props.location.state.id) {
-                this.setState({
-                    invoice
-                });
+				let payDate = new Date(invoice.paymentDue);
+				let createdDate = new Date(invoice.createdAt)
+				let paymentDueDateMonth = payDate.getUTCMonth();
+				let paymentDueDateDay = payDate.getUTCDate();
+				let paymentDueDateYear = payDate.getFullYear();
+				let createdAtDateMonth = createdDate.getUTCMonth();
+				let createdAtDateDay = createdDate.getUTCDate();
+				let createdAtDateYear = createdDate.getFullYear();
+				this.setState({
+					createdAtDateMonth,
+					createdAtDateDay,
+					createdAtDateYear,
+					paymentDueDateMonth,
+					paymentDueDateDay,
+					paymentDueDateYear,
+					invoice,
+					clientAddress: invoice.clientAddress,
+					clientEmail: invoice.clientEmail,
+					clientName: invoice.clientName,
+					description: invoice.description,
+					id: invoice.id,
+					items: invoice.items,
+					paymentTerms: invoice.paymentTerms,
+					senderAddress: invoice.senderAddress,
+					status: invoice.status,
+					total: invoice.total
+				})
             }
             return null;
         })
@@ -24,7 +65,6 @@ class ViewInvoice extends React.Component {
     }
 
 	render() {
-        console.log(this.state.invoice)
 		return (
 			<div className="view-invoice-outside-div">
 				<Navbar />
