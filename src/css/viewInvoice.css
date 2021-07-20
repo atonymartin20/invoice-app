@@ -56,7 +56,7 @@
     margin-top: 32px;
     margin-bottom: 24px;
     height: 88px;
-    width: 730px;
+    width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
     border-radius: 8px;
@@ -97,9 +97,91 @@
     font-weight: 700;
 }
 
-
 .view-invoices-option-bar-right-side{
     display: flex;
-    width: 250px;
-    background-color: blue;
+    width: 309px;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-button {
+    width: 73px;
+    height: 48px;
+    background: #F9FAFE;
+    border-radius: 24px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-button {
+    width: 89px;
+    height: 48px;
+    background: #EC5757;
+    border-radius: 24px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark-pending-button {
+    width: 131px;
+    height: 48px;
+    background: #FF8F00;
+    border-radius: 24px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark-paid-button {
+    width: 131px;
+    height: 48px;
+    background: #7C5DFA;
+    border-radius: 24px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-invoices-info-div {
+    width: 100%;
+    height: 631px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
 }
