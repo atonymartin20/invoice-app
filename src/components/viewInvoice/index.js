@@ -46,10 +46,15 @@ class ViewInvoice extends React.Component {
 								</div>
 
 								<div className='view-invoices-option-bar-right-side'>
+									<div className='edit-button'>Edit</div>
+									<div className='delete-button'>Delete</div>
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
 								</div>
 							</div>
 
 							<div className='view-invoices-info-div'>
+
 							</div>
 						</div>
 						
