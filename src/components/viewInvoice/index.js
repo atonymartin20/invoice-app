@@ -94,7 +94,55 @@ class ViewInvoice extends React.Component {
 							</div>
 
 							<div className='view-invoices-info-div'>
+								<div className='view-invoices-info-top-div'>
+									<div className='view-invoices-info-top-left-div'>
+										#{this.state.id}
+										{this.state.description}
+									</div>
 
+									<div className='view-invoices-info-top-right-div'>
+										{this.state.senderAddress['street']}
+										{this.state.senderAddress['city']}
+										{this.state.senderAddress['postCode']}
+										{this.state.senderAddress['country']}
+									</div>
+								</div>
+
+								<div className='view-invoices-info-middle-container-div'>
+									<div className='view-invoices-info-middle-container-left-div'>
+										Invoice Date
+										{this.state.createdAtDateDay} {this.state.months[this.state.createdAtDateMonth]} {this.state.createdAtDateYear}
+
+										Payment Due
+										{this.state.paymentDueDateDay} {this.state.months[this.state.paymentDueDateMonth]} {this.state.paymentDueDateYear}
+									</div>
+
+									<div className='view-invoices-info-middle-container-center-div'>
+										Bill To
+										{this.state.clientName}
+
+										{this.state.clientAddress['street']}
+										{this.state.clientAddress['city']}
+										{this.state.clientAddress['postCode']}
+										{this.state.clientAddress['country']}
+									</div>
+
+									<div className='view-invoices-info-middle-container-right-div'>
+										Sent to
+										{this.state.clientEmail}
+									</div>
+								</div>
+
+								<div className='view-invoices-info-bottom-container-div'>
+
+								</div>
+
+							{/* items: Array(2)
+							0: {name: "Banner Design", quantity: 1, price: 156, total: 156}
+							1: {name: "Email Design", quantity: 2, price: 200, total: 400} */}
+							{/* 
+							paymentTerms: 30
+							total: 556 */}
 							</div>
 						</div>
 						
