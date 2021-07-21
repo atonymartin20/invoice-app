@@ -113,26 +113,30 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-info-middle-container-div'>
 									<div className='view-invoices-info-middle-container-left-div'>
-										Invoice Date
-										{this.state.createdAtDateDay} {this.state.months[this.state.createdAtDateMonth]} {this.state.createdAtDateYear}
+										<div className='view-invoices-info-middle-container-left-spacing-div'>
+											<span>Invoice Date</span>
+											<span className='view-invoices-date-span'>{this.state.createdAtDateDay} {this.state.months[this.state.createdAtDateMonth]} {this.state.createdAtDateYear}</span>
+										</div>
 
-										Payment Due
-										{this.state.paymentDueDateDay} {this.state.months[this.state.paymentDueDateMonth]} {this.state.paymentDueDateYear}
+										<div className='view-invoices-info-middle-container-left-spacing-div'>
+											<span>Payment Due</span>
+											<span className='view-invoices-date-span'>{this.state.paymentDueDateDay} {this.state.months[this.state.paymentDueDateMonth]} {this.state.paymentDueDateYear}</span>
+										</div>
 									</div>
 
 									<div className='view-invoices-info-middle-container-center-div'>
-										Bill To
-										{this.state.clientName}
+										<span>Bill To</span>
+										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
 
-										{this.state.clientAddress['street']}
-										{this.state.clientAddress['city']}
-										{this.state.clientAddress['postCode']}
-										{this.state.clientAddress['country']}
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['street']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['city']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['postCode']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
 									</div>
 
 									<div className='view-invoices-info-middle-container-right-div'>
-										Sent to
-										{this.state.clientEmail}
+										<span>Sent to</span>
+										<span className='view-invoices-info-middle-container-right-div-client-email-span'>{this.state.clientEmail}</span>
 									</div>
 								</div>
 
