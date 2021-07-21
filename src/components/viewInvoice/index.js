@@ -64,7 +64,6 @@ class ViewInvoice extends React.Component {
             }
             return null;
         })
-
     }
 
 	render() {
@@ -140,16 +139,16 @@ class ViewInvoice extends React.Component {
 									</div>
 								</div>
 
-								<div className='view-invoices-info-bottom-container-div'>
-
-								</div>
-		                            <div className=''>
+								<div className='view-invoices-info-bottom-outside-div'>
 									{this.state.items.length > 0 ? 
-										<div>
-											Item Name
-											QTY.
-											Price
-											Total
+										<div className='view-invoices-info-bottom-container-div'>
+											<div className='view-invoices-info-bottom-container-labels-div'>
+												<span className='view-invoices-info-bottom-container-labels-item-name-span'>Item Name</span>
+												<span className='view-invoices-info-bottom-container-labels-qty-span'>QTY.</span>
+												<span className='view-invoices-info-bottom-container-labels-price-span'>Price</span>
+												<span className='view-invoices-info-bottom-container-labels-total-span'>Total</span>
+											</div>
+
 
 											{this.state.items.map(item => (
 												<ItemCard
@@ -159,20 +158,16 @@ class ViewInvoice extends React.Component {
 												/>
 											))}
 								
-											Amount Due
-											£ {this.state.total}
+											<div className='view-invoices-info-bottom-container-total-div'>
+												<span>Amount Due</span>
+												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
+											</div>
 										</div>
 
 										:
 											null
 									}
-									</div>
-							{/* items: Array(2)
-							0: {name: "Banner Design", quantity: 1, price: 156, total: 156}
-							1: {name: "Email Design", quantity: 2, price: 200, total: 400} */}
-							{/* 
-							paymentTerms: 30
-							total: 556 */}
+								</div>
 							</div>
 						</div>
 						
