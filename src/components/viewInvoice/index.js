@@ -4,7 +4,7 @@ import { AppContext } from '../context/appContext.js';
 import Navbar from '../navbar';
 import '../../css/viewInvoice.css';
 import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
-
+import ItemCard from './itemCard.js';
 
 class ViewInvoice extends React.Component {
 	state = {
@@ -39,6 +39,9 @@ class ViewInvoice extends React.Component {
 				let createdAtDateMonth = createdDate.getUTCMonth();
 				let createdAtDateDay = createdDate.getUTCDate();
 				let createdAtDateYear = createdDate.getFullYear();
+				let preciseTotal = invoice.total.toFixed(2);
+				let total = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
 				this.setState({
 					createdAtDateMonth,
 					createdAtDateDay,
@@ -56,7 +59,7 @@ class ViewInvoice extends React.Component {
 					paymentTerms: invoice.paymentTerms,
 					senderAddress: invoice.senderAddress,
 					status: invoice.status,
-					total: invoice.total
+					total
 				})
             }
             return null;
@@ -96,15 +99,15 @@ class ViewInvoice extends React.Component {
 							<div className='view-invoices-info-div'>
 								<div className='view-invoices-info-top-div'>
 									<div className='view-invoices-info-top-left-div'>
-										#{this.state.id}
-										{this.state.description}
+										<span className='view-invoices-info-top-left-div-id-span'>#<span className='black-span'>{this.state.id}</span></span>
+										<span className='view-invoices-info-top-left-div-description-span'>{this.state.description}</span>
 									</div>
 
 									<div className='view-invoices-info-top-right-div'>
-										{this.state.senderAddress['street']}
-										{this.state.senderAddress['city']}
-										{this.state.senderAddress['postCode']}
-										{this.state.senderAddress['country']}
+										<span>{this.state.senderAddress['street']}</span>
+										<span>{this.state.senderAddress['city']}</span>
+										<span>{this.state.senderAddress['postCode']}</span>
+										<span>{this.state.senderAddress['country']}</span>
 									</div>
 								</div>
 
@@ -136,7 +139,30 @@ class ViewInvoice extends React.Component {
 								<div className='view-invoices-info-bottom-container-div'>
 
 								</div>
+		                            <div className=''>
+									{this.state.items.length > 0 ? 
+										<div>
+											Item Name
+											QTY.
+											Price
+											Total
 
+											{this.state.items.map(item => (
+												<ItemCard
+													key={item['quantity'] + item['price']}
+													item={item}
+													// colorType='dark'
+												/>
+											))}
+								
+											Amount Due
+											£ {this.state.total}
+										</div>
+
+										:
+											null
+									}
+									</div>
 							{/* items: Array(2)
 							0: {name: "Banner Design", quantity: 1, price: 156, total: 156}
 							1: {name: "Email Design", quantity: 2, price: 200, total: 400} */}
