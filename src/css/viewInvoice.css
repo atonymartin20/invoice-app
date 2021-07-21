@@ -255,4 +255,104 @@
     width: 100%;
     height: 130px;
     margin-bottom: 45px;
+    display: flex;
+
+}
+
+.view-invoices-info-middle-container-left-div {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 96px;
+}
+
+.view-invoices-info-middle-container-left-spacing-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.view-invoices-info-middle-container-left-spacing-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.view-invoices-info-middle-container-left-spacing-div .view-invoices-date-span {
+    margin-top: 12px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 20px;
+    letter-spacing: -0.3125px;
+    color: #0C0E16;
+}
+
+.view-invoices-info-middle-container-center-div {
+    width: 130px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 73px;
+}
+
+.view-invoices-info-middle-container-center-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    color: #7E88C3;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.view-invoices-info-middle-container-center-div .view-invoices-info-middle-container-center-div-address-span {
+    font-size: 1.1rem;
+    line-height: 18px;
+    letter-spacing: -0.229167px;
+}
+
+.view-invoices-info-middle-container-center-div .view-invoices-info-middle-container-center-div-client-name-span {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 20px;
+    letter-spacing: -0.3125px;
+    color: #0C0E16;
+}
+
+.view-invoices-info-middle-container-right-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-invoices-info-middle-container-right-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.view-invoices-info-middle-container-right-div .view-invoices-info-middle-container-right-div-client-email-span {
+    margin-top: 12px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 20px;
+    letter-spacing: -0.3125px;
+    color: #0C0E16;
 }
