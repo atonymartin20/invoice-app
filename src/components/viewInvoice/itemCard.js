@@ -5,15 +5,29 @@ import '../../css/viewInvoice.css';
 class ItemCard extends React.Component {
 	state = {
         item: this.props.item,
+        price: '',
+        total: '',
 	};
+
+    componentDidMount() {
+        let precisePrice = this.state.item['price'].toFixed(2);
+        let preciseTotal = this.state.item['total'].toFixed(2);
+        let price = precisePrice.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        let total = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+        this.setState({
+            price,
+            total,
+        })
+    }
 
 	render() {
         return (
-            <div>
-                {this.state.item['name']}
-                {this.state.item['quantity']}
-                £ {this.state.item['price'].toFixed(2)}
-                £ {this.state.item['total'].toFixed(2)}
+            <div className='item-card-div'>
+                <span className='item-card-name-span'>{this.state.item['name']}</span>
+                <span className='item-card-quantity-span'>{this.state.item['quantity']}</span>
+                <span className='item-card-price-span'>£ {this.state.price}</span>
+                <span className='item-card-total-span'>£ {this.state.total}</span>
             </div>
         )
 	}
