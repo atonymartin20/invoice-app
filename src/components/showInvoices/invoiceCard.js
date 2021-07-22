@@ -42,7 +42,7 @@ class InvoiceCard extends React.Component {
         
         if (this.props.type === 'unfiltered' && this.props.colorType === 'dark') {
             return (
-                <div className="card-outside-div">
+                <div className="card-outside-div" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div-dark">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
@@ -53,7 +53,7 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
-                        <img src={RightArrowIcon} alt='right arrow' onClick={this.handleRedirect} />
+                        <img src={RightArrowIcon} alt='right arrow' />
                     </div>
                 </div>
             );
@@ -61,7 +61,7 @@ class InvoiceCard extends React.Component {
 
         else if (this.props.type === 'unfiltered' && this.props.colorType === 'light') {
             return (
-                <div className="card-outside-div">
+                <div className="card-outside-div" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div">
                         <span className='id-span'>#<span className='black-font-span'>{this.props.id}</span></span>
@@ -72,7 +72,7 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
-                        <img src={RightArrowIcon} alt='right arrow' onClick={this.handleRedirect} />
+                        <img src={RightArrowIcon} alt='right arrow' />
                     </div>
                 </div>
             );
@@ -80,7 +80,7 @@ class InvoiceCard extends React.Component {
 
         else if (this.props.type === 'filtered' && this.props.colorType === 'dark') {
             return (
-                <div className="card-outside-div-filtered">
+                <div className="card-outside-div-filtered" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div-dark">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
@@ -91,7 +91,7 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
-                        <img src={RightArrowIcon} alt='right arrow' onClick={this.handleRedirect} />
+                        <img src={RightArrowIcon} alt='right arrow' />
                     </div>
                 </div>
             );
@@ -99,7 +99,7 @@ class InvoiceCard extends React.Component {
 
         else {
             return (
-                <div className="card-outside-div-filtered">
+                <div className="card-outside-div-filtered" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div">
                         <span className='id-span'>#<span className='black-font-span'>{this.props.id}</span></span>
@@ -110,7 +110,7 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
-                        <img src={RightArrowIcon} alt='right arrow' onClick={this.handleRedirect} />
+                        <img src={RightArrowIcon} alt='right arrow' />
                     </div>
                 </div>
             );
