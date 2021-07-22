@@ -72,7 +72,100 @@ class ViewInvoice extends React.Component {
 				<Navbar />
 				{this.context.state.darkMode === true ? (
 					<div className="view-invoice-outside-container-div-dark-mode">
-                        test text
+						<div className='view-invoice-inside-container-div'>
+							<span className='go-back-span-dark-mode' onClick={this.handleRedirect}><img src={LeftArrowIcon} alt='left arrow' className='left-arrow-icon' /> Go back</span>
+							
+							<div className='view-invoices-option-bar-dark-mode'>
+								<div className='view-invoices-option-bar-left-side-dark-mode'>
+									<span>Status </span>
+										{this.state.invoice.status === 'draft' ? <div className='draft-status-div-dark-mode'><span className='status-span-draft-dark-mode'><div className='draft-ball-div-dark-mode' />{this.state.invoice.status}</span></div>: null }
+										{this.state.invoice.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.state.invoice.status}</span></div>: null }
+										{this.state.invoice.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.state.invoice.status}</span></div> : null }
+								</div>
+
+								<div className='view-invoices-option-bar-right-side'>
+									<div className='edit-button-dark-mode'>Edit</div>
+									<div className='delete-button'>Delete</div>
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
+								</div>
+							</div>
+
+							<div className='view-invoices-info-div'>
+								<div className='view-invoices-info-top-div'>
+									<div className='view-invoices-info-top-left-div'>
+										<span className='view-invoices-info-top-left-div-id-span'>#<span className='black-span'>{this.state.id}</span></span>
+										<span className='view-invoices-info-top-left-div-description-span'>{this.state.description}</span>
+									</div>
+
+									<div className='view-invoices-info-top-right-div'>
+										<span>{this.state.senderAddress['street']}</span>
+										<span>{this.state.senderAddress['city']}</span>
+										<span>{this.state.senderAddress['postCode']}</span>
+										<span>{this.state.senderAddress['country']}</span>
+									</div>
+								</div>
+
+								<div className='view-invoices-info-middle-container-div'>
+									<div className='view-invoices-info-middle-container-left-div'>
+										<div className='view-invoices-info-middle-container-left-spacing-div'>
+											<span>Invoice Date</span>
+											<span className='view-invoices-date-span'>{this.state.createdAtDateDay} {this.state.months[this.state.createdAtDateMonth]} {this.state.createdAtDateYear}</span>
+										</div>
+
+										<div className='view-invoices-info-middle-container-left-spacing-div'>
+											<span>Payment Due</span>
+											<span className='view-invoices-date-span'>{this.state.paymentDueDateDay} {this.state.months[this.state.paymentDueDateMonth]} {this.state.paymentDueDateYear}</span>
+										</div>
+									</div>
+
+									<div className='view-invoices-info-middle-container-center-div'>
+										<span>Bill To</span>
+										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
+
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['street']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['city']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['postCode']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
+									</div>
+
+									<div className='view-invoices-info-middle-container-right-div'>
+										<span>Sent to</span>
+										<span className='view-invoices-info-middle-container-right-div-client-email-span'>{this.state.clientEmail}</span>
+									</div>
+								</div>
+
+								<div className='view-invoices-info-bottom-outside-div'>
+									{this.state.items.length > 0 ? 
+										<div className='view-invoices-info-bottom-container-div'>
+											<div className='view-invoices-info-bottom-container-labels-div'>
+												<span className='view-invoices-info-bottom-container-labels-item-name-span'>Item Name</span>
+												<span className='view-invoices-info-bottom-container-labels-qty-span'>QTY.</span>
+												<span className='view-invoices-info-bottom-container-labels-price-span'>Price</span>
+												<span className='view-invoices-info-bottom-container-labels-total-span'>Total</span>
+											</div>
+
+
+											{this.state.items.map(item => (
+												<ItemCard
+													key={item['quantity'] + item['price']}
+													item={item}
+													// colorType='dark'
+												/>
+											))}
+								
+											<div className='view-invoices-info-bottom-container-total-div'>
+												<span>Amount Due</span>
+												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
+											</div>
+										</div>
+
+										:
+											null
+									}
+								</div>
+							</div>
+						</div>
 					</div>
 				) : (
 					<div className="view-invoice-outside-container-div">
@@ -164,14 +257,12 @@ class ViewInvoice extends React.Component {
 											</div>
 										</div>
 
-										:
-											null
+									:
+										null
 									}
 								</div>
 							</div>
 						</div>
-						
-
 					</div>
 				)}
 			</div>
