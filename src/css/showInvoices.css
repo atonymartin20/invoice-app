@@ -37,12 +37,14 @@
 .card-outside-div {
     width: 730px;
     height: 72px;
+    cursor: pointer;
 }
 
 .card-outside-div-filtered {
     width: 730px;
     height: 72px;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .card-inside-div {
