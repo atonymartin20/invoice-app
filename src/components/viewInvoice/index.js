@@ -91,14 +91,14 @@ class ViewInvoice extends React.Component {
 								</div>
 							</div>
 
-							<div className='view-invoices-info-div'>
+							<div className='view-invoices-info-div-dark-mode'>
 								<div className='view-invoices-info-top-div'>
 									<div className='view-invoices-info-top-left-div'>
-										<span className='view-invoices-info-top-left-div-id-span'>#<span className='black-span'>{this.state.id}</span></span>
-										<span className='view-invoices-info-top-left-div-description-span'>{this.state.description}</span>
+										<span className='view-invoices-info-top-left-div-id-span'>#<span className='white-span'>{this.state.id}</span></span>
+										<span className='view-invoices-info-top-left-div-description-span-dark-mode'>{this.state.description}</span>
 									</div>
 
-									<div className='view-invoices-info-top-right-div'>
+									<div className='view-invoices-info-top-right-div-dark-mode'>
 										<span>{this.state.senderAddress['street']}</span>
 										<span>{this.state.senderAddress['city']}</span>
 										<span>{this.state.senderAddress['postCode']}</span>
@@ -108,18 +108,18 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-info-middle-container-div'>
 									<div className='view-invoices-info-middle-container-left-div'>
-										<div className='view-invoices-info-middle-container-left-spacing-div'>
+										<div className='view-invoices-info-middle-container-left-spacing-div-dark-mode'>
 											<span>Invoice Date</span>
 											<span className='view-invoices-date-span'>{this.state.createdAtDateDay} {this.state.months[this.state.createdAtDateMonth]} {this.state.createdAtDateYear}</span>
 										</div>
 
-										<div className='view-invoices-info-middle-container-left-spacing-div'>
+										<div className='view-invoices-info-middle-container-left-spacing-div-dark-mode'>
 											<span>Payment Due</span>
 											<span className='view-invoices-date-span'>{this.state.paymentDueDateDay} {this.state.months[this.state.paymentDueDateMonth]} {this.state.paymentDueDateYear}</span>
 										</div>
 									</div>
 
-									<div className='view-invoices-info-middle-container-center-div'>
+									<div className='view-invoices-info-middle-container-center-div-dark-mode'>
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
 
@@ -129,16 +129,16 @@ class ViewInvoice extends React.Component {
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
 									</div>
 
-									<div className='view-invoices-info-middle-container-right-div'>
+									<div className='view-invoices-info-middle-container-right-div-dark-mode'>
 										<span>Sent to</span>
 										<span className='view-invoices-info-middle-container-right-div-client-email-span'>{this.state.clientEmail}</span>
 									</div>
 								</div>
 
-								<div className='view-invoices-info-bottom-outside-div'>
+								<div className='view-invoices-info-bottom-outside-div-dark-mode'>
 									{this.state.items.length > 0 ? 
 										<div className='view-invoices-info-bottom-container-div'>
-											<div className='view-invoices-info-bottom-container-labels-div'>
+											<div className='view-invoices-info-bottom-container-labels-div-dark-mode'>
 												<span className='view-invoices-info-bottom-container-labels-item-name-span'>Item Name</span>
 												<span className='view-invoices-info-bottom-container-labels-qty-span'>QTY.</span>
 												<span className='view-invoices-info-bottom-container-labels-price-span'>Price</span>
@@ -150,11 +150,11 @@ class ViewInvoice extends React.Component {
 												<ItemCard
 													key={item['quantity'] + item['price']}
 													item={item}
-													// colorType='dark'
+													colorType='dark'
 												/>
 											))}
 								
-											<div className='view-invoices-info-bottom-container-total-div'>
+											<div className='view-invoices-info-bottom-container-total-div-dark-mode'>
 												<span>Amount Due</span>
 												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
 											</div>
