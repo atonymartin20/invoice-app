@@ -5,6 +5,7 @@ export const AppContext = React.createContext();
 export default class AppProvider extends Component {
 	state = {
 		darkMode: false,
+		grayMode: false,
 		invoiceCount: 0,
 		draftInvoiceCount: 0,
 		paidInvoiceCount: 0,
@@ -260,6 +261,17 @@ export default class AppProvider extends Component {
 						this.setState({
 							darkMode: false,
 						});
+					},
+					switchToGrayMode: () => {
+						console.log('Gray Mode active')
+						this.setState({
+							grayMode: true,
+						})
+					},
+					closeGrayMode: () => {
+						this.setState({
+							grayMode: false,
+						})
 					},
 					setInvoiceCount: (newInvoiceCount) => {
 						this.setState({
