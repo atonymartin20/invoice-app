@@ -17,6 +17,7 @@ class MyNavbar extends React.Component {
 
     handleRedirect = (event) => {
         event.preventDefault();
+        this.context.closeGrayMode();
         this.setState({
             redirect: true
         })
@@ -38,7 +39,7 @@ class MyNavbar extends React.Component {
         })
     }
 
-    render() {
+    render() { 
         if (this.context.state.darkMode === true || this.state.darkMode === true) {
             return(
                 <Navbar className='dark-navbar'>

@@ -54,6 +54,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.draftInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
@@ -86,6 +87,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.pendingInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
@@ -118,6 +120,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.paidInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
@@ -186,6 +189,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.draftInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
@@ -218,6 +222,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.pendingInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
@@ -250,6 +255,7 @@ class InvoicesContainer extends React.Component {
 									<>
 										{this.context.state.paidInvoices.map(invoice => (
 											<InvoiceCard
+												key={invoice.id}
 												id={invoice.id}
 												paymentDue={invoice.paymentDue}
 												clientName={invoice.clientName}
