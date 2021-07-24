@@ -1,6 +1,7 @@
 .view-invoice-outside-div {
     display: flex;
     height: 908px;
+    width: 100%;
 }
 
 .view-invoice-outside-container-div {
