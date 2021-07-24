@@ -5,6 +5,7 @@ import Navbar from '../navbar';
 import '../../css/viewInvoice.css';
 import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
 import ItemCard from './itemCard.js';
+import EditInvoice from '../editInvoice';
 
 class ViewInvoice extends React.Component {
 	state = {
@@ -26,6 +27,7 @@ class ViewInvoice extends React.Component {
 		senderAddress: {},
 		status: '',
 		total: 0,
+		openEditPage: false,
 	};
 
     componentDidMount() {
@@ -66,10 +68,27 @@ class ViewInvoice extends React.Component {
         })
     }
 
+	openEditInvoice = (event) => {
+		event.preventDefault();
+		this.context.switchToGrayMode();
+		this.setState({
+			openEditPage: true,
+		})
+	}
+
+	closeEditInvoice = (event) => {
+		event.preventDefault();
+		this.context.closeGrayMode();
+		this.setState({
+			openEditPage: false,
+		})
+	}
+
 	render() {
 		return (
 			<div className="view-invoice-outside-div">
 				<Navbar />
+				{this.state.openEditPage === true ? <EditInvoice closeEditInvoice={this.closeEditInvoice} id={this.state.id} /> : null}
 				{this.context.state.darkMode === true ? (
 					<div className="view-invoice-outside-container-div-dark-mode">
 						<div className='view-invoice-inside-container-div'>
@@ -84,7 +103,7 @@ class ViewInvoice extends React.Component {
 								</div>
 
 								<div className='view-invoices-option-bar-right-side'>
-									<div className='edit-button-dark-mode'>Edit</div>
+									<div className='edit-button-dark-mode' onClick={this.openEditInvoice}>Edit</div>
 									<div className='delete-button'>Delete</div>
 									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
 									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
@@ -181,7 +200,7 @@ class ViewInvoice extends React.Component {
 								</div>
 
 								<div className='view-invoices-option-bar-right-side'>
-									<div className='edit-button'>Edit</div>
+									<div className='edit-button' onClick={this.openEditInvoice}>Edit</div>
 									<div className='delete-button'>Delete</div>
 									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
 									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
@@ -247,7 +266,7 @@ class ViewInvoice extends React.Component {
 												<ItemCard
 													key={item['quantity'] + item['price']}
 													item={item}
-													// colorType='dark'
+													colorType='light'
 												/>
 											))}
 								
