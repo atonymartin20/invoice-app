@@ -117,7 +117,38 @@ class EditInvoice extends React.Component {
 							</div>
 
 							<div className='edit-invoice-bill-to-div'>
+								<h5>Bill To</h5>
+								<div className='edit-invoice-bill-to-client-name-div'>
+									<span>Client's Name</span>
+									<input />
+								</div>
 
+								<div className='edit-invoice-bill-to-client-email-div'>
+									<span>Client's Email</span>
+									<input />
+								</div>
+
+								<div className='edit-invoice-bill-to-street-address-div'>
+									<span>Street Address</span>
+									<input />
+								</div>
+
+								<div className='edit-invoice-bill-to-city-post-code-country-div'>
+									<div className='edit-invoice-bill-to-city-div'>
+										<span>City</span>
+										<input />
+									</div>
+
+									<div className='edit-invoice-bill-to-post-code-div'>
+										<span>Post Code</span>
+										<input />
+									</div>
+
+									<div className='edit-invoice-bill-to-country-div'>
+										<span>Country</span>
+										<input />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
