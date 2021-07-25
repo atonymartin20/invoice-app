@@ -224,3 +224,239 @@
     color: #0C0E16;
     width: 100%;
 }
+
+.edit-invoice-bill-to-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    width: 100%;
+    height: 403px;
+}
+
+.edit-invoice-bill-to-div h5 {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7C5DFA;
+    margin-bottom: 24px;
+}
+
+.edit-invoice-bill-to-client-name-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 73px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.edit-invoice-bill-to-client-name-div span{
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-client-name-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
+
+.edit-invoice-bill-to-client-email-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 73px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.edit-invoice-bill-to-client-email-div span{
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-client-email-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
+
+.edit-invoice-bill-to-street-address-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 73px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.edit-invoice-bill-to-street-address-div span{
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-street-address-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
+
+.edit-invoice-bill-to-city-post-code-country-div {
+    height: 73px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.edit-invoice-bill-to-city-div {
+    height: 73px;
+    width: 33%;
+    max-width: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit-invoice-bill-to-city-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-city-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
+
+.edit-invoice-bill-to-post-code-div {
+    height: 73px;
+    width: 33%;
+    max-width: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit-invoice-bill-to-post-code-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-post-code-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
+
+.edit-invoice-bill-to-country-div {
+    height: 73px;
+    width: 33%;
+    max-width: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit-invoice-bill-to-country-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.edit-invoice-bill-to-country-div input {
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DFE3FA;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    width: 100%;
+}
