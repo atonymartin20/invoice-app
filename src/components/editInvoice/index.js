@@ -3,6 +3,7 @@ import { AppContext } from '../context/appContext.js';
 
 import Navbar from '../navbar';
 import '../../css/editInvoice.css';
+import DownArrowIcon from '../../assets/icon-arrow-down.svg';
 
 class EditInvoice extends React.Component {
 	state = {
@@ -26,6 +27,7 @@ class EditInvoice extends React.Component {
 		senderAddress: {},
 		status: '',
 		total: 0,
+		showOptions: false,
 	};
 
     componentDidMount() {
@@ -67,6 +69,13 @@ class EditInvoice extends React.Component {
             return null;
         })
     }
+
+	flipOptions = (event) => {
+		event.preventDefault();
+		this.setState({
+			showOptions: !this.state.showOptions
+		})
+	}
 
 	render() {
 		if (this.context.state.darkMode === true) {
@@ -159,12 +168,34 @@ class EditInvoice extends React.Component {
 
 								<div className='edit-invoice-payment-terms-div'>
 									<span>Payment Terms</span>
-									<select name='' className=''>
-										<option value=''>Net 1 Day</option>
-										<option value=''>Net 7 Days</option>
-										<option value=''>Net 14 Days</option>
-										<option value=''>Net 30 Days</option>
-									</select>
+									{this.state.showOptions === true ? 
+										<div className='edit-invoice-payment-terms-custom-select-container-div'>
+											<div className='edit-invoice-payment-terms-custom-select' onClick={this.flipOptions}>
+												{this.state.paymentTerms > 1 ? 
+													<span>Net {this.state.paymentTerms} Days</span>
+												:
+													<span>Net {this.state.paymentTerms} Day</span>
+												}
+												<img src={DownArrowIcon} alt='up-arrow' className='down-arrow-icon-reversed' />
+											</div>
+
+											<div className='edit-invoice-payment-terms-custom-select-option-container-div'>
+												<span value='1'>Net 1 Day</span>
+												<span value='7'>Net 7 Days</span>
+												<span value='14'>Net 14 Days</span>
+												<span value='30'>Net 30 Days</span>
+											</div>
+										</div>
+									:
+										<div className='edit-invoice-payment-terms-custom-select' onClick={this.flipOptions}>
+											{this.state.paymentTerms > 1 ? 
+												<span>Net {this.state.paymentTerms} Days</span>
+											:
+												<span>Net {this.state.paymentTerms} Day</span>
+											}
+											<img src={DownArrowIcon} alt='down-arrow' className='down-arrow-icon' />
+										</div>
+									}
 								</div>
 							</div>
 
