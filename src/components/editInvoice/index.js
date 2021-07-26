@@ -150,6 +150,28 @@ class EditInvoice extends React.Component {
 									</div>
 								</div>
 							</div>
+
+							<div className='edit-invoice-invoice-date-payment-terms-div'>
+								<div className='edit-invoice-invoice-date-div'>
+									<span>Invoice Date</span>
+									<input />
+								</div>
+
+								<div className='edit-invoice-payment-terms-div'>
+									<span>Payment Terms</span>
+									<select name='' className=''>
+										<option value=''>Net 1 Day</option>
+										<option value=''>Net 7 Days</option>
+										<option value=''>Net 14 Days</option>
+										<option value=''>Net 30 Days</option>
+									</select>
+								</div>
+							</div>
+
+							<div className='edit-invoice-project-description-div'>
+								<span>Project Description</span>
+								<input />
+							</div>
 						</div>
 					</div>
 				</div>
