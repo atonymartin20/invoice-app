@@ -203,6 +203,16 @@ class EditInvoice extends React.Component {
 								<span>Project Description</span>
 								<input />
 							</div>
+
+							<div className='edit-invoice-item-list-div'>
+								<h2>Item List</h2>
+								<div className='edit-invoice-item-list-labels-div'>
+									<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+									<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+									<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+									<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
