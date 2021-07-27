@@ -263,7 +263,6 @@ export default class AppProvider extends Component {
 						});
 					},
 					switchToGrayMode: () => {
-						console.log('Gray Mode active')
 						this.setState({
 							grayMode: true,
 						})

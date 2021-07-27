@@ -4,6 +4,7 @@ import { AppContext } from '../context/appContext.js';
 import Navbar from '../navbar';
 import '../../css/editInvoice.css';
 import DownArrowIcon from '../../assets/icon-arrow-down.svg';
+import EditItemCard from './editItemCard.js';
 
 class EditInvoice extends React.Component {
 	state = {
@@ -203,14 +204,47 @@ class EditInvoice extends React.Component {
 								<span>Project Description</span>
 								<input />
 							</div>
-
-							<div className='edit-invoice-item-list-div'>
-								<h2>Item List</h2>
-								<div className='edit-invoice-item-list-labels-div'>
-									<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
-									<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
-									<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
-									<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+							
+							{this.state.items.length > 0 ? 
+								<div className='edit-invoice-item-list-div'>
+									<h2>Item List</h2>
+									<div className='edit-invoice-item-list-labels-div'>
+										<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+										<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+										<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+										<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+									</div>
+									{this.state.items.map(item => (
+										<EditItemCard
+											key={item['quantity'] + item['price']}
+											item={item}
+											colorType='light'
+										/>
+									))}
+									<div className='edit-invoice-add-new-item-div'>
+										+ Add New Item	
+									</div>
+								</div>
+							:
+								<div className='edit-invoice-item-list-div'>
+									<h2>Item List</h2>
+									<div className='edit-invoice-item-list-labels-div'>
+										<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+										<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+										<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+										<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+									</div>
+									<div className='edit-invoice-add-new-item-div'>
+										<span>+ Add New Item</span>	
+									</div>
+								</div>				
+							}
+							<div className='edit-invoice-bottom-buttons-div'>
+								<div className='edit-invoice-bottom-button-cancel-div'>
+									<span>Cancel</span>
+								</div>
+								<div className='edit-invoice-bottom-button-save-div'>
+									<span>Save Changes</span>
 								</div>
 							</div>
 						</div>
