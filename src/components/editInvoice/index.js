@@ -17,6 +17,10 @@ class EditInvoice extends React.Component {
 		paymentDueDateMonth: null,
 		paymentDueDateYear: null,
 		clientAddress: {},
+		clientAddressCity: '',
+		clientAddressCountry: '',
+		clientAddressPostCode: '',
+		clientAddressStreet: '',
 		clientEmail: '',
 		clientName: '',
 		createdAt: '',
@@ -26,6 +30,10 @@ class EditInvoice extends React.Component {
 		paymentDue: '',
 		paymentTerms: 0,
 		senderAddress: {},
+		senderAddressCity: '',
+		senderAddressCountry: '',
+		senderAddressPostCode: '',
+		senderAddressStreet: '',
 		status: '',
 		total: 0,
 		showOptions: false,
@@ -54,6 +62,10 @@ class EditInvoice extends React.Component {
 					paymentDueDateYear,
 					invoice,
 					clientAddress: invoice.clientAddress,
+					clientAddressCity: invoice.clientAddress['city'],
+					clientAddressCountry: invoice.clientAddress['country'],
+					clientAddressPostCode: invoice.clientAddress['postCode'],
+					clientAddressStreet: invoice.clientAddress['street'],
 					clientEmail: invoice.clientEmail,
 					clientName: invoice.clientName,
 					createdAt: invoice.createdAt,
@@ -63,6 +75,10 @@ class EditInvoice extends React.Component {
 					paymentDue: invoice.paymentDue,
 					paymentTerms: invoice.paymentTerms,
 					senderAddress: invoice.senderAddress,
+					senderAddressCity: invoice.senderAddress['city'],
+					senderAddressCountry: invoice.senderAddress['country'],
+					senderAddressPostCode: invoice.senderAddress['postCode'],
+					senderAddressStreet: invoice.senderAddress['street'],
 					status: invoice.status,
 					total
 				})
@@ -78,7 +94,23 @@ class EditInvoice extends React.Component {
 		})
 	}
 
+	inputHandler = (event) => {
+		event.preventDefault();
+		const target = event.target;
+		this.setState({
+			[target.name]: target.value
+		});
+	  }
+
+	updatePaymentTerms = (value) => {
+		this.setState({
+			paymentTerms: value,
+			showOptions: !this.state.showOptions
+		})
+	}
+
 	render() {
+		console.log(this.state)
 		if (this.context.state.darkMode === true) {
 			return (
 				<div className="edit-invoice-outside-div">
@@ -106,22 +138,22 @@ class EditInvoice extends React.Component {
 								<h5>Bill From</h5>
 								<div className='edit-invoice-bill-from-street-address-div'>
 									<span>Street Address</span>
-									<input />
+									<input type='text' id='senderAddressStreet' name='senderAddressStreet' value={this.state.senderAddressStreet} onChange={this.inputHandler} />
 								</div>
 								<div className='edit-invoice-bill-from-city-post-code-country-div'>
 									<div className='edit-invoice-bill-from-city-div'>
 										<span>City</span>
-										<input />
+										<input type='text' id='senderAddressCity' name='senderAddressCity' value={this.state.senderAddressCity} onChange={this.inputHandler} />
 									</div>
 
 									<div className='edit-invoice-bill-from-post-code-div'>
 										<span>Post Code</span>
-										<input />
+										<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.state.senderAddressPostCode} onChange={this.inputHandler}/>
 									</div>
 
 									<div className='edit-invoice-bill-from-country-div'>
 										<span>Country</span>
-										<input />
+										<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.state.senderAddressCountry} onChange={this.inputHandler} />
 									</div>
 								</div>
 							</div>
@@ -130,33 +162,33 @@ class EditInvoice extends React.Component {
 								<h5>Bill To</h5>
 								<div className='edit-invoice-bill-to-client-name-div'>
 									<span>Client's Name</span>
-									<input />
+									<input type='text' id='clientName' name='clientName' value={this.state.clientName} onChange={this.inputHandler} />
 								</div>
 
 								<div className='edit-invoice-bill-to-client-email-div'>
 									<span>Client's Email</span>
-									<input />
+									<input type='text' id='clientEmail' name='clientEmail' value={this.state.clientEmail} onChange={this.inputHandler} />
 								</div>
 
 								<div className='edit-invoice-bill-to-street-address-div'>
 									<span>Street Address</span>
-									<input />
+									<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.state.clientAddressStreet} onChange={this.inputHandler} />
 								</div>
 
 								<div className='edit-invoice-bill-to-city-post-code-country-div'>
 									<div className='edit-invoice-bill-to-city-div'>
 										<span>City</span>
-										<input />
+										<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.state.clientAddressCity} onChange={this.inputHandler} />
 									</div>
 
 									<div className='edit-invoice-bill-to-post-code-div'>
 										<span>Post Code</span>
-										<input />
+										<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.state.clientAddressPostCode} onChange={this.inputHandler}/>
 									</div>
 
 									<div className='edit-invoice-bill-to-country-div'>
 										<span>Country</span>
-										<input />
+										<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.state.clientAddressCountry} onChange={this.inputHandler} />
 									</div>
 								</div>
 							</div>
@@ -164,7 +196,7 @@ class EditInvoice extends React.Component {
 							<div className='edit-invoice-invoice-date-payment-terms-div'>
 								<div className='edit-invoice-invoice-date-div'>
 									<span>Invoice Date</span>
-									<input />
+									<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.state.createdAt} onChange={this.inputHandler} />
 								</div>
 
 								<div className='edit-invoice-payment-terms-div'>
@@ -181,10 +213,10 @@ class EditInvoice extends React.Component {
 											</div>
 
 											<div className='edit-invoice-payment-terms-custom-select-option-container-div'>
-												<span value='1'>Net 1 Day</span>
-												<span value='7'>Net 7 Days</span>
-												<span value='14'>Net 14 Days</span>
-												<span value='30'>Net 30 Days</span>
+												<span onClick={() => this.updatePaymentTerms(1)}>Net 1 Day</span>
+												<span onClick={() => this.updatePaymentTerms(7)}>Net 7 Days</span>
+												<span onClick={() => this.updatePaymentTerms(14)}>Net 14 Days</span>
+												<span onClick={() => this.updatePaymentTerms(30)}>Net 30 Days</span>
 											</div>
 										</div>
 									:
@@ -202,7 +234,7 @@ class EditInvoice extends React.Component {
 
 							<div className='edit-invoice-project-description-div'>
 								<span>Project Description</span>
-								<input />
+								<input type='text' id='description' name='description' value={this.state.description} onChange={this.inputHandler} />
 							</div>
 							
 							{this.state.items.length > 0 ? 
