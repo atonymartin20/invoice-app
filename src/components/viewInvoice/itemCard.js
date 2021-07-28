@@ -10,8 +10,8 @@ class ItemCard extends React.Component {
 	};
 
     componentDidMount() {
-        let precisePrice = this.state.item['price'].toFixed(2);
-        let preciseTotal = this.state.item['total'].toFixed(2);
+        let precisePrice = Number(this.state.item['price']).toFixed(2);
+        let preciseTotal = Number(this.state.item['total']).toFixed(2);
         let price = precisePrice.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         let total = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
