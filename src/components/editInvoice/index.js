@@ -4,7 +4,6 @@ import { AppContext } from '../context/appContext.js';
 import Navbar from '../navbar';
 import '../../css/editInvoice.css';
 import DownArrowIcon from '../../assets/icon-arrow-down.svg';
-import EditItemCard from './editItemCard.js';
 import DeleteIcon from '../../assets/icon-delete.svg';
 
 class EditInvoice extends React.Component {
