@@ -63,7 +63,6 @@ class ViewInvoice extends React.Component {
 	componentDidMount() {
 		this.context.state.invoices.map((invoice, index) => {
             if(invoice.id === this.props.location.state.id) {
-				console.log(invoice)
 				let payDate = new Date(invoice.paymentDue);
 				let createdDate = new Date(invoice.createdAt)
 				let paymentDueDateMonth = payDate.getUTCMonth();
@@ -397,14 +396,6 @@ class ViewInvoice extends React.Component {
         })
 	}
 
-	openEditInvoice = (event) => {
-		event.preventDefault();
-		this.context.switchToGrayMode();
-		this.setState({
-			openEditPage: true,
-		})
-	}
-
 	addItem = (event) => {
 		event.preventDefault();
 		let items = this.state.items;
@@ -412,6 +403,300 @@ class ViewInvoice extends React.Component {
 
 		this.setState({
 			items
+		})
+	}
+
+	cancelUpdates = () => {
+		let originalInvoice = this.state.originalInvoice
+
+		if(originalInvoice.items.length > 0) {
+			if (originalInvoice.items.length === 1) {
+				let item0name = originalInvoice.items[0].name
+				let item0quantity = originalInvoice.items[0].quantity
+				let item0price = originalInvoice.items[0].price
+				let item0total = originalInvoice.items[0].total
+
+				this.setState({
+					invoice: originalInvoice,
+					clientAddress: originalInvoice.clientAddress,
+					clientAddressStreet: originalInvoice.clientAddress.street,
+					clientAddressCity: originalInvoice.clientAddress.city,
+					clientAddressPostCode: originalInvoice.clientAddress.postCode,
+					clientAddressCountry: originalInvoice.clientAddress.country,
+					clientEmail: originalInvoice.clientEmail,
+					clientName: originalInvoice.clientName,
+					createdAt: originalInvoice.createdAt,
+					description: originalInvoice.description,
+					id: originalInvoice.id,
+					items: originalInvoice.items,
+					paymentTerms: originalInvoice.paymentTerms,
+					senderAddress: originalInvoice.senderAddress,
+					senderAddressStreet: originalInvoice.senderAddress.street,
+					senderAddressCity: originalInvoice.senderAddress.city,
+					senderAddressPostCode: originalInvoice.senderAddress.postCode,
+					senderAddressCountry: originalInvoice.senderAddress.country,
+					status: originalInvoice.status,
+					total: Number(originalInvoice.total).toFixed(2),
+					openEditPage: false,
+					item0name,
+					item0quantity,
+					item0price,
+					item0total,
+				})
+			}
+
+			if (originalInvoice.items.length === 2) {
+				let item0name = originalInvoice.items[0].name
+				let item0quantity = originalInvoice.items[0].quantity
+				let item0price = originalInvoice.items[0].price
+				let item0total = originalInvoice.items[0].total
+				let item1name = originalInvoice.items[1].name
+				let item1quantity = originalInvoice.items[1].quantity
+				let item1price = originalInvoice.items[1].price
+				let item1total = originalInvoice.items[1].total
+
+				this.setState({
+					invoice: originalInvoice,
+					clientAddress: originalInvoice.clientAddress,
+					clientAddressStreet: originalInvoice.clientAddress.street,
+					clientAddressCity: originalInvoice.clientAddress.city,
+					clientAddressPostCode: originalInvoice.clientAddress.postCode,
+					clientAddressCountry: originalInvoice.clientAddress.country,
+					clientEmail: originalInvoice.clientEmail,
+					clientName: originalInvoice.clientName,
+					createdAt: originalInvoice.createdAt,
+					description: originalInvoice.description,
+					id: originalInvoice.id,
+					items: originalInvoice.items,
+					paymentTerms: originalInvoice.paymentTerms,
+					senderAddress: originalInvoice.senderAddress,
+					senderAddressStreet: originalInvoice.senderAddress.street,
+					senderAddressCity: originalInvoice.senderAddress.city,
+					senderAddressPostCode: originalInvoice.senderAddress.postCode,
+					senderAddressCountry: originalInvoice.senderAddress.country,
+					status: originalInvoice.status,
+					total: Number(originalInvoice.total).toFixed(2),
+					openEditPage: false,
+					item0name,
+					item0quantity,
+					item0price,
+					item0total,
+					item1name,
+					item1quantity,
+					item1price,
+					item1total,
+				})
+			}
+
+			if (originalInvoice.items.length === 3) {
+				let item0name = originalInvoice.items[0].name
+				let item0quantity = originalInvoice.items[0].quantity
+				let item0price = originalInvoice.items[0].price
+				let item0total = originalInvoice.items[0].total
+				let item1name = originalInvoice.items[1].name
+				let item1quantity = originalInvoice.items[1].quantity
+				let item1price = originalInvoice.items[1].price
+				let item1total = originalInvoice.items[1].total
+				let item2name = originalInvoice.items[2].name
+				let item2quantity = originalInvoice.items[2].quantity
+				let item2price = originalInvoice.items[2].price
+				let item2total = originalInvoice.items[2].total
+
+				this.setState({
+					invoice: originalInvoice,
+					clientAddress: originalInvoice.clientAddress,
+					clientAddressStreet: originalInvoice.clientAddress.street,
+					clientAddressCity: originalInvoice.clientAddress.city,
+					clientAddressPostCode: originalInvoice.clientAddress.postCode,
+					clientAddressCountry: originalInvoice.clientAddress.country,
+					clientEmail: originalInvoice.clientEmail,
+					clientName: originalInvoice.clientName,
+					createdAt: originalInvoice.createdAt,
+					description: originalInvoice.description,
+					id: originalInvoice.id,
+					items: originalInvoice.items,
+					paymentTerms: originalInvoice.paymentTerms,
+					senderAddress: originalInvoice.senderAddress,
+					senderAddressStreet: originalInvoice.senderAddress.street,
+					senderAddressCity: originalInvoice.senderAddress.city,
+					senderAddressPostCode: originalInvoice.senderAddress.postCode,
+					senderAddressCountry: originalInvoice.senderAddress.country,
+					status: originalInvoice.status,
+					total: Number(originalInvoice.total).toFixed(2),
+					openEditPage: false,
+					item0name,
+					item0quantity,
+					item0price,
+					item0total,
+					item1name,
+					item1quantity,
+					item1price,
+					item1total,
+					item2name,
+					item2quantity,
+					item2price,
+					item2total,
+				})
+			}
+
+			if (originalInvoice.items.length === 4) {
+				let item0name = originalInvoice.items[0].name
+				let item0quantity = originalInvoice.items[0].quantity
+				let item0price = originalInvoice.items[0].price
+				let item0total = originalInvoice.items[0].total
+				let item1name = originalInvoice.items[1].name
+				let item1quantity = originalInvoice.items[1].quantity
+				let item1price = originalInvoice.items[1].price
+				let item1total = originalInvoice.items[1].total
+				let item2name = originalInvoice.items[2].name
+				let item2quantity = originalInvoice.items[2].quantity
+				let item2price = originalInvoice.items[2].price
+				let item2total = originalInvoice.items[2].total
+				let item3name = originalInvoice.items[3].name
+				let item3quantity = originalInvoice.items[3].quantity
+				let item3price = originalInvoice.items[3].price
+				let item3total = originalInvoice.items[3].total
+
+				this.setState({
+					invoice: originalInvoice,
+					clientAddress: originalInvoice.clientAddress,
+					clientAddressStreet: originalInvoice.clientAddress.street,
+					clientAddressCity: originalInvoice.clientAddress.city,
+					clientAddressPostCode: originalInvoice.clientAddress.postCode,
+					clientAddressCountry: originalInvoice.clientAddress.country,
+					clientEmail: originalInvoice.clientEmail,
+					clientName: originalInvoice.clientName,
+					createdAt: originalInvoice.createdAt,
+					description: originalInvoice.description,
+					id: originalInvoice.id,
+					items: originalInvoice.items,
+					paymentTerms: originalInvoice.paymentTerms,
+					senderAddress: originalInvoice.senderAddress,
+					senderAddressStreet: originalInvoice.senderAddress.street,
+					senderAddressCity: originalInvoice.senderAddress.city,
+					senderAddressPostCode: originalInvoice.senderAddress.postCode,
+					senderAddressCountry: originalInvoice.senderAddress.country,
+					status: originalInvoice.status,
+					total: Number(originalInvoice.total).toFixed(2),
+					openEditPage: false,
+					item0name,
+					item0quantity,
+					item0price,
+					item0total,
+					item1name,
+					item1quantity,
+					item1price,
+					item1total,
+					item2name,
+					item2quantity,
+					item2price,
+					item2total,
+					item3name,
+					item3quantity,
+					item3price,
+					item3total,
+				})
+			}
+
+			if (originalInvoice.items.length === 5) {
+				let item0name = originalInvoice.items[0].name
+				let item0quantity = originalInvoice.items[0].quantity
+				let item0price = originalInvoice.items[0].price
+				let item0total = originalInvoice.items[0].total
+				let item1name = originalInvoice.items[1].name
+				let item1quantity = originalInvoice.items[1].quantity
+				let item1price = originalInvoice.items[1].price
+				let item1total = originalInvoice.items[1].total
+				let item2name = originalInvoice.items[2].name
+				let item2quantity = originalInvoice.items[2].quantity
+				let item2price = originalInvoice.items[2].price
+				let item2total = originalInvoice.items[2].total
+				let item3name = originalInvoice.items[3].name
+				let item3quantity = originalInvoice.items[3].quantity
+				let item3price = originalInvoice.items[3].price
+				let item3total = originalInvoice.items[3].total
+				let item4name = originalInvoice.items[4].name
+				let item4quantity = originalInvoice.items[4].quantity
+				let item4price = originalInvoice.items[4].price
+				let item4total = originalInvoice.items[4].total
+
+				this.setState({
+					invoice: originalInvoice,
+					clientAddress: originalInvoice.clientAddress,
+					clientAddressStreet: originalInvoice.clientAddress.street,
+					clientAddressCity: originalInvoice.clientAddress.city,
+					clientAddressPostCode: originalInvoice.clientAddress.postCode,
+					clientAddressCountry: originalInvoice.clientAddress.country,
+					clientEmail: originalInvoice.clientEmail,
+					clientName: originalInvoice.clientName,
+					createdAt: originalInvoice.createdAt,
+					description: originalInvoice.description,
+					id: originalInvoice.id,
+					items: originalInvoice.items,
+					paymentTerms: originalInvoice.paymentTerms,
+					senderAddress: originalInvoice.senderAddress,
+					senderAddressStreet: originalInvoice.senderAddress.street,
+					senderAddressCity: originalInvoice.senderAddress.city,
+					senderAddressPostCode: originalInvoice.senderAddress.postCode,
+					senderAddressCountry: originalInvoice.senderAddress.country,
+					status: originalInvoice.status,
+					total: Number(originalInvoice.total).toFixed(2),
+					openEditPage: false,
+					item0name,
+					item0quantity,
+					item0price,
+					item0total,
+					item1name,
+					item1quantity,
+					item1price,
+					item1total,
+					item2name,
+					item2quantity,
+					item2price,
+					item2total,
+					item3name,
+					item3quantity,
+					item3price,
+					item3total,
+					item4name,
+					item4quantity,
+					item4price,
+					item4total,
+				})
+			}
+		}
+
+		else {
+			this.setState({
+				invoice: originalInvoice,
+				clientAddress: originalInvoice.clientAddress,
+				clientAddressStreet: originalInvoice.clientAddress.street,
+				clientAddressCity: originalInvoice.clientAddress.city,
+				clientAddressPostCode: originalInvoice.clientAddress.postCode,
+				clientAddressCountry: originalInvoice.clientAddress.country,
+				clientEmail: originalInvoice.clientEmail,
+				clientName: originalInvoice.clientName,
+				createdAt: originalInvoice.createdAt,
+				description: originalInvoice.description,
+				id: originalInvoice.id,
+				items: originalInvoice.items,
+				paymentTerms: originalInvoice.paymentTerms,
+				senderAddress: originalInvoice.senderAddress,
+				senderAddressStreet: originalInvoice.senderAddress.street,
+				senderAddressCity: originalInvoice.senderAddress.city,
+				senderAddressPostCode: originalInvoice.senderAddress.postCode,
+				senderAddressCountry: originalInvoice.senderAddress.country,
+				status: originalInvoice.status,
+				total: Number(originalInvoice.total).toFixed(2),
+				openEditPage: false,
+			})
+		}
+	}
+
+	closeEditInvoice = () => {
+		this.context.closeGrayMode();
+		this.setState({
+			openEditPage: false,
 		})
 	}
 
@@ -429,44 +714,60 @@ class ViewInvoice extends React.Component {
 		})
 	}
 
-
-	closeEditInvoice = () => {
-		this.context.closeGrayMode();
+	flipOptions = (event) => {
+		event.preventDefault();
 		this.setState({
-			openEditPage: false,
-		})
-	}
-
-	cancelUpdates = () => {
-		let originalInvoice = this.state.originalInvoice
-		this.setState({
-			invoice: originalInvoice,
-			clientAddress: originalInvoice.clientAddress,
-			clientAddressStreet: originalInvoice.clientAddress.street,
-			clientAddressCity: originalInvoice.clientAddress.city,
-			clientAddressPostCode: originalInvoice.clientAddress.postCode,
-			clientAddressCountry: originalInvoice.clientAddress.country,
-			clientEmail: originalInvoice.clientEmail,
-			clientName: originalInvoice.clientName,
-			createdAt: originalInvoice.createdAt,
-			description: originalInvoice.description,
-			id: originalInvoice.id,
-			items: originalInvoice.items,
-			paymentTerms: originalInvoice.paymentTerms,
-			senderAddress: originalInvoice.senderAddress,
-			senderAddressStreet: originalInvoice.senderAddress.street,
-			senderAddressCity: originalInvoice.senderAddress.city,
-			senderAddressPostCode: originalInvoice.senderAddress.postCode,
-			senderAddressCountry: originalInvoice.senderAddress.country,
-			status: originalInvoice.status,
-			total: Number(originalInvoice.total).toFixed(2),
-			openEditPage: false,
+			showOptions: !this.state.showOptions
 		})
 	}
 
 	inputHandler = (event) => {
 		event.preventDefault();
 		let target = event.target;
+		this.setState({
+			[target.name]: target.value
+		});
+	}
+	
+	itemPriceInputHandler = (event) => {
+		event.preventDefault();
+		let target = event.target;
+		let location = event.target.name.slice(4,5)
+		if(location === '0') {
+			let total = event.target.value * this.state.item0quantity
+			this.setState({
+				item0total: total
+			})
+		}
+		
+		if(location === '1') {
+			let total = event.target.value * this.state.item1quantity
+			this.setState({
+				item1total: total
+			})
+		}
+		
+		if(location === '2') {
+			let total = event.target.value * this.state.item2quantity
+			this.setState({
+				item2total: total
+			})
+		}
+		
+		if(location === '3') {
+			let total = event.target.value * this.state.item3quantity
+			this.setState({
+				item3total: total
+			})
+		}
+		
+		if(location === '4') {
+			let total = event.target.value * this.state.item4quantity
+			this.setState({
+				item4total: total
+			})
+		}
+		
 		this.setState({
 			[target.name]: target.value
 		});
@@ -482,95 +783,52 @@ class ViewInvoice extends React.Component {
 				item0total: total
 			})
 		}
-
+		
 		if(location === '1') {
 			let total = event.target.value * this.state.item1price
 			this.setState({
 				item1total: total
 			})
 		}
-
+		
 		if(location === '2') {
 			let total = event.target.value * this.state.item2price
 			this.setState({
 				item2total: total
 			})
 		}
-
+		
 		if(location === '3') {
 			let total = event.target.value * this.state.item3price
 			this.setState({
 				item3total: total
 			})
 		}
-
+		
 		if(location === '4') {
 			let total = event.target.value * this.state.item4price
 			this.setState({
 				item4total: total
 			})
 		}
-
+		
 		this.setState({
 			[target.name]: target.value
 		});
 	}
-
-	itemPriceInputHandler = (event) => {
+	
+	openEditInvoice = (event) => {
 		event.preventDefault();
-		let target = event.target;
-		let location = event.target.name.slice(4,5)
-		if(location === '0') {
-			let total = event.target.value * this.state.item0quantity
-			this.setState({
-				item0total: total
-			})
-		}
-
-		if(location === '1') {
-			let total = event.target.value * this.state.item1quantity
-			this.setState({
-				item1total: total
-			})
-		}
-
-		if(location === '2') {
-			let total = event.target.value * this.state.item2quantity
-			this.setState({
-				item2total: total
-			})
-		}
-
-		if(location === '3') {
-			let total = event.target.value * this.state.item3quantity
-			this.setState({
-				item3total: total
-			})
-		}
-
-		if(location === '4') {
-			let total = event.target.value * this.state.item4quantity
-			this.setState({
-				item4total: total
-			})
-		}
-
+		this.context.switchToGrayMode();
 		this.setState({
-			[target.name]: target.value
-		});
+			openEditPage: true,
+		})
 	}
 
 	saveUpdates = (editState) => {
 		console.log(editState)
 	}
-
-	flipOptions = (event) => {
-		event.preventDefault();
-		this.setState({
-			showOptions: !this.state.showOptions
-		})
-	}
-
+	
 	updatePaymentTerms = (value) => {
 		this.setState({
 			paymentTerms: value,
@@ -579,7 +837,6 @@ class ViewInvoice extends React.Component {
 	}
 
 	render() {
-		console.log(this.state)
 		return (
 			<div className="view-invoice-outside-div">
 				<Navbar />
