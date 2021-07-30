@@ -39,29 +39,30 @@ class ViewInvoice extends React.Component {
 		openEditPage: false,
 		showOptions: false,
 		item0name: '',
-		item0quantity: '',
+		item0quantity: 0,
 		item0price: 0,
 		item0total: 0,
 		item1name: '',
-		item1quantity: '',
+		item1quantity: 0,
 		item1price: 0,
 		item1total: 0,
 		item2name: '',
-		item2quantity: '',
+		item2quantity: 0,
 		item2price: 0,
 		item2total: 0,
 		item3name: '',
-		item3quantity: '',
+		item3quantity: 0,
 		item3price: 0,
 		item3total: 0,
 		item4name: '',
-		item4quantity: '',
+		item4quantity: 0,
 		item4price: 0,
 		item4total: 0,
 	};
 
-	componentDidMount() {
-		this.context.state.invoices.map((invoice, index) => {
+	componentDidMount = () => {
+		let viewInvoice = this.context.state.invoices;
+		viewInvoice.map((invoice, index) => {
             if(invoice.id === this.props.location.state.id) {
 				let payDate = new Date(invoice.paymentDue);
 				let createdDate = new Date(invoice.createdAt)
@@ -408,6 +409,7 @@ class ViewInvoice extends React.Component {
 
 	cancelUpdates = () => {
 		let originalInvoice = this.state.originalInvoice
+		this.context.closeGrayMode();
 
 		if(originalInvoice.items.length > 0) {
 			if (originalInvoice.items.length === 1) {
@@ -442,6 +444,22 @@ class ViewInvoice extends React.Component {
 					item0quantity,
 					item0price,
 					item0total,
+					item1name: '',
+					item1quantity: 0,
+					item1price: 0,
+					item1total: 0,
+					item2name: '',
+					item2quantity: 0,
+					item2price: 0,
+					item2total: 0,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
 				})
 			}
 
@@ -485,6 +503,18 @@ class ViewInvoice extends React.Component {
 					item1quantity,
 					item1price,
 					item1total,
+					item2name: '',
+					item2quantity: 0,
+					item2price: 0,
+					item2total: 0,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
 				})
 			}
 
@@ -536,6 +566,14 @@ class ViewInvoice extends React.Component {
 					item2quantity,
 					item2price,
 					item2total,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
 				})
 			}
 
@@ -595,6 +633,10 @@ class ViewInvoice extends React.Component {
 					item3quantity,
 					item3price,
 					item3total,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
 				})
 			}
 
@@ -700,18 +742,252 @@ class ViewInvoice extends React.Component {
 		})
 	}
 
-	deleteItem = (itemName) => {
-		let items = this.state.items;
-
+	deleteItem = (position) => {
+		let newItems = this.state.items;
+		let itemsLength = this.state.items.length;
 		this.state.items.map((item, index) => {
-			if (item.name === itemName) {
-				items.splice(index, 1)
+			if (position === index) {
+				newItems.splice(index, 1)
 			}
 			return null;
 		})
-		this.setState({
-			items
-		})
+		if(itemsLength === 5) {
+			if (position === 0) {
+				this.setState({
+					item0name: this.state.item1name,
+					item0quantity: this.state.item1quantity,
+					item0price: this.state.item1price,
+					item0total: this.state.item1total,
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: this.state.item4name,
+					item3quantity: this.state.item4quantity,
+					item3price: this.state.item4price,
+					item3total: this.state.item4total,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 1) {
+				this.setState({
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: this.state.item4name,
+					item3quantity: this.state.item4quantity,
+					item3price: this.state.item4price,
+					item3total: this.state.item4total,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 2) {
+				this.setState({
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: this.state.item4name,
+					item3quantity: this.state.item4quantity,
+					item3price: this.state.item4price,
+					item3total: this.state.item4total,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 3) {
+				this.setState({
+					item3name: this.state.item4name,
+					item3quantity: this.state.item4quantity,
+					item3price: this.state.item4price,
+					item3total: this.state.item4total,
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
+					items: newItems
+				})
+			}
+
+			else {
+				this.setState({
+					item4name: '',
+					item4quantity: 0,
+					item4price: 0,
+					item4total: 0,
+					items: newItems
+				})
+			}
+		}
+
+		else if (itemsLength === 4) {
+			if (position === 0) {
+				this.setState({
+					item0name: this.state.item1name,
+					item0quantity: this.state.item1quantity,
+					item0price: this.state.item1price,
+					item0total: this.state.item1total,
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 1) {
+				this.setState({
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 2) {
+				this.setState({
+					item2name: this.state.item3name,
+					item2quantity: this.state.item3quantity,
+					item2price: this.state.item3price,
+					item2total: this.state.item3total,
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					items: newItems
+				})
+			}
+
+			else {
+				this.setState({
+					item3name: '',
+					item3quantity: 0,
+					item3price: 0,
+					item3total: 0,
+					items: newItems
+				})
+			}
+		}
+
+		else if (itemsLength === 3) {
+			if (position === 0) {
+				this.setState({
+					item0name: this.state.item1name,
+					item0quantity: this.state.item1quantity,
+					item0price: this.state.item1price,
+					item0total: this.state.item1total,
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: '',
+					item2quantity: 0,
+					item2price: 0,
+					item2total: 0,
+					items: newItems
+				})
+			}
+
+			else if (position === 1) {
+				this.setState({
+					item1name: this.state.item2name,
+					item1quantity: this.state.item2quantity,
+					item1price: this.state.item2price,
+					item1total: this.state.item2total,
+					item2name: '',
+					item2quantity: 0,
+					item2price: 0,
+					item2total: 0,
+					items: newItems
+				})
+			}
+
+			else {
+				this.setState({
+					item2name: '',
+					item2quantity: 0,
+					item2price: 0,
+					item2total: 0,
+					items: newItems
+				})
+			}
+		}
+
+		else if (itemsLength === 2) {
+			if (position === 0) {
+				this.setState({
+					item0name: this.state.item1name,
+					item0quantity: this.state.item1quantity,
+					item0price: this.state.item1price,
+					item0total: this.state.item1total,
+					item1name: '',
+					item1quantity: 0,
+					item1price: 0,
+					item1total: 0,
+					items: newItems
+				})
+			}
+
+			else {
+				this.setState({
+					item1name: '',
+					item1quantity: 0,
+					item1price: 0,
+					item1total: 0,
+					items: newItems
+				})
+			}
+		}
+
+		else {
+			this.setState({
+				item0name: '',
+				item0quantity: 0,
+				item0price: 0,
+				item0total: 0,
+				items: newItems,
+			})
+		}
 	}
 
 	flipOptions = (event) => {
@@ -837,6 +1113,9 @@ class ViewInvoice extends React.Component {
 	}
 
 	render() {
+		console.log(this.state.items)
+		console.log(this.state.originalInvoice)
+		console.log(this.context.state)
 		return (
 			<div className="view-invoice-outside-div">
 				<Navbar />
@@ -965,9 +1244,9 @@ class ViewInvoice extends React.Component {
 											</div>
 
 
-											{this.state.items.map(item => (
+											{this.state.items.map((item, index) => (
 												<ItemCard
-													key={item['quantity'] + item['price']}
+													key={this.state.id + item['quantity'] + item['price'] + index}
 													item={item}
 													colorType='dark'
 												/>
@@ -978,9 +1257,12 @@ class ViewInvoice extends React.Component {
 												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
 											</div>
 										</div>
-
-										:
-											null
+									:
+										<div className='view-invoices-info-bottom-container-div'>
+											<div className='view-invoices-info-bottom-container-no-items-div'>
+												<span className='view-invoices-info-bottom-container-no-items-span-dark-mode'>No items</span>
+											</div>
+										</div>
 									}
 								</div>
 							</div>
@@ -1015,10 +1297,10 @@ class ViewInvoice extends React.Component {
 									</div>
 
 									<div className='view-invoices-info-top-right-div'>
-										<span>{this.state.senderAddress['street']}</span>
-										<span>{this.state.senderAddress['city']}</span>
-										<span>{this.state.senderAddress['postCode']}</span>
-										<span>{this.state.senderAddress['country']}</span>
+										<span>{this.state.senderAddressStreet}</span>
+										<span>{this.state.senderAddressCity}</span>
+										<span>{this.state.senderAddressPostCode}</span>
+										<span>{this.state.senderAddressCountry}</span>
 									</div>
 								</div>
 
@@ -1039,10 +1321,10 @@ class ViewInvoice extends React.Component {
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
 
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['street']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['city']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['postCode']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressStreet}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCity}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressPostCode}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCountry}</span>
 									</div>
 
 									<div className='view-invoices-info-middle-container-right-div'>
@@ -1061,10 +1343,9 @@ class ViewInvoice extends React.Component {
 												<span className='view-invoices-info-bottom-container-labels-total-span'>Total</span>
 											</div>
 
-
-											{this.state.items.map(item => (
+											{this.state.items.map((item, index) => (
 												<ItemCard
-													key={item['quantity'] + item['price']}
+													key={this.state.id + item['quantity'] + item['price'] + index}
 													item={item}
 													colorType='light'
 												/>
@@ -1075,9 +1356,12 @@ class ViewInvoice extends React.Component {
 												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
 											</div>
 										</div>
-
 									:
-										null
+										<div className='view-invoices-info-bottom-container-div'>
+											<div className='view-invoices-info-bottom-container-no-items-div'>
+												<span className='view-invoices-info-bottom-container-no-items-span'>No items</span>
+											</div>
+										</div>
 									}
 								</div>
 							</div>
