@@ -347,6 +347,65 @@ export default class AppProvider extends Component {
 							pendingInvoiceCount: newPendingInvoiceCount
 						})
 					},
+					updateInvoice: (updatedInvoice) => {
+						let invoices = this.state.invoices;
+						let invoiceStatus = updatedInvoice.status;
+						invoices.map((invoice, index) => {
+							if (invoice.id === updatedInvoice.id) {
+								invoices[index] = updatedInvoice
+								// invoice = updatedInvoice
+							}
+							return null;
+						})
+
+						if (invoiceStatus === 'draft') {
+							let draftInvoices = this.state.draftInvoices;
+
+							draftInvoices.map((invoice, index) => {
+								if (invoice.id === updatedInvoice.id) {
+									invoice = updatedInvoice
+								}
+								return null;
+							})
+
+							this.setState({
+								draftInvoices
+							})
+						}
+
+						else if (invoiceStatus === 'paid') {
+							let paidInvoices = this.state.paidInvoices;
+
+							paidInvoices.map((invoice, index) => {
+								if (invoice.id === updatedInvoice.id) {
+									invoice = updatedInvoice
+								}
+								return null;
+							})
+
+							this.setState({
+								paidInvoices
+							})
+						}
+
+						else {
+							let pendingInvoices = this.state.pendingInvoices;
+
+							pendingInvoices.map((invoice, index) => {
+								if (invoice.id === updatedInvoice.id) {
+									invoice = updatedInvoice
+								}
+								return null;
+							})
+
+							this.setState({
+								pendingInvoices
+							})
+						}
+						this.setState({
+							invoices,
+						})
+					}
 				}}
 			>
 				{this.props.children}
