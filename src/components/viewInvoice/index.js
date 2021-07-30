@@ -35,6 +35,7 @@ class ViewInvoice extends React.Component {
 		senderAddressPostCode: '',
 		senderAddressCountry: '',
 		status: '',
+		fancyTotal: 0,
 		total: 0,
 		openEditPage: false,
 		showOptions: false,
@@ -73,7 +74,7 @@ class ViewInvoice extends React.Component {
 				let createdAtDateDay = createdDate.getUTCDate();
 				let createdAtDateYear = createdDate.getFullYear();
 				let preciseTotal = invoice.total.toFixed(2);
-				let total = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+				let fancyTotal = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 				if(invoice.items.length > 0) {
 					if(invoice.items.length === 1) {
@@ -109,7 +110,7 @@ class ViewInvoice extends React.Component {
 							senderAddressPostCode: invoice.senderAddress.postCode,
 							senderAddressCountry: invoice.senderAddress.country,
 							status: invoice.status,
-							total,
+							fancyTotal,
 							item0name,
 							item0quantity,
 							item0price,
@@ -154,7 +155,7 @@ class ViewInvoice extends React.Component {
 							senderAddressPostCode: invoice.senderAddress.postCode,
 							senderAddressCountry: invoice.senderAddress.country,
 							status: invoice.status,
-							total,
+							fancyTotal,
 							item0name,
 							item0quantity,
 							item0price,
@@ -207,7 +208,7 @@ class ViewInvoice extends React.Component {
 							senderAddressPostCode: invoice.senderAddress.postCode,
 							senderAddressCountry: invoice.senderAddress.country,
 							status: invoice.status,
-							total,
+							fancyTotal,
 							item0name,
 							item0quantity,
 							item0price,
@@ -268,7 +269,7 @@ class ViewInvoice extends React.Component {
 							senderAddressPostCode: invoice.senderAddress.postCode,
 							senderAddressCountry: invoice.senderAddress.country,
 							status: invoice.status,
-							total,
+							fancyTotal,
 							item0name,
 							item0quantity,
 							item0price,
@@ -337,7 +338,7 @@ class ViewInvoice extends React.Component {
 							senderAddressPostCode: invoice.senderAddress.postCode,
 							senderAddressCountry: invoice.senderAddress.country,
 							status: invoice.status,
-							total,
+							fancyTotal,
 							item0name,
 							item0quantity,
 							item0price,
@@ -389,7 +390,7 @@ class ViewInvoice extends React.Component {
 						senderAddressPostCode: invoice.senderAddress.postCode,
 						senderAddressCountry: invoice.senderAddress.country,
 						status: invoice.status,
-						total
+						fancyTotal,
 					})
 				}
             }
@@ -411,6 +412,9 @@ class ViewInvoice extends React.Component {
 	cancelUpdates = () => {
 		let originalInvoice = this.state.originalInvoice
 		this.context.closeGrayMode();
+
+		let preciseTotal = originalInvoice.total.toFixed(2);
+		let fancyTotal = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 		if(originalInvoice.items.length > 0) {
 			if (originalInvoice.items.length === 1) {
@@ -439,6 +443,7 @@ class ViewInvoice extends React.Component {
 					senderAddressPostCode: originalInvoice.senderAddress.postCode,
 					senderAddressCountry: originalInvoice.senderAddress.country,
 					status: originalInvoice.status,
+					fancyTotal,
 					total: Number(originalInvoice.total).toFixed(2),
 					openEditPage: false,
 					item0name,
@@ -494,6 +499,7 @@ class ViewInvoice extends React.Component {
 					senderAddressPostCode: originalInvoice.senderAddress.postCode,
 					senderAddressCountry: originalInvoice.senderAddress.country,
 					status: originalInvoice.status,
+					fancyTotal,
 					total: Number(originalInvoice.total).toFixed(2),
 					openEditPage: false,
 					item0name,
@@ -553,6 +559,7 @@ class ViewInvoice extends React.Component {
 					senderAddressPostCode: originalInvoice.senderAddress.postCode,
 					senderAddressCountry: originalInvoice.senderAddress.country,
 					status: originalInvoice.status,
+					fancyTotal,
 					total: Number(originalInvoice.total).toFixed(2),
 					openEditPage: false,
 					item0name,
@@ -616,6 +623,7 @@ class ViewInvoice extends React.Component {
 					senderAddressPostCode: originalInvoice.senderAddress.postCode,
 					senderAddressCountry: originalInvoice.senderAddress.country,
 					status: originalInvoice.status,
+					fancyTotal,
 					total: Number(originalInvoice.total).toFixed(2),
 					openEditPage: false,
 					item0name,
@@ -683,6 +691,7 @@ class ViewInvoice extends React.Component {
 					senderAddressPostCode: originalInvoice.senderAddress.postCode,
 					senderAddressCountry: originalInvoice.senderAddress.country,
 					status: originalInvoice.status,
+					fancyTotal,
 					total: Number(originalInvoice.total).toFixed(2),
 					openEditPage: false,
 					item0name,
@@ -730,6 +739,7 @@ class ViewInvoice extends React.Component {
 				senderAddressPostCode: originalInvoice.senderAddress.postCode,
 				senderAddressCountry: originalInvoice.senderAddress.country,
 				status: originalInvoice.status,
+				fancyTotal,
 				total: Number(originalInvoice.total).toFixed(2),
 				openEditPage: false,
 			})
@@ -1102,8 +1112,187 @@ class ViewInvoice extends React.Component {
 		})
 	}
 
-	saveUpdates = (editState) => {
-		console.log(editState)
+	saveUpdates = () => {
+		let clientAddress = {
+			street: this.state.clientAddressStreet,
+			city: this.state.clientAddressCity,
+			postCode: this.state.clientAddressPostCode,
+			country: this.state.clientAddressCountry
+		}
+
+		let senderAddress = {
+			street: this.state.senderAddressStreet,
+			city: this.state.senderAddressCity,
+			postCode: this.state.senderAddressPostCode,
+			country: this.state.senderAddressCountry
+		}
+
+		let createdDate = new Date(this.state.createdAt)
+		let payDueDate = new Date(this.state.createdAt);
+		payDueDate.setDate(createdDate.getDate() + this.state.paymentTerms)
+		let paymentDueDateMonth = payDueDate.getUTCMonth();
+		let paymentDueDateDay = payDueDate.getUTCDate();
+		let paymentDueDateYear = payDueDate.getFullYear();
+		let createdAtDateMonth = createdDate.getUTCMonth();
+		let createdAtDateDay = createdDate.getUTCDate();
+		let createdAtDateYear = createdDate.getFullYear();
+		let paymentDueDate = '';
+		if(paymentDueDateMonth >= 9) {
+			paymentDueDate = `${paymentDueDateYear}-${paymentDueDateMonth + 1}-${paymentDueDateDay}`;
+		}
+		else {
+			paymentDueDate = `${paymentDueDateYear}-0${paymentDueDateMonth + 1}-${paymentDueDateDay}`;
+		}
+		let total = Number(this.state.item0total + this.state.item1total + this.state.item2total + this.state.item3total + this.state.item4total)
+		let preciseTotal = total.toFixed(2);
+		let fancyTotal = preciseTotal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+		let itemsTotal = this.state.items.length
+		let items = []
+		if (itemsTotal === 1) {
+			items = [{
+				name: this.state.item0name,
+				quantity: this.state.item0quantity,
+				price: this.state.item0price,
+				total: this.state.item0total,
+			}]
+		}
+
+		if (itemsTotal === 2) {
+			items = [
+				{
+					name: this.state.item0name,
+					quantity: this.state.item0quantity,
+					price: this.state.item0price,
+					total: this.state.item0total,
+				},
+				{
+					name: this.state.item1name,
+					quantity: this.state.item1quantity,
+					price: this.state.item1price,
+					total: this.state.item1total,
+				},
+			]
+		}
+
+		if (itemsTotal === 3) {
+			items = [
+				{
+					name: this.state.item0name,
+					quantity: this.state.item0quantity,
+					price: this.state.item0price,
+					total: this.state.item0total,
+				},
+				{
+					name: this.state.item1name,
+					quantity: this.state.item1quantity,
+					price: this.state.item1price,
+					total: this.state.item1total,
+				},
+				{
+					name: this.state.item2name,
+					quantity: this.state.item2quantity,
+					price: this.state.item2price,
+					total: this.state.item2total,
+				},
+			]
+		}
+
+		if (itemsTotal === 4) {
+			items = [
+				{
+					name: this.state.item0name,
+					quantity: this.state.item0quantity,
+					price: this.state.item0price,
+					total: this.state.item0total,
+				},
+				{
+					name: this.state.item1name,
+					quantity: this.state.item1quantity,
+					price: this.state.item1price,
+					total: this.state.item1total,
+				},
+				{
+					name: this.state.item2name,
+					quantity: this.state.item2quantity,
+					price: this.state.item2price,
+					total: this.state.item2total,
+				},
+				{
+					name: this.state.item3name,
+					quantity: this.state.item3quantity,
+					price: this.state.item3price,
+					total: this.state.item3total,
+				},
+			]
+		}
+
+		if (itemsTotal === 5) {
+			items = [
+				{
+					name: this.state.item0name,
+					quantity: this.state.item0quantity,
+					price: this.state.item0price,
+					total: this.state.item0total,
+				},
+				{
+					name: this.state.item1name,
+					quantity: this.state.item1quantity,
+					price: this.state.item1price,
+					total: this.state.item1total,
+				},
+				{
+					name: this.state.item2name,
+					quantity: this.state.item2quantity,
+					price: this.state.item2price,
+					total: this.state.item2total,
+				},
+				{
+					name: this.state.item3name,
+					quantity: this.state.item3quantity,
+					price: this.state.item3price,
+					total: this.state.item3total,
+				},
+				{
+					name: this.state.item4name,
+					quantity: this.state.item4quantity,
+					price: this.state.item4price,
+					total: this.state.item4total,
+				},
+			]
+		}
+
+		let invoice = {
+			id: this.state.id,
+			createdAt: this.state.createdAt,
+			paymentDue: paymentDueDate,
+			description: this.state.description,
+			paymentTerms: this.state.paymentTerms,
+			clientName: this.state.clientName,
+			clientEmail: this.state.clientEmail,
+			status: this.state.status,
+			senderAddress: senderAddress,
+			clientAddress: clientAddress,
+			items: items,
+			total: total
+		}
+
+		this.context.updateInvoice(invoice);
+		this.setState({
+			openEditPage: false,
+			createdAtDateDay,
+			createdAtDateMonth,
+			createdAtDateYear,
+			paymentDueDateDay,
+			paymentDueDateMonth,
+			paymentDueDateYear,
+			clientAddress,
+			senderAddress,
+			total,
+			fancyTotal,
+			items,
+			invoice,
+		})
 	}
 	
 	updatePaymentTerms = (value) => {
@@ -1114,9 +1303,6 @@ class ViewInvoice extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.items)
-		console.log(this.state.originalInvoice)
-		console.log(this.context.state)
 		return (
 			<div className="view-invoice-outside-div">
 				<Navbar />
@@ -1354,7 +1540,7 @@ class ViewInvoice extends React.Component {
 								
 											<div className='view-invoices-info-bottom-container-total-div'>
 												<span>Amount Due</span>
-												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
+												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.fancyTotal}</span>
 											</div>
 										</div>
 									:
