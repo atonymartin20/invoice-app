@@ -399,11 +399,12 @@ class ViewInvoice extends React.Component {
 
 	addItem = (event) => {
 		event.preventDefault();
-		let items = this.state.items;
-		items.push({name:'', quantity: '', price: '', total: 0})
+		let newItems = this.state.items;
+		let newItem = {name: '', quantity: 0, price: 0, total: 0}
+		let newItems2 = newItems.concat(newItem)
 
 		this.setState({
-			items
+			items: newItems2
 		})
 	}
 
