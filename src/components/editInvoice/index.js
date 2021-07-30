@@ -194,7 +194,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item0name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
 									</div>
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										+ Add New Item	
@@ -217,7 +217,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item0name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -225,7 +225,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item1name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
 									</div>
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										+ Add New Item	
@@ -248,7 +248,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item0name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -256,7 +256,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item1name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -264,7 +264,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item2name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(2)}/>
 									</div>
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										+ Add New Item	
@@ -287,7 +287,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item0name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -295,7 +295,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item1name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -303,7 +303,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item2name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(2)}/>
 									</div>
 									
 									<div className='edit-item-card-div'>
@@ -311,7 +311,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item3name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(3)}/>
 									</div>
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										+ Add New Item	
@@ -334,7 +334,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item0name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -342,7 +342,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item1name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
 									</div>
 
 									<div className='edit-item-card-div'>
@@ -350,7 +350,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item2name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(2)}/>
 									</div>
 									
 									<div className='edit-item-card-div'>
@@ -358,7 +358,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item3name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(3)}/>
 									</div>
 																		
 									<div className='edit-item-card-div'>
@@ -366,7 +366,7 @@ class EditInvoice extends React.Component {
 										<input className='edit-item-card-quantity-input' type='text' id={this.props.id + 4 + 'quantity'} name='item4quantity' value={this.props.item4quantity} onChange={this.props.itemQuantityInputHandler} />
 										<input className='edit-item-card-price-input' type='text' id={this.props.id + 4 + 'price'} name='item4price' value={this.props.item4price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item4total).toFixed(2)}</span>
-										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(this.props.item4name)}/>
+										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(4)}/>
 									</div>
 								</div>
 							: null			
