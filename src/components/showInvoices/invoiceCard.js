@@ -1,5 +1,4 @@
 import React from 'react';
-import { AppContext } from '../context/appContext.js';
 
 import '../../css/showInvoices.css';
 import RightArrowIcon from '../../assets/icon-arrow-right.svg';
@@ -18,7 +17,7 @@ class InvoiceCard extends React.Component {
 
 	};
 
-    componentDidMount() {
+    componentDidMount = () => {
         let month = this.state.testDate.getUTCMonth();
         let day = this.state.testDate.getUTCDate();
         let year = this.state.testDate.getFullYear();
@@ -117,7 +116,5 @@ class InvoiceCard extends React.Component {
         }
 	}
 }
-
-InvoiceCard.contextType = AppContext;
 
 export default InvoiceCard;

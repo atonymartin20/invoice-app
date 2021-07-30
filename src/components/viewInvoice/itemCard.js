@@ -9,7 +9,7 @@ class ItemCard extends React.Component {
         total: '',
 	};
 
-    componentDidMount() {
+    componentDidMount = () => {
         let precisePrice = Number(this.state.item['price']).toFixed(2);
         let preciseTotal = Number(this.state.item['total']).toFixed(2);
         let price = precisePrice.replace(/\B(?=(\d{3})+(?!\d))/g, ',');

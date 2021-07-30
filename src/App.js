@@ -9,7 +9,7 @@ import ViewInvoice from './components/viewInvoice';
 
 class App extends React.Component {
 
-	componentDidMount() {
+	componentDidMount = () => {
 		if(this.context.state.invoices.length > 0) {
 			let invoiceCount = 0;
 			let draftInvoiceCount = 0;

@@ -6,15 +6,12 @@
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     mix-blend-mode: normal;
-    /* z-index: 5; */
-    position: absolute;
     margin: 0 auto;
 }
 
 .edit-invoice-container-div {
     width: 719px;
     height: 100%;
-    /* z-index: 16; */
     position: absolute;
     display: flex;
     background: #FFFFFF;
@@ -24,7 +21,6 @@
 .edit-invoice-container-div-dark-mode {
     width: 719px;
     height: 100%;
-    /* z-index: 16; */
     position: absolute;
     display: flex;
     background: #141625;
