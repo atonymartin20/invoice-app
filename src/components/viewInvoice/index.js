@@ -1122,6 +1122,28 @@ class ViewInvoice extends React.Component {
 		});
 	}
 	
+	markInvoiceAsPending = (event) => {
+		event.preventDefault();
+		let invoice = this.state.invoice;
+		invoice.status = 'pending'
+		this.context.updateInvoice(invoice)
+
+		this.setState({
+			invoice
+		})
+	}
+
+	markInvoiceAsPaid = (event) => {
+		event.preventDefault();
+		let invoice = this.state.invoice;
+		invoice.status = 'paid'
+		this.context.updateInvoice(invoice)
+
+		this.setState({
+			invoice
+		})
+	}	
+
 	openEditInvoice = (event) => {
 		event.preventDefault();
 		this.context.switchToGrayMode();
@@ -1390,8 +1412,8 @@ class ViewInvoice extends React.Component {
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button-dark-mode' onClick={this.openEditInvoice}>Edit</div>
 									<div className='delete-button'>Delete</div>
-									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
-									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
 							</div>
 
@@ -1490,8 +1512,8 @@ class ViewInvoice extends React.Component {
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button' onClick={this.openEditInvoice}>Edit</div>
 									<div className='delete-button'>Delete</div>
-									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
-									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
 							</div>
 
