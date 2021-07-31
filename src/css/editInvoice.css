@@ -3,7 +3,6 @@
     width: 100%;
     max-width: 1440px;
     min-height: 1424px;
-    height: 100%;
     background-color: rgba(0,0,0,0.5);
     mix-blend-mode: normal;
     margin: 0 auto;
@@ -11,7 +10,6 @@
 
 .edit-invoice-container-div {
     width: 719px;
-    height: 100%;
     position: absolute;
     display: flex;
     background: #FFFFFF;
@@ -20,7 +18,6 @@
 
 .edit-invoice-container-div-dark-mode {
     width: 719px;
-    height: 100%;
     position: absolute;
     display: flex;
     background: #141625;
@@ -730,7 +727,7 @@
 .edit-invoice-bottom-buttons-div {
     width: 100%;
     height: 48px;
-    margin-top: auto;
+    margin-top: 39px;
     display: flex;
     justify-content: flex-end;
 }
