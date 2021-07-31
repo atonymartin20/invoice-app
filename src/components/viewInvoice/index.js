@@ -1482,7 +1482,7 @@ class ViewInvoice extends React.Component {
 								
 											<div className='view-invoices-info-bottom-container-total-div-dark-mode'>
 												<span>Amount Due</span>
-												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
+												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.fancyTotal}</span>
 											</div>
 										</div>
 									:
