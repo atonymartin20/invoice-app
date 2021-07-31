@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppContext } from '../context/appContext.js';
+import { Redirect } from 'react-router-dom';
 
 import Navbar from '../navbar';
 import '../../css/viewInvoice.css';
@@ -59,6 +60,7 @@ class ViewInvoice extends React.Component {
 		item4quantity: 0,
 		item4price: 0,
 		item4total: 0,
+		redirect: false,
 	};
 
 	componentDidMount = () => {
@@ -1017,6 +1019,13 @@ class ViewInvoice extends React.Component {
 		})
 	}
 
+	handleRedirect = (event) => {
+        event.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    }   
+
 	inputHandler = (event) => {
 		event.preventDefault();
 		let target = event.target;
@@ -1314,6 +1323,7 @@ class ViewInvoice extends React.Component {
 	render() {
 		return (
 			<div className="view-invoice-outside-div">
+				{this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
 				<Navbar />
 				{this.state.openEditPage === true ? <EditInvoice 
 					invoice={this.state.invoice}
