@@ -754,14 +754,23 @@ class ViewInvoice extends React.Component {
 	}
 
 	deleteItem = (position) => {
-		let newItems = this.state.items;
+		let newItems = [];
+		let newItemsPart1 = [];
+		let newItemsPart2 = [];
 		let itemsLength = this.state.items.length;
+
 		this.state.items.map((item, index) => {
-			if (position === index) {
-				newItems.splice(index, 1)
+			if(index < position) {
+				newItemsPart1 = newItemsPart1.concat(item)
+			}
+			if (index > position) {
+				newItemsPart2 = newItemsPart2.concat(item)
 			}
 			return null;
 		})
+
+		newItems = newItemsPart1.concat(newItemsPart2)
+
 		if(itemsLength === 5) {
 			if (position === 0) {
 				this.setState({
@@ -996,7 +1005,7 @@ class ViewInvoice extends React.Component {
 				item0quantity: 0,
 				item0price: 0,
 				item0total: 0,
-				items: newItems,
+				items: {},
 			})
 		}
 	}
