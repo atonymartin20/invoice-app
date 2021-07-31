@@ -1,6 +1,6 @@
 .light-navbar {
     width: 103px;
-    height: 800px;
+    min-height: 800px;
     background: #373B53;
     border-radius: 0px 20px 20px 0px;
     display: flex;
@@ -13,7 +13,7 @@
 
 .dark-navbar {
     width: 103px;
-    height: 800px;
+    min-height: 800px;
     background: #1E2139;
     border-radius: 0px 20px 20px 0px;
     display: flex;
@@ -88,11 +88,13 @@
 .sun-icon {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .moon-icon {
     width: 19.99px;
     height: 19.9px;
+    cursor: pointer;
 }
 
 .second-box-line {

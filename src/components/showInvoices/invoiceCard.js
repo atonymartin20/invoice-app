@@ -1,8 +1,8 @@
 import React from 'react';
-import { AppContext } from '../context/appContext.js';
 
 import '../../css/showInvoices.css';
 import RightArrowIcon from '../../assets/icon-arrow-right.svg';
+import { Redirect } from 'react-router-dom';
 
 class InvoiceCard extends React.Component {
 	state = {
@@ -12,10 +12,12 @@ class InvoiceCard extends React.Component {
         day: 0,
         year: 0,
         months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        total: this.props.total.toFixed(2)
+        total: this.props.total.toFixed(2),
+        redirect: false,
+
 	};
 
-    componentDidMount() {
+    componentDidMount = () => {
         let month = this.state.testDate.getUTCMonth();
         let day = this.state.testDate.getUTCDate();
         let year = this.state.testDate.getFullYear();
@@ -27,11 +29,20 @@ class InvoiceCard extends React.Component {
             total: newTotal
         })
     }
-	render() {
 
+    handleRedirect = (event) => {
+        event.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    }   
+    
+	render() {
+        
         if (this.props.type === 'unfiltered' && this.props.colorType === 'dark') {
             return (
-                <div className="card-outside-div">
+                <div className="card-outside-div" onClick={this.handleRedirect}>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div-dark">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span-dark-mode'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
@@ -49,7 +60,8 @@ class InvoiceCard extends React.Component {
 
         else if (this.props.type === 'unfiltered' && this.props.colorType === 'light') {
             return (
-                <div className="card-outside-div">
+                <div className="card-outside-div" onClick={this.handleRedirect}>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div">
                         <span className='id-span'>#<span className='black-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
@@ -67,7 +79,8 @@ class InvoiceCard extends React.Component {
 
         else if (this.props.type === 'filtered' && this.props.colorType === 'dark') {
             return (
-                <div className="card-outside-div-filtered">
+                <div className="card-outside-div-filtered" onClick={this.handleRedirect}>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div-dark">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span-dark-mode'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
@@ -85,7 +98,8 @@ class InvoiceCard extends React.Component {
 
         else {
             return (
-                <div className="card-outside-div-filtered">
+                <div className="card-outside-div-filtered" onClick={this.handleRedirect}>
+                    {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
                     <div className="card-inside-div">
                         <span className='id-span'>#<span className='black-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
@@ -102,7 +116,5 @@ class InvoiceCard extends React.Component {
         }
 	}
 }
-
-InvoiceCard.contextType = AppContext;
 
 export default InvoiceCard;

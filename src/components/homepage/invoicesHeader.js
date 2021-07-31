@@ -35,25 +35,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.draftFilter === true ? 
                                 <>
                                     {this.context.state.draftInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.draftInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 draft invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.draftInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.draftInvoiceCount} draft invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -65,25 +65,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.paidFilter === true ? 
                                 <>
                                     {this.context.state.paidInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.paidInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 paid invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.paidInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.paidInvoiceCount} paid invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -95,25 +95,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.pendingFilter === true ? 
                                 <>
                                     {this.context.state.pendingInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.pendingInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 pending invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.pendingInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.pendingInvoiceCount} pending invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -125,25 +125,25 @@ class InvoicesHeader extends React.Component {
                         : 
                             <>
                                 {this.context.state.invoiceCount === 0 ? 
-                                    <body>
+                                    <span>
                                         No invoices
-                                    </body>
+                                    </span>
                                 : 
                                     null
                                 }
             
                                 {this.context.state.invoiceCount === 1 ?
-                                    <body>
+                                    <span>
                                         There is 1 total invoice
-                                    </body>
+                                    </span>
                                 : 
                                     null
                                 }
             
                                 {this.context.state.invoiceCount > 1 ?
-                                    <body>
+                                    <span>
                                         There are {this.context.state.invoiceCount} total invoices
-                                    </body>
+                                    </span>
                                 :
                                     null
                                 }
@@ -212,25 +212,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.draftFilter === true ? 
                                 <>
                                     {this.context.state.draftInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.draftInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 draft invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.draftInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.draftInvoiceCount} draft invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -242,25 +242,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.paidFilter === true ? 
                                 <>
                                     {this.context.state.paidInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.paidInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 paid invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.paidInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.paidInvoiceCount} paid invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -272,25 +272,25 @@ class InvoicesHeader extends React.Component {
                             {this.props.pendingFilter === true ? 
                                 <>
                                     {this.context.state.pendingInvoiceCount === 0 ?
-                                        <body>
+                                        <span>
                                             No invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.pendingInvoiceCount === 1 ?
-                                        <body>
+                                        <span>
                                             There is 1 pending invoice
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
 
                                     {this.context.state.pendingInvoiceCount > 1 ?
-                                        <body>
+                                        <span>
                                         There are {this.context.state.pendingInvoiceCount} pending invoices
-                                        </body>
+                                        </span>
                                     : 
                                         null
                                     }
@@ -302,25 +302,25 @@ class InvoicesHeader extends React.Component {
                         : 
                             <>
                                 {this.context.state.invoiceCount === 0 ? 
-                                    <body>
+                                    <span>
                                         No invoices
-                                    </body>
+                                    </span>
                                 : 
                                     null
                                 }
             
                                 {this.context.state.invoiceCount === 1 ?
-                                    <body>
+                                    <span>
                                         There is 1 total invoice
-                                    </body>
+                                    </span>
                                 : 
                                     null
                                 }
             
                                 {this.context.state.invoiceCount > 1 ?
-                                    <body>
+                                    <span>
                                         There are {this.context.state.invoiceCount} total invoices
-                                    </body>
+                                    </span>
                                 :
                                     null
                                 }
@@ -372,9 +372,6 @@ class InvoicesHeader extends React.Component {
                         </div>
                         <span className='header-span'>New Invoice</span>
                     </Button>
-    
-    
-                    
                 </div>
             )
         }

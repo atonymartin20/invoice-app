@@ -49,7 +49,7 @@
     justify-content: space-between;
 }
 
-.invoices-header-left-side body {
+.invoices-header-left-side span {
     background: inherit;
 }
 
@@ -57,7 +57,7 @@
     color: #FFFFFF;
 }
 
-.invoices-header-left-side-dark-mode body {
+.invoices-header-left-side-dark-mode span {
     background: inherit;
     color: #DFE3FA;
 }

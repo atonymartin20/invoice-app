@@ -5,10 +5,11 @@ import { AppContext } from './components/context/appContext.js';
 
 // Components
 import Homepage from './components/homepage';
+import ViewInvoice from './components/viewInvoice';
 
 class App extends React.Component {
 
-	componentDidMount() {
+	componentDidMount = () => {
 		if(this.context.state.invoices.length > 0) {
 			let invoiceCount = 0;
 			let draftInvoiceCount = 0;
@@ -55,37 +56,90 @@ class App extends React.Component {
 
 	render() {
 		if (this.context.state.darkMode === true) {
-			return (
-				<div className='app-outside-container-dark-mode'>
-					<div className="app-inside-container-dark-mode">
-						<Switch>
-							<Route exact path="">
-								<Homepage />
-							</Route>
-							<Route>
-								<Homepage />
-							</Route>
-						</Switch>
+			if (this.context.state.grayMode === true) {
+				return (
+					<div className='app-outside-container-dark-mode-gray-mode'>
+						<div className="app-inside-container-dark-mode">
+							<Switch>
+								<Route exact path="/">
+									<Homepage />
+								</Route>
+								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+								{/* <Route path='/view'>
+									<ViewInvoice />
+								</Route> */}
+								<Route>
+									<Homepage />
+								</Route>
+							</Switch>
+						</div>
 					</div>
-				</div>
-			);
+				);
+			}
+
+			else {
+				return (
+					<div className='app-outside-container-dark-mode'>
+						<div className="app-inside-container-dark-mode">
+							<Switch>
+								<Route exact path="/">
+									<Homepage />
+								</Route>
+								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+								{/* <Route path='/view'>
+									<ViewInvoice />
+								</Route> */}
+								<Route>
+									<Homepage />
+								</Route>
+							</Switch>
+						</div>
+					</div>
+				);
+			}
 		}
 
 		else {
-			return (
-				<div className='app-outside-container'>
-					<div className="app-inside-container">
-						<Switch>
-							<Route exact path="">
-								<Homepage />
-							</Route>
-							<Route>
-								<Homepage />
-							</Route>
-						</Switch>
+			if (this.context.state.grayMode === true) {
+				return (
+					<div className='app-outside-container-gray-mode'>
+						<div className="app-inside-container">
+							<Switch>
+								<Route exact path="/">
+									<Homepage />
+								</Route>
+								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+								{/* <Route path='/view'>
+									<ViewInvoice />
+								</Route> */}
+								<Route>
+									<Homepage />
+								</Route>
+							</Switch>
+						</div>
 					</div>
-				</div>
-			);
+				);
+			}
+			else {
+				return (
+					<div className='app-outside-container'>
+						<div className="app-inside-container">
+							<Switch>
+								<Route exact path="/">
+									<Homepage />
+								</Route>
+								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
+								{/* <Route path='/view'>
+									<ViewInvoice />
+								</Route> */}
+								<Route>
+									<Homepage />
+								</Route>
+							</Switch>
+						</div>
+					</div>
+				);
+			}
 		}
 	}
 }
