@@ -1425,10 +1425,10 @@ class ViewInvoice extends React.Component {
 									</div>
 
 									<div className='view-invoices-info-top-right-div-dark-mode'>
-										<span>{this.state.senderAddress['street']}</span>
-										<span>{this.state.senderAddress['city']}</span>
-										<span>{this.state.senderAddress['postCode']}</span>
-										<span>{this.state.senderAddress['country']}</span>
+									<span>{this.state.senderAddressStreet}</span>
+										<span>{this.state.senderAddressCity}</span>
+										<span>{this.state.senderAddressPostCode}</span>
+										<span>{this.state.senderAddressCountry}</span>
 									</div>
 								</div>
 
@@ -1448,11 +1448,10 @@ class ViewInvoice extends React.Component {
 									<div className='view-invoices-info-middle-container-center-div-dark-mode'>
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
-
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['street']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['city']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['postCode']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressStreet}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCity}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressPostCode}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCountry}</span>
 									</div>
 
 									<div className='view-invoices-info-middle-container-right-div-dark-mode'>
@@ -1548,7 +1547,6 @@ class ViewInvoice extends React.Component {
 									<div className='view-invoices-info-middle-container-center-div'>
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
-
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressStreet}</span>
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCity}</span>
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressPostCode}</span>
