@@ -2888,3 +2888,20 @@
     margin-left: auto;
     cursor: pointer;
 }
+
+.edit-invoice-bottom-error-check {
+    margin-top: 32px;
+    margin-bottom:5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-invoice-bottom-error-check span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.0rem;
+    line-height: 15px;
+    letter-spacing: -0.208333px;
+    color: #EC5757;
+}

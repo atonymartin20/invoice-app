@@ -665,6 +665,85 @@ class EditInvoice extends React.Component {
 							: null			
 							}
 
+							{this.props.senderAddressStreet === '' || this.props.senderAddressCity === '' || this.props.senderAddressPostCode === '' || this.props.senderAddressCountry === '' || this.props.clientName === '' || this.props.clientEmail === '' || this.props.clientAddressStreet === '' || this.props.clientAddressCity === '' || this.props.clientAddressPostCode === '' || this.props.clientAddressCountry === '' || this.props.createdAt === '' || this.props.description === '' ? 
+								<div className='edit-invoice-bottom-error-check'>
+									<span>- All fields must be added</span>
+									{this.props.senderAddressStreet === '' ?
+										<span>- Sender Street must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressCity === '' ?
+										<span>- Sender City must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressPostCode === '' ?
+										<span>- Sender Post Code must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressCountry === '' ?
+										<span>- Sender Country must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientName === '' ?
+										<span>- Client Name must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientEmail === '' ?
+										<span>- Client Email must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressStreet === '' ?
+										<span>- Client Street must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressCity === '' ?
+										<span>- Client City must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressPostCode === '' ?
+										<span>- Client Post Code must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressCountry === '' ?
+										<span>- Client Country must be added</span>
+									:
+										null
+									}
+
+									{this.props.createdAt === '' ?
+										<span>- Invoice Date must be added</span>
+									:
+										null
+									}
+
+									{this.props.description === '' ?
+										<span>- Description must be added</span>
+									:
+										null
+									}
+								</div>
+							:
+								null
+							}
+
 							<div className='edit-invoice-bottom-buttons-div'>
 								<div className='edit-invoice-bottom-button-cancel-div-dark-mode'>
 									<span onClick={this.cancelUpdates}>Cancel</span>
@@ -1305,6 +1384,85 @@ class EditInvoice extends React.Component {
 									</div>
 								</div>
 							: null			
+							}
+
+							{this.props.senderAddressStreet === '' || this.props.senderAddressCity === '' || this.props.senderAddressPostCode === '' || this.props.senderAddressCountry === '' || this.props.clientName === '' || this.props.clientEmail === '' || this.props.clientAddressStreet === '' || this.props.clientAddressCity === '' || this.props.clientAddressPostCode === '' || this.props.clientAddressCountry === '' || this.props.createdAt === '' || this.props.description === '' ? 
+								<div className='edit-invoice-bottom-error-check'>
+									<span>- All fields must be added</span>
+									{this.props.senderAddressStreet === '' ?
+										<span>- Sender Street must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressCity === '' ?
+										<span>- Sender City must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressPostCode === '' ?
+										<span>- Sender Post Code must be added</span>
+									:
+										null
+									}
+
+									{this.props.senderAddressCountry === '' ?
+										<span>- Sender Country must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientName === '' ?
+										<span>- Client Name must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientEmail === '' ?
+										<span>- Client Email must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressStreet === '' ?
+										<span>- Client Street must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressCity === '' ?
+										<span>- Client City must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressPostCode === '' ?
+										<span>- Client Post Code must be added</span>
+									:
+										null
+									}
+
+									{this.props.clientAddressCountry === '' ?
+										<span>- Client Country must be added</span>
+									:
+										null
+									}
+
+									{this.props.createdAt === '' ?
+										<span>- Invoice Date must be added</span>
+									:
+										null
+									}
+
+									{this.props.description === '' ?
+										<span>- Description must be added</span>
+									:
+										null
+									}
+								</div>
+							:
+								null
 							}
 
 							<div className='edit-invoice-bottom-buttons-div'>
