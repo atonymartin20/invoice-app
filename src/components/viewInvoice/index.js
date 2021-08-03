@@ -1001,13 +1001,19 @@ class ViewInvoice extends React.Component {
 			}
 		}
 
-		else {
+		else if (itemsLength === 1) {
 			this.setState({
 				item0name: '',
 				item0quantity: 0,
 				item0price: 0,
 				item0total: 0,
-				items: {},
+				items: [],
+			})
+		}
+
+		else {
+			this.setState({
+				items: []
 			})
 		}
 	}

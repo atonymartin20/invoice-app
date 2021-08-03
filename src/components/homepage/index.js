@@ -19,6 +19,7 @@ class Homepage extends React.Component {
 
 	createNewInvoice = (event) => {
 		event.preventDefault();
+		this.context.switchToGrayMode();
 		this.setState({
 			openCreateInvoice: true,
 		})
