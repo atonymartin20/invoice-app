@@ -18,20 +18,7 @@ class EditInvoice extends React.Component {
 		this.props.saveUpdates();
 	}
 
-	updateItem = (location, key, value, newTotal) => {
-		let item = this.state.items[location];
-		item[key] = value;
-		item.total = newTotal;
-
-		let items = this.state.items;
-		items[location] = item
-		this.setState({
-			items
-		})
-	}
-
 	render() {
-		console.log(this.props.senderAddressStreet, this.props.senderAddressStreet.length)
 		if (this.context.state.darkMode === true) {
 			return (
 				<div className="edit-invoice-outside-div">
@@ -745,11 +732,11 @@ class EditInvoice extends React.Component {
 							}
 
 							<div className='edit-invoice-bottom-buttons-div'>
-								<div className='edit-invoice-bottom-button-cancel-div-dark-mode'>
-									<span onClick={this.cancelUpdates}>Cancel</span>
+								<div className='edit-invoice-bottom-button-cancel-div-dark-mode' onClick={this.cancelUpdates}>
+									<span>Cancel</span>
 								</div>
-								<div className='edit-invoice-bottom-button-save-div-dark-mode'>
-									<span onClick={this.saveUpdates}>Save Changes</span>
+								<div className='edit-invoice-bottom-button-save-div-dark-mode' onClick={this.saveUpdates}>
+									<span>Save Changes</span>
 								</div>
 							</div>
 						</div>
@@ -1466,11 +1453,11 @@ class EditInvoice extends React.Component {
 							}
 
 							<div className='edit-invoice-bottom-buttons-div'>
-								<div className='edit-invoice-bottom-button-cancel-div'>
-									<span onClick={this.cancelUpdates}>Cancel</span>
+								<div className='edit-invoice-bottom-button-cancel-div' onClick={this.cancelUpdates}>
+									<span>Cancel</span>
 								</div>
-								<div className='edit-invoice-bottom-button-save-div'>
-									<span onClick={this.saveUpdates}>Save Changes</span>
+								<div className='edit-invoice-bottom-button-save-div' onClick={this.saveUpdates}>
+									<span>Save Changes</span>
 								</div>
 							</div>
 						</div>
