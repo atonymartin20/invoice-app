@@ -5,6 +5,7 @@ import Navbar from '../navbar';
 import '../../css/createInvoice.css';
 import DownArrowIcon from '../../assets/icon-arrow-down.svg';
 import DeleteIcon from '../../assets/icon-delete.svg';
+import { Redirect } from 'react-router-dom';
 
 class CreateInvoice extends React.Component {
 	state = {
@@ -49,6 +50,7 @@ class CreateInvoice extends React.Component {
 		item4quantity: 0,
 		item4price: 0,
 		item4total: 0,
+		redirect: false,
 	};
 
 	componentDidMount = () => {
@@ -354,6 +356,14 @@ class CreateInvoice extends React.Component {
 		})
 	}
 
+	handleRedirect = () => {
+        this.context.closeGrayMode();
+		this.props.closeCreateInvoice();
+        this.setState({
+            redirect: true
+        })
+    }   
+
 	inputHandler = (event) => {
 		event.preventDefault();
 		let target = event.target;
@@ -609,9 +619,8 @@ class CreateInvoice extends React.Component {
 			items: items,
 			total: total
 		}
-		this.context.closeGrayMode();
-		this.props.closeCreateInvoice();
 		this.context.createInvoice(invoice);
+		this.handleRedirect();
 		this.setState({
 			clientAddress,
 			senderAddress,
@@ -780,9 +789,8 @@ class CreateInvoice extends React.Component {
 			items: items,
 			total: total
 		}
-		this.context.closeGrayMode();
-		this.props.closeCreateInvoice();
 		this.context.createInvoice(invoice);
+		this.handleRedirect();
 		this.setState({
 			clientAddress,
 			senderAddress,
@@ -805,6 +813,8 @@ class CreateInvoice extends React.Component {
 				<div className="create-invoice-outside-div">
 					<div className='create-invoice-container-div-dark-mode'>
 						<Navbar />
+						{this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
+
 						<div className='create-invoice-inside-container-div'>
 							<span className='create-invoice-id-span-dark-mode'>New Invoice</span>
 
