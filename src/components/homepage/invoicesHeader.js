@@ -181,7 +181,7 @@ class InvoicesHeader extends React.Component {
                         </div>         
                     }
     
-                    <Button className='header-button'>
+                    <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />
                         </div>
@@ -357,7 +357,7 @@ class InvoicesHeader extends React.Component {
                         </div>      
                     }
     
-                    <Button className='header-button'>
+                    <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />
                         </div>
