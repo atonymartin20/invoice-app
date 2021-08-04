@@ -7,6 +7,7 @@ import '../../css/viewInvoice.css';
 import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
 import ItemCard from './itemCard.js';
 import EditInvoice from '../editInvoice';
+import DeleteModal from '../deleteModal';
 
 class ViewInvoice extends React.Component {
 	state = {
@@ -61,6 +62,7 @@ class ViewInvoice extends React.Component {
 		item4price: 0,
 		item4total: 0,
 		redirect: false,
+		openDeleteModal: false,
 	};
 
 	componentDidMount = () => {
@@ -748,11 +750,26 @@ class ViewInvoice extends React.Component {
 		}
 	}
 
+	closeDeleteModal = (event) => {
+		event.preventDefault();
+		this.context.closeGrayMode();
+		this.setState({
+			openDeleteModal: false,
+		})
+	}
+
 	closeEditInvoice = () => {
 		this.context.closeGrayMode();
 		this.setState({
 			openEditPage: false,
 		})
+	}
+
+	deleteInvoice = (event) => {
+		event.preventDefault();
+		this.context.closeGrayMode();
+		this.context.deleteItem(this.state.id);
+		this.handleRedirect();
 	}
 
 	deleteItem = (position) => {
@@ -1150,6 +1167,14 @@ class ViewInvoice extends React.Component {
 		})
 	}	
 
+	openDeleteModal = (event) => {
+		event.preventDefault();
+		this.context.switchToGrayMode();
+		this.setState({
+			openDeleteModal: true,
+		})
+	}
+
 	openEditInvoice = (event) => {
 		event.preventDefault();
 		this.context.switchToGrayMode();
@@ -1353,6 +1378,22 @@ class ViewInvoice extends React.Component {
 			<div className="view-invoice-outside-div">
 				{this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
 				<Navbar />
+				{this.state.openDeleteModal === true && this.context.state.darkMode === true ? <DeleteModal 
+					id={this.state.id} 
+					closeDeleteModal={this.closeDeleteModal}				
+					deleteInvoice={this.deleteInvoice}
+					colorType='dark' />
+					: null
+				}
+
+				{this.state.openDeleteModal === true && this.context.state.darkMode === false ? <DeleteModal 
+					id={this.state.id} 
+					closeDeleteModal={this.closeDeleteModal}				
+					deleteInvoice={this.deleteInvoice}
+					colorType='light' />
+					: null
+				}
+
 				{this.state.openEditPage === true ? <EditInvoice 
 					invoice={this.state.invoice}
 					clientAddressStreet={this.state.clientAddressStreet}
@@ -1417,7 +1458,7 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button-dark-mode' onClick={this.openEditInvoice}>Edit</div>
-									<div className='delete-button'>Delete</div>
+									<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
 									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
 									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
@@ -1516,7 +1557,7 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button' onClick={this.openEditInvoice}>Edit</div>
-									<div className='delete-button'>Delete</div>
+									<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
 									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
 									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
