@@ -1,0 +1,163 @@
+.delete-modal-outside-div {
+    position: absolute;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 1424px;
+    background-color: rgba(0,0,0,0.5);
+    mix-blend-mode: normal;
+    margin: 0 auto;
+}
+
+.delete-modal-container-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.delete-modal-inside-container-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 48px;
+    width: 480px;
+    height: 249px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    margin-top: 388px;
+}
+
+.delete-modal-inside-container-div-dark-mode {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 48px;
+    width: 480px;
+    height: 249px;
+    background: #1E2139;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    margin-top: 388px;
+}
+
+.delete-modal-h2-confirm {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: #0C0E16;   
+    margin-bottom: 13px;
+}
+
+.delete-modal-h2-confirm-dark-mode {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}
+
+.delete-modal-span-confirm {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+    margin-bottom: 16px;
+}
+
+.delete-modal-span-confirm-dark-mode {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    letter-spacing: -0.25px;
+    color: #DFE3FA;
+    margin-bottom: 16px;
+}
+
+.delete-modal-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.delete-modal-cancel-button {
+    width: 91px;
+    height: 48px;
+    background: #F9FAFE;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.delete-modal-cancel-button-dark-mode {
+    width: 91px;
+    height: 48px;
+    background: #252945;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.delete-modal-cancel-button span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.delete-modal-cancel-button-dark-mode span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #DFE3FA;
+}
+
+.delete-modal-delete-button {
+    width: 89px;
+    height: 48px;
+    background: #EC5757;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-modal-delete-button span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+}
