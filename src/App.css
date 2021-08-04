@@ -2,28 +2,24 @@
 
 .app-outside-container {
     width: 100%;
-    height: 100%;
     min-height: 100vh;
     background-color: #F8F8F8;
 }
 
 .app-outside-container-gray-mode {
     width: 100%;
-    height: 100%;
     min-height: 1424px;
     background-color: #F8F8F8;
 }
 
 .app-outside-container-dark-mode {
     width: 100%;
-    height: 100%;
     min-height: 100vh;
     background-color: #141625;
 }
 
 .app-outside-container-dark-mode-gray-mode {
     width: 100%;
-    height: 100%;
     min-height: 1424px;
     background-color: #141625;
 }

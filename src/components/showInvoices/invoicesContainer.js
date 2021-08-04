@@ -34,9 +34,9 @@ class InvoicesContainer extends React.Component {
 					<div className="invoices-inside-container-div">
 						{this.props.activeFilter === false ? 
 							<>
-								{this.state.invoices.length > 0 ? 
+								{this.context.state.invoices.length > 0 ? 
 		                            <div className='card-container-div-all-invoices'>
-										{this.state.invoices.map(invoice => (
+										{this.context.state.invoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -68,9 +68,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.draftFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.draftInvoices.length > 0 ? 
+								{this.context.state.draftInvoices.length > 0 ? 
 									<>
-										{this.state.draftInvoices.map(invoice => (
+										{this.context.state.draftInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -101,9 +101,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.pendingFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.pendingInvoices.length > 0 ? 
+								{this.context.state.pendingInvoices.length > 0 ? 
 									<>
-										{this.state.pendingInvoices.map(invoice => (
+										{this.context.state.pendingInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -134,9 +134,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.paidFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.paidInvoices.length > 0 ? 
+								{this.context.state.paidInvoices.length > 0 ? 
 									<>
-										{this.state.paidInvoices.map(invoice => (
+										{this.context.state.paidInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -169,9 +169,9 @@ class InvoicesContainer extends React.Component {
 					<div className="invoices-inside-container-div">
 						{this.props.activeFilter === false ? 
 							<>
-								{this.state.invoices.length > 0 ? 
+								{this.context.state.invoices.length > 0 ? 
 		                            <div className='card-container-div-all-invoices'>
-										{this.state.invoices.map(invoice => (
+										{this.context.state.invoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -203,9 +203,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.draftFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.draftInvoices.length > 0 ? 
+								{this.context.state.draftInvoices.length > 0 ? 
 									<>
-										{this.state.draftInvoices.map(invoice => (
+										{this.context.state.draftInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -236,9 +236,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.pendingFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.pendingInvoices.length > 0 ? 
+								{this.context.state.pendingInvoices.length > 0 ? 
 									<>
-										{this.state.pendingInvoices.map(invoice => (
+										{this.context.state.pendingInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}
@@ -269,9 +269,9 @@ class InvoicesContainer extends React.Component {
 
 						{this.props.activeFilter === true && this.props.paidFilter === true ? 
                             <div className='card-container-div-filtered-invoices'>
-								{this.state.paidInvoices.length > 0 ? 
+								{this.context.state.paidInvoices.length > 0 ? 
 									<>
-										{this.state.paidInvoices.map(invoice => (
+										{this.context.state.paidInvoices.map(invoice => (
 											<InvoiceCard
 												key={invoice.id}
 												id={invoice.id}

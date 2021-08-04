@@ -1,11 +1,13 @@
 import React from 'react';
 import { AppContext } from '../context/appContext.js';
+import { Redirect } from 'react-router-dom';
 
 import Navbar from '../navbar';
 import '../../css/viewInvoice.css';
 import LeftArrowIcon from '../../assets/icon-arrow-left.svg';
 import ItemCard from './itemCard.js';
 import EditInvoice from '../editInvoice';
+import DeleteModal from '../deleteModal';
 
 class ViewInvoice extends React.Component {
 	state = {
@@ -59,6 +61,8 @@ class ViewInvoice extends React.Component {
 		item4quantity: 0,
 		item4price: 0,
 		item4total: 0,
+		redirect: false,
+		openDeleteModal: false,
 	};
 
 	componentDidMount = () => {
@@ -746,11 +750,26 @@ class ViewInvoice extends React.Component {
 		}
 	}
 
+	closeDeleteModal = (event) => {
+		event.preventDefault();
+		this.context.closeGrayMode();
+		this.setState({
+			openDeleteModal: false,
+		})
+	}
+
 	closeEditInvoice = () => {
 		this.context.closeGrayMode();
 		this.setState({
 			openEditPage: false,
 		})
+	}
+
+	deleteInvoice = (event) => {
+		event.preventDefault();
+		this.context.closeGrayMode();
+		this.context.deleteItem(this.state.id);
+		this.handleRedirect();
 	}
 
 	deleteItem = (position) => {
@@ -999,13 +1018,19 @@ class ViewInvoice extends React.Component {
 			}
 		}
 
-		else {
+		else if (itemsLength === 1) {
 			this.setState({
 				item0name: '',
 				item0quantity: 0,
 				item0price: 0,
 				item0total: 0,
-				items: {},
+				items: [],
+			})
+		}
+
+		else {
+			this.setState({
+				items: []
 			})
 		}
 	}
@@ -1016,6 +1041,13 @@ class ViewInvoice extends React.Component {
 			showOptions: !this.state.showOptions
 		})
 	}
+
+	handleRedirect = (event) => {
+        event.preventDefault();
+        this.setState({
+            redirect: true
+        })
+    }   
 
 	inputHandler = (event) => {
 		event.preventDefault();
@@ -1113,6 +1145,36 @@ class ViewInvoice extends React.Component {
 		});
 	}
 	
+	markInvoiceAsPending = (event) => {
+		event.preventDefault();
+		let invoice = this.state.invoice;
+		invoice.status = 'pending'
+		this.context.updateInvoice(invoice)
+
+		this.setState({
+			invoice
+		})
+	}
+
+	markInvoiceAsPaid = (event) => {
+		event.preventDefault();
+		let invoice = this.state.invoice;
+		invoice.status = 'paid'
+		this.context.updateInvoice(invoice)
+
+		this.setState({
+			invoice
+		})
+	}	
+
+	openDeleteModal = (event) => {
+		event.preventDefault();
+		this.context.switchToGrayMode();
+		this.setState({
+			openDeleteModal: true,
+		})
+	}
+
 	openEditInvoice = (event) => {
 		event.preventDefault();
 		this.context.switchToGrayMode();
@@ -1314,7 +1376,24 @@ class ViewInvoice extends React.Component {
 	render() {
 		return (
 			<div className="view-invoice-outside-div">
+				{this.state.redirect ? <Redirect to={{ pathname:'/' }} /> : null}
 				<Navbar />
+				{this.state.openDeleteModal === true && this.context.state.darkMode === true ? <DeleteModal 
+					id={this.state.id} 
+					closeDeleteModal={this.closeDeleteModal}				
+					deleteInvoice={this.deleteInvoice}
+					colorType='dark' />
+					: null
+				}
+
+				{this.state.openDeleteModal === true && this.context.state.darkMode === false ? <DeleteModal 
+					id={this.state.id} 
+					closeDeleteModal={this.closeDeleteModal}				
+					deleteInvoice={this.deleteInvoice}
+					colorType='light' />
+					: null
+				}
+
 				{this.state.openEditPage === true ? <EditInvoice 
 					invoice={this.state.invoice}
 					clientAddressStreet={this.state.clientAddressStreet}
@@ -1379,9 +1458,9 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button-dark-mode' onClick={this.openEditInvoice}>Edit</div>
-									<div className='delete-button'>Delete</div>
-									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
-									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
+									<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
 							</div>
 
@@ -1393,10 +1472,10 @@ class ViewInvoice extends React.Component {
 									</div>
 
 									<div className='view-invoices-info-top-right-div-dark-mode'>
-										<span>{this.state.senderAddress['street']}</span>
-										<span>{this.state.senderAddress['city']}</span>
-										<span>{this.state.senderAddress['postCode']}</span>
-										<span>{this.state.senderAddress['country']}</span>
+									<span>{this.state.senderAddressStreet}</span>
+										<span>{this.state.senderAddressCity}</span>
+										<span>{this.state.senderAddressPostCode}</span>
+										<span>{this.state.senderAddressCountry}</span>
 									</div>
 								</div>
 
@@ -1416,11 +1495,10 @@ class ViewInvoice extends React.Component {
 									<div className='view-invoices-info-middle-container-center-div-dark-mode'>
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
-
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['street']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['city']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['postCode']}</span>
-										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddress['country']}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressStreet}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCity}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressPostCode}</span>
+										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCountry}</span>
 									</div>
 
 									<div className='view-invoices-info-middle-container-right-div-dark-mode'>
@@ -1450,7 +1528,7 @@ class ViewInvoice extends React.Component {
 								
 											<div className='view-invoices-info-bottom-container-total-div-dark-mode'>
 												<span>Amount Due</span>
-												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.total}</span>
+												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.fancyTotal}</span>
 											</div>
 										</div>
 									:
@@ -1479,9 +1557,9 @@ class ViewInvoice extends React.Component {
 
 								<div className='view-invoices-option-bar-right-side'>
 									<div className='edit-button' onClick={this.openEditInvoice}>Edit</div>
-									<div className='delete-button'>Delete</div>
-									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button'>Mark as Pending</div>: null }
-									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button'>Mark as Paid</div>: null }
+									<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
+									{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+									{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 								</div>
 							</div>
 
@@ -1516,7 +1594,6 @@ class ViewInvoice extends React.Component {
 									<div className='view-invoices-info-middle-container-center-div'>
 										<span>Bill To</span>
 										<span className='view-invoices-info-middle-container-center-div-client-name-span'>{this.state.clientName}</span>
-
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressStreet}</span>
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressCity}</span>
 										<span className='view-invoices-info-middle-container-center-div-address-span'>{this.state.clientAddressPostCode}</span>

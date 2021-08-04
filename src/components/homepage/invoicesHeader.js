@@ -1,6 +1,5 @@
 import React from 'react';
 import { AppContext } from '../context/appContext.js';
-// import { Redirect } from 'react-router-dom';
 import '../../css/homepage.css';
 
 import  { Button } from 'reactstrap';
@@ -10,19 +9,11 @@ import CheckIcon from '../../assets/icon-check.svg';
 
 class InvoicesHeader extends React.Component {
     state = {
-        redirect: false,
 		activeFilter: this.props.activeFilter,
 		draftFilter: this.props.draftFilter,
 		paidFilter: this.props.paidFilter,
 		pendingFilter: this.props.pendingFilter,        
     }
-
-    handleRedirect = (event) => {
-        event.preventDefault();
-        this.setState({
-            redirect: true
-        })
-    }   
 
     render() {
         if (this.props.type === 'light') {
@@ -190,7 +181,7 @@ class InvoicesHeader extends React.Component {
                         </div>         
                     }
     
-                    <Button className='header-button'>
+                    <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />
                         </div>
@@ -366,7 +357,7 @@ class InvoicesHeader extends React.Component {
                         </div>      
                     }
     
-                    <Button className='header-button'>
+                    <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />
                         </div>

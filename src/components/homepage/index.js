@@ -5,6 +5,7 @@ import Navbar from '../navbar';
 import '../../css/homepage.css';
 import InvoicesHeader from './invoicesHeader.js';
 import InvoicesContainer from '../showInvoices/invoicesContainer.js';
+import CreateInvoice from '../createInvoice';
 
 class Homepage extends React.Component {
 	state = {
@@ -13,7 +14,22 @@ class Homepage extends React.Component {
 		draftFilter: false,
 		paidFilter: false,
 		pendingFilter: false,
+		openCreateInvoice: false,
 	};
+
+	createNewInvoice = (event) => {
+		event.preventDefault();
+		this.context.switchToGrayMode();
+		this.setState({
+			openCreateInvoice: true,
+		})
+	}
+
+	closeCreateInvoice = () => {
+		this.setState({
+			openCreateInvoice: false,
+		})
+	}
 
 	openFilterStatusMenu = (event) => {
 		event.preventDefault();
@@ -87,6 +103,9 @@ class Homepage extends React.Component {
 		return (
 			<div className="homepage-container-div">
 				<Navbar />
+				{this.state.openCreateInvoice === true ? 
+				<CreateInvoice closeCreateInvoice={this.closeCreateInvoice} /> : null}
+
 				{this.context.state.darkMode === true ? (
 					<div className="homepage-inside-container-div-dark-mode">
 						<InvoicesHeader
@@ -96,6 +115,8 @@ class Homepage extends React.Component {
                             filterByStatusDraft={this.filterByStatusDraft}
                             filterByStatusPaid={this.filterByStatusPaid}
                             filterByStatusPending={this.filterByStatusPending}
+							createNewInvoice={this.createNewInvoice}
+							closeCreateInvoice={this.closeCreateInvoice}
 							filterStatusContainerOpen={
 								this.state.filterStatusContainerOpen
 							}
@@ -122,6 +143,8 @@ class Homepage extends React.Component {
                             filterByStatusDraft={this.filterByStatusDraft}
                             filterByStatusPaid={this.filterByStatusPaid}
                             filterByStatusPending={this.filterByStatusPending}
+							createNewInvoice={this.createNewInvoice}
+							closeCreateInvoice={this.closeCreateInvoice}
 							filterStatusContainerOpen={
 								this.state.filterStatusContainerOpen
 							}

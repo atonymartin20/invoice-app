@@ -1,4 +1,4 @@
-.edit-invoice-outside-div {
+.create-invoice-outside-div {
     position: absolute;
     width: 100%;
     max-width: 1440px;
@@ -8,7 +8,7 @@
     margin: 0 auto;
 }
 
-.edit-invoice-container-div {
+.create-invoice-container-div {
     width: 719px;
     position: absolute;
     display: flex;
@@ -16,7 +16,7 @@
     border-radius: 0px 20px 20px 0px;
 }
 
-.edit-invoice-container-div-dark-mode {
+.create-invoice-container-div-dark-mode {
     width: 719px;
     position: absolute;
     display: flex;
@@ -24,14 +24,14 @@
     border-radius: 0px 20px 20px 0px;
 }
 
-.edit-invoice-inside-container-div {
+.create-invoice-inside-container-div {
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 56px 56px 32px 56px;
 }
 
-.edit-invoice-id-span {
+.create-invoice-id-span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -41,7 +41,7 @@
     color: #0C0E16;
 }
 
-.edit-invoice-id-span-dark-mode {
+.create-invoice-id-span-dark-mode {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -51,17 +51,7 @@
     color: #FFFFFF;
 }
 
-.edit-invoice-id-span-gray {
-    font-family: Spartan;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2.4rem;
-    line-height: 32px;
-    letter-spacing: -0.5px;
-    color: #888EB0;
-}
-
-.edit-invoice-bill-from-div {
+.create-invoice-bill-from-div {
     display: flex;
     flex-direction: column;
     margin-top: 48px;
@@ -69,7 +59,7 @@
     height: 209px;
 }
 
-.edit-invoice-bill-from-div h5 {
+.create-invoice-bill-from-div h5 {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -80,7 +70,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-from-street-address-div {
+.create-invoice-bill-from-street-address-div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -89,7 +79,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-from-street-address-div-error {
+.create-invoice-bill-from-street-address-div-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -99,7 +89,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-from-street-address-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-street-address-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -110,7 +100,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode {
+.create-invoice-bill-from-street-address-div-dark-mode {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -119,7 +109,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode-error {
+.create-invoice-bill-from-street-address-div-dark-mode-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -129,7 +119,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-street-address-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -140,7 +130,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-street-address-div span{
+.create-invoice-bill-from-street-address-div span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -150,7 +140,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-from-street-address-div-error span{
+.create-invoice-bill-from-street-address-div-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -160,7 +150,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode span{
+.create-invoice-bill-from-street-address-div-dark-mode span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -170,7 +160,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode-error span{
+.create-invoice-bill-from-street-address-div-dark-mode-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -180,7 +170,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-street-address-div input {
+.create-invoice-bill-from-street-address-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -197,7 +187,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-street-address-div-error input {
+.create-invoice-bill-from-street-address-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -215,12 +205,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-street-address-div input:hover {
+.create-invoice-bill-from-street-address-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode input {
+.create-invoice-bill-from-street-address-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -237,7 +227,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode-error input {
+.create-invoice-bill-from-street-address-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -255,19 +245,19 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-street-address-div-dark-mode input:hover {
+.create-invoice-bill-from-street-address-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-bill-from-city-post-code-country-div {
+.create-invoice-bill-from-city-post-code-country-div {
     height: 73px;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-city-div {
+.create-invoice-bill-from-city-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -276,7 +266,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-city-div-error {
+.create-invoice-bill-from-city-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -286,7 +276,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-city-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-city-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -297,7 +287,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode {
+.create-invoice-bill-from-city-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -306,7 +296,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode-error {
+.create-invoice-bill-from-city-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -316,7 +306,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-city-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -327,7 +317,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-city-div span {
+.create-invoice-bill-from-city-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -337,7 +327,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-from-city-div-error span {
+.create-invoice-bill-from-city-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -347,7 +337,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode span {
+.create-invoice-bill-from-city-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -357,7 +347,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode-error span {
+.create-invoice-bill-from-city-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -367,7 +357,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-city-div input {
+.create-invoice-bill-from-city-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -384,7 +374,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-city-div-error input {
+.create-invoice-bill-from-city-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -402,12 +392,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-city-div input:hover {
+.create-invoice-bill-from-city-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode input {
+.create-invoice-bill-from-city-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -424,7 +414,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode-error input {
+.create-invoice-bill-from-city-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -442,12 +432,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-city-div-dark-mode input:hover {
+.create-invoice-bill-from-city-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-bill-from-post-code-div {
+.create-invoice-bill-from-post-code-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -456,7 +446,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-post-code-div-error {
+.create-invoice-bill-from-post-code-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -466,7 +456,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-post-code-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-post-code-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -477,7 +467,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode {
+.create-invoice-bill-from-post-code-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -486,7 +476,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode-error {
+.create-invoice-bill-from-post-code-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -496,7 +486,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-post-code-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -507,7 +497,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-post-code-div span {
+.create-invoice-bill-from-post-code-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -517,7 +507,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-from-post-code-div-error span {
+.create-invoice-bill-from-post-code-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -527,7 +517,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode span {
+.create-invoice-bill-from-post-code-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -537,7 +527,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode-error span {
+.create-invoice-bill-from-post-code-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -547,7 +537,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-post-code-div input {
+.create-invoice-bill-from-post-code-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -564,7 +554,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-post-code-div-error input {
+.create-invoice-bill-from-post-code-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -582,12 +572,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-post-code-div input:hover {
+.create-invoice-bill-from-post-code-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode input {
+.create-invoice-bill-from-post-code-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -604,7 +594,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode-error input {
+.create-invoice-bill-from-post-code-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -622,12 +612,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-post-code-div-dark-mode input:hover {
+.create-invoice-bill-from-post-code-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;   
 }
 
-.edit-invoice-bill-from-country-div {
+.create-invoice-bill-from-country-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -636,7 +626,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-country-div-error {
+.create-invoice-bill-from-country-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -646,7 +636,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-country-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-country-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -657,7 +647,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode {
+.create-invoice-bill-from-country-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -666,7 +656,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode-error {
+.create-invoice-bill-from-country-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -676,7 +666,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-from-country-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -687,7 +677,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-country-div span {
+.create-invoice-bill-from-country-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -697,7 +687,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-from-country-div-error span {
+.create-invoice-bill-from-country-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -707,7 +697,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode span {
+.create-invoice-bill-from-country-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -717,7 +707,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode-error span {
+.create-invoice-bill-from-country-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -727,7 +717,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-from-country-div input {
+.create-invoice-bill-from-country-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -744,7 +734,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-country-div-error input {
+.create-invoice-bill-from-country-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -762,12 +752,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-country-div input:hover {
+.create-invoice-bill-from-country-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-from-country-div-dark-mode input {
+.create-invoice-bill-from-country-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -784,7 +774,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode-error input {
+.create-invoice-bill-from-country-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -802,12 +792,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-from-country-div-dark-mode input:hover {
+.create-invoice-bill-from-country-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-div {
+.create-invoice-bill-to-div {
     display: flex;
     flex-direction: column;
     margin-top: 48px;
@@ -815,7 +805,7 @@
     height: 403px;
 }
 
-.edit-invoice-bill-to-div h5 {
+.create-invoice-bill-to-div h5 {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -826,7 +816,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-name-div {
+.create-invoice-bill-to-client-name-div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -835,7 +825,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-name-div-error {
+.create-invoice-bill-to-client-name-div-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -845,7 +835,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode {
+.create-invoice-bill-to-client-name-div-dark-mode {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -854,7 +844,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode-error {
+.create-invoice-bill-to-client-name-div-dark-mode-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -864,7 +854,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-name-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-client-name-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -875,7 +865,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-client-name-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -886,7 +876,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-name-div span{
+.create-invoice-bill-to-client-name-div span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -896,7 +886,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-client-name-div-error span{
+.create-invoice-bill-to-client-name-div-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -906,7 +896,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode span{
+.create-invoice-bill-to-client-name-div-dark-mode span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -916,7 +906,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode-error span{
+.create-invoice-bill-to-client-name-div-dark-mode-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -926,7 +916,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-name-div input {
+.create-invoice-bill-to-client-name-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -943,7 +933,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-client-name-div-error input {
+.create-invoice-bill-to-client-name-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -961,12 +951,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-client-name-div input:hover {
+.create-invoice-bill-to-client-name-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode input {
+.create-invoice-bill-to-client-name-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -983,7 +973,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode-error input {
+.create-invoice-bill-to-client-name-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1001,12 +991,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-client-name-div-dark-mode input:hover {
+.create-invoice-bill-to-client-name-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-to-client-email-div {
+.create-invoice-bill-to-client-email-div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1015,7 +1005,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-email-div-error {
+.create-invoice-bill-to-client-email-div-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1025,7 +1015,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode {
+.create-invoice-bill-to-client-email-div-dark-mode {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1034,7 +1024,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode-error {
+.create-invoice-bill-to-client-email-div-dark-mode-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1044,7 +1034,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-client-email-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-client-email-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1055,7 +1045,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-client-email-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1066,7 +1056,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-email-div span{
+.create-invoice-bill-to-client-email-div span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1076,7 +1066,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-client-email-div-error span{
+.create-invoice-bill-to-client-email-div-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1086,7 +1076,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode span{
+.create-invoice-bill-to-client-email-div-dark-mode span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1096,7 +1086,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode-error span{
+.create-invoice-bill-to-client-email-div-dark-mode-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1106,7 +1096,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-client-email-div input {
+.create-invoice-bill-to-client-email-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -1123,7 +1113,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-client-email-div-error input {
+.create-invoice-bill-to-client-email-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -1141,12 +1131,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-client-email-div input:hover {
+.create-invoice-bill-to-client-email-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode input {
+.create-invoice-bill-to-client-email-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -1163,7 +1153,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode-error input {
+.create-invoice-bill-to-client-email-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1181,12 +1171,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-client-email-div-dark-mode input:hover {
+.create-invoice-bill-to-client-email-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-street-address-div {
+.create-invoice-bill-to-street-address-div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1195,7 +1185,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-street-address-div-error {
+.create-invoice-bill-to-street-address-div-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1205,7 +1195,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode {
+.create-invoice-bill-to-street-address-div-dark-mode {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1214,7 +1204,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode-error {
+.create-invoice-bill-to-street-address-div-dark-mode-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1224,7 +1214,7 @@
     margin-bottom: 24px;
 }
 
-.edit-invoice-bill-to-street-address-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-street-address-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1235,7 +1225,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-street-address-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1247,7 +1237,7 @@
 }
 
 
-.edit-invoice-bill-to-street-address-div span{
+.create-invoice-bill-to-street-address-div span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1257,7 +1247,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-street-address-div-error span{
+.create-invoice-bill-to-street-address-div-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1267,7 +1257,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode span{
+.create-invoice-bill-to-street-address-div-dark-mode span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1277,7 +1267,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode-error span{
+.create-invoice-bill-to-street-address-div-dark-mode-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1287,7 +1277,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-street-address-div input {
+.create-invoice-bill-to-street-address-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -1304,7 +1294,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-street-address-div-error input {
+.create-invoice-bill-to-street-address-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -1322,12 +1312,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-street-address-div input:hover {
+.create-invoice-bill-to-street-address-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;   
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode input {
+.create-invoice-bill-to-street-address-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -1344,7 +1334,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode-error input {
+.create-invoice-bill-to-street-address-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1362,19 +1352,19 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-street-address-div-dark-mode input:hover {
+.create-invoice-bill-to-street-address-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-to-city-post-code-country-div {
+.create-invoice-bill-to-city-post-code-country-div {
     height: 73px;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-city-div {
+.create-invoice-bill-to-city-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1383,7 +1373,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-city-div-error {
+.create-invoice-bill-to-city-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1393,7 +1383,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode {
+.create-invoice-bill-to-city-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1402,7 +1392,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode-error {
+.create-invoice-bill-to-city-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1412,7 +1402,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-city-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-city-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1424,7 +1414,7 @@
 }
 
 
-.edit-invoice-bill-to-city-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-city-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1435,7 +1425,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-city-div span {
+.create-invoice-bill-to-city-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1445,7 +1435,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-city-div-error span {
+.create-invoice-bill-to-city-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1455,7 +1445,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode span {
+.create-invoice-bill-to-city-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1465,7 +1455,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode-error span {
+.create-invoice-bill-to-city-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1475,7 +1465,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-city-div input {
+.create-invoice-bill-to-city-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -1492,7 +1482,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-city-div-error input {
+.create-invoice-bill-to-city-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -1510,12 +1500,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-city-div input:hover {
+.create-invoice-bill-to-city-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode input {
+.create-invoice-bill-to-city-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -1532,7 +1522,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode-error input {
+.create-invoice-bill-to-city-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1550,12 +1540,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-city-div-dark-mode input:hover {
+.create-invoice-bill-to-city-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-post-code-div {
+.create-invoice-bill-to-post-code-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1564,7 +1554,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-post-code-div-error {
+.create-invoice-bill-to-post-code-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1574,7 +1564,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode {
+.create-invoice-bill-to-post-code-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1583,7 +1573,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode-error {
+.create-invoice-bill-to-post-code-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1593,7 +1583,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-post-code-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-post-code-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1604,7 +1594,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-post-code-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1616,7 +1606,7 @@
 }
 
 
-.edit-invoice-bill-to-post-code-div span {
+.create-invoice-bill-to-post-code-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1626,7 +1616,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-post-code-div-error span {
+.create-invoice-bill-to-post-code-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1636,7 +1626,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode span {
+.create-invoice-bill-to-post-code-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1646,7 +1636,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode-error span {
+.create-invoice-bill-to-post-code-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1656,7 +1646,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-post-code-div input {
+.create-invoice-bill-to-post-code-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -1673,7 +1663,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-post-code-div-error input {
+.create-invoice-bill-to-post-code-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -1691,12 +1681,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-post-code-div input:hover {
+.create-invoice-bill-to-post-code-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode input {
+.create-invoice-bill-to-post-code-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -1713,7 +1703,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode-error input {
+.create-invoice-bill-to-post-code-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1731,12 +1721,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-post-code-div-dark-mode input:hover {
+.create-invoice-bill-to-post-code-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;   
 }
 
-.edit-invoice-bill-to-country-div {
+.create-invoice-bill-to-country-div {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1745,7 +1735,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-country-div-error {
+.create-invoice-bill-to-country-div-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1755,7 +1745,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode {
+.create-invoice-bill-to-country-div-dark-mode {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1764,7 +1754,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode-error {
+.create-invoice-bill-to-country-div-dark-mode-error {
     height: 73px;
     width: 33%;
     max-width: 152px;
@@ -1774,7 +1764,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-bill-to-country-div-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-country-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1785,7 +1775,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-bill-to-country-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1796,7 +1786,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-country-div span {
+.create-invoice-bill-to-country-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1806,7 +1796,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bill-to-country-div-error span {
+.create-invoice-bill-to-country-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1816,7 +1806,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode span {
+.create-invoice-bill-to-country-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1826,7 +1816,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode-error span {
+.create-invoice-bill-to-country-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1836,7 +1826,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-bill-to-country-div input {
+.create-invoice-bill-to-country-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -1853,7 +1843,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-country-div-error input {
+.create-invoice-bill-to-country-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -1871,12 +1861,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-country-div input:hover {
+.create-invoice-bill-to-country-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode input {
+.create-invoice-bill-to-country-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -1893,7 +1883,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode-error input {
+.create-invoice-bill-to-country-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -1911,12 +1901,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-bill-to-country-div-dark-mode input:hover {
+.create-invoice-bill-to-country-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-invoice-date-payment-terms-div {
+.create-invoice-invoice-date-payment-terms-div {
     display: flex;
     margin-top: 48px;
     width: 100%;
@@ -1924,7 +1914,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-invoice-date-div {
+.create-invoice-invoice-date-div {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -1933,7 +1923,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-invoice-date-div-error {
+.create-invoice-invoice-date-div-error {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -1943,7 +1933,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-invoice-date-div-dark-mode {
+.create-invoice-invoice-date-div-dark-mode {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -1952,7 +1942,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-invoice-date-div-dark-mode-error {
+.create-invoice-invoice-date-div-dark-mode-error {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -1962,7 +1952,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-invoice-date-div-error .edit-invoice-right-error-text {
+.create-invoice-invoice-date-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1973,7 +1963,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-invoice-date-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-invoice-date-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -1984,7 +1974,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-invoice-date-div span {
+.create-invoice-invoice-date-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -1994,7 +1984,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-invoice-date-div-error span {
+.create-invoice-invoice-date-div-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2004,7 +1994,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-invoice-date-div-dark-mode span {
+.create-invoice-invoice-date-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2014,7 +2004,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-invoice-date-div-dark-mode-error span {
+.create-invoice-invoice-date-div-dark-mode-error span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2024,7 +2014,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-invoice-date-div input {
+.create-invoice-invoice-date-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -2041,7 +2031,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-invoice-date-div-error input {
+.create-invoice-invoice-date-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -2059,12 +2049,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-invoice-date-div input:hover {
+.create-invoice-invoice-date-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-invoice-date-div-dark-mode input {
+.create-invoice-invoice-date-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -2081,7 +2071,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-invoice-date-div-dark-mode-error input {
+.create-invoice-invoice-date-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -2099,12 +2089,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-invoice-date-div-dark-mode input:hover {
+.create-invoice-invoice-date-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-payment-terms-div {
+.create-invoice-payment-terms-div {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -2113,7 +2103,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-payment-terms-div-dark-mode {
+.create-invoice-payment-terms-div-dark-mode {
     height: 73px;
     width: 50%;
     max-width: 240px;
@@ -2122,7 +2112,7 @@
     justify-content: space-between;
 }
 
-.edit-invoice-payment-terms-div span {
+.create-invoice-payment-terms-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2132,7 +2122,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-payment-terms-div-dark-mode span {
+.create-invoice-payment-terms-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2142,27 +2132,27 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-payment-terms-custom-select-container-div {
+.create-invoice-payment-terms-custom-select-container-div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.edit-invoice-payment-terms-custom-select-container-div-dark-mode {
+.create-invoice-payment-terms-custom-select-container-div-dark-mode {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.edit-invoice-payment-terms-custom-select-container-div .edit-invoice-payment-terms-custom-select {
+.create-invoice-payment-terms-custom-select-container-div .create-invoice-payment-terms-custom-select {
     margin-top: 10px;
 }
 
-.edit-invoice-payment-terms-custom-select-container-div-dark-mode .edit-invoice-payment-terms-custom-select-dark-mode {
+.create-invoice-payment-terms-custom-select-container-div-dark-mode .create-invoice-payment-terms-custom-select-dark-mode {
     margin-top: 10px;
 }
 
-.edit-invoice-payment-terms-custom-select {
+.create-invoice-payment-terms-custom-select {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -2184,12 +2174,12 @@
     position: relative;
 }
 
-.edit-invoice-payment-terms-custom-select:hover {
+.create-invoice-payment-terms-custom-select:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-payment-terms-custom-select-dark-mode {
+.create-invoice-payment-terms-custom-select-dark-mode {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -2211,12 +2201,12 @@
     position: relative;
 }
 
-.edit-invoice-payment-terms-custom-select-dark-mode:hover {
+.create-invoice-payment-terms-custom-select-dark-mode:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div {
+.create-invoice-payment-terms-custom-select-option-container-div {
     height: 191px;
     margin-top: 8px;
     display: flex;
@@ -2229,7 +2219,7 @@
     z-index: 2;
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div-dark-mode {
+.create-invoice-payment-terms-custom-select-option-container-div-dark-mode {
     height: 191px;
     margin-top: 8px;
     display: flex;
@@ -2242,7 +2232,7 @@
     z-index: 2;
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div span {
+.create-invoice-payment-terms-custom-select-option-container-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2258,12 +2248,12 @@
     padding: 0px 24px;
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div span:hover {
+.create-invoice-payment-terms-custom-select-option-container-div span:hover {
     color: #7C5DFA;
     cursor: pointer;
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div-dark-mode span {
+.create-invoice-payment-terms-custom-select-option-container-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2279,7 +2269,7 @@
     padding: 0px 24px;
 }
 
-.edit-invoice-payment-terms-custom-select-option-container-div-dark-mode span:hover {
+.create-invoice-payment-terms-custom-select-option-container-div-dark-mode span:hover {
     color: #9277FF;
     cursor: pointer;
 }
@@ -2299,7 +2289,7 @@
     transform: rotate(180deg);
 }
 
-.edit-invoice-payment-terms-custom-select span {
+.create-invoice-payment-terms-custom-select span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2309,7 +2299,7 @@
     color: #0C0E16;
 }
 
-.edit-invoice-payment-terms-custom-select-dark-mode span {
+.create-invoice-payment-terms-custom-select-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2319,7 +2309,7 @@
     color: #FFFFFF;
 }
 
-.edit-invoice-project-description-div {
+.create-invoice-project-description-div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -2328,7 +2318,7 @@
     margin-top: 24px;
 }
 
-.edit-invoice-project-description-div-error {
+.create-invoice-project-description-div-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -2338,7 +2328,7 @@
     margin-top: 24px;
 }
 
-.edit-invoice-project-description-div-dark-mode {
+.create-invoice-project-description-div-dark-mode {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -2347,7 +2337,7 @@
     margin-top: 24px;
 }
 
-.edit-invoice-project-description-div-dark-mode-error {
+.create-invoice-project-description-div-dark-mode-error {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -2357,7 +2347,7 @@
     margin-top: 24px;
 }
 
-.edit-invoice-project-description-div-error .edit-invoice-right-error-text {
+.create-invoice-project-description-div-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -2368,7 +2358,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-project-description-div-dark-mode-error .edit-invoice-right-error-text {
+.create-invoice-project-description-div-dark-mode-error .create-invoice-right-error-text {
     height: 15px; 
     font-family: Spartan;
     font-style: normal;
@@ -2379,7 +2369,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-project-description-div span{
+.create-invoice-project-description-div span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2389,7 +2379,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-project-description-div-error span{
+.create-invoice-project-description-div-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2399,7 +2389,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-project-description-div-dark-mode span{
+.create-invoice-project-description-div-dark-mode span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2409,7 +2399,7 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-project-description-div-dark-mode-error span{
+.create-invoice-project-description-div-dark-mode-error span{
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2419,7 +2409,7 @@
     color: #EC5757;
 }
 
-.edit-invoice-project-description-div input {
+.create-invoice-project-description-div input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
@@ -2436,7 +2426,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-project-description-div-error input {
+.create-invoice-project-description-div-error input {
     height: 48px;
     background: #FFFFFF;
     border: 1px solid #EC5757;
@@ -2454,12 +2444,12 @@
     margin-top: auto;
 }
 
-.edit-invoice-project-description-div input:hover {
+.create-invoice-project-description-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-project-description-div-dark-mode input {
+.create-invoice-project-description-div-dark-mode input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #252945;
@@ -2476,7 +2466,7 @@
     padding-left: 20px;
 }
 
-.edit-invoice-project-description-div-dark-mode-error input {
+.create-invoice-project-description-div-dark-mode-error input {
     height: 48px;
     background: #1E2139;
     border: 1px solid #EC5757;
@@ -2494,19 +2484,19 @@
     margin-top: auto;
 }
 
-.edit-invoice-project-description-div-dark-mode input:hover {
+.create-invoice-project-description-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-item-list-div {
+.create-invoice-item-list-div {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 32px;
 }
 
-.edit-invoice-item-list-div h2{
+.create-invoice-item-list-div h2{
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2516,21 +2506,21 @@
     color: #777F98;
 }
 
-.edit-invoice-item-list-labels-div {
+.create-invoice-item-list-labels-div {
     width: 100%;
     display: flex;
     height: 15px;
     margin-top: 16px;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode {
+.create-invoice-item-list-labels-div-dark-mode {
     width: 100%;
     display: flex;
     height: 15px;
     margin-top: 16px;
 }
 
-.edit-invoice-item-list-labels-div span {
+.create-invoice-item-list-labels-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2540,7 +2530,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode span {
+.create-invoice-item-list-labels-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 500;
@@ -2550,45 +2540,45 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-item-list-labels-div .edit-invoice-item-list-labels-div-name-span {
+.create-invoice-item-list-labels-div .create-invoice-item-list-labels-div-name-span {
     width: 200px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode .edit-invoice-item-list-labels-div-name-span {
+.create-invoice-item-list-labels-div-dark-mode .create-invoice-item-list-labels-div-name-span {
     width: 200px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div .edit-invoice-item-list-labels-div-qty-span {
+.create-invoice-item-list-labels-div .create-invoice-item-list-labels-div-qty-span {
     width: 46px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode .edit-invoice-item-list-labels-div-qty-span {
+.create-invoice-item-list-labels-div-dark-mode .create-invoice-item-list-labels-div-qty-span {
     width: 46px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div .edit-invoice-item-list-labels-div-price-span {
+.create-invoice-item-list-labels-div .create-invoice-item-list-labels-div-price-span {
     width: 100px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode .edit-invoice-item-list-labels-div-price-span {
+.create-invoice-item-list-labels-div-dark-mode .create-invoice-item-list-labels-div-price-span {
     width: 100px;
     margin-right: 16px;
 }
 
-.edit-invoice-item-list-labels-div .edit-invoice-item-list-labels-div-total-span {
+.create-invoice-item-list-labels-div .create-invoice-item-list-labels-div-total-span {
     width: 70px;
 }
 
-.edit-invoice-item-list-labels-div-dark-mode .edit-invoice-item-list-labels-div-total-span {
+.create-invoice-item-list-labels-div-dark-mode .create-invoice-item-list-labels-div-total-span {
     width: 70px;
 }
 
-.edit-invoice-add-new-item-div {
+.create-invoice-add-new-item-div {
     width: 100%;
     height: 48px;
     background: #F9FAFE;
@@ -2599,12 +2589,12 @@
     margin-top: 16px;
 }
 
-.edit-invoice-add-new-item-div:hover {
+.create-invoice-add-new-item-div:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-add-new-item-div-dark-mode {
+.create-invoice-add-new-item-div-dark-mode {
     width: 100%;
     height: 48px;
     background: #252945;
@@ -2615,12 +2605,12 @@
     margin-top: 16px;
 }
 
-.edit-invoice-add-new-item-div-dark-mode:hover {
+.create-invoice-add-new-item-div-dark-mode:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;   
 }
 
-.edit-invoice-add-new-item-div span {
+.create-invoice-add-new-item-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2631,7 +2621,7 @@
     color: #7E88C3;
 }
 
-.edit-invoice-add-new-item-div-dark-mode span {
+.create-invoice-add-new-item-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2642,15 +2632,14 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bottom-buttons-div {
+.create-invoice-bottom-buttons-div {
     width: 100%;
     height: 48px;
     margin-top: 39px;
     display: flex;
-    justify-content: flex-end;
 }
 
-.edit-invoice-bottom-button-cancel-div {
+.create-invoice-bottom-button-discard-div {
     width: 96px;
     height: 48px;
     background: #F9FAFE;
@@ -2658,32 +2647,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;
     cursor: pointer;
 }
 
-.edit-invoice-bottom-button-cancel-div:hover {
+.create-invoice-bottom-button-discard-div:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bottom-button-cancel-div-dark-mode {
-    width: 96px;
-    height: 48px;
-    background: #252945;
-    border-radius: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-.edit-invoice-bottom-button-cancel-div-dark-mode:hover {
-    border: 1px solid #7C5DFA;
-}
-
-.edit-invoice-bottom-button-cancel-div span {
+.create-invoice-bottom-button-discard-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2694,7 +2666,52 @@
     color: #7E88C3;
 }
 
-.edit-invoice-bottom-button-cancel-div-dark-mode span {
+.create-invoice-bottom-button-save-as-draft-div {
+    width: 133px;
+    height: 48px;
+    background: #373B53;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.create-invoice-bottom-button-save-as-draft-div:hover {
+    border: 1px solid #9277FF;
+    cursor: pointer;    
+}
+
+.create-invoice-bottom-button-save-as-draft-div-dark-mode {
+    width: 133px;
+    height: 48px;
+    background: #373B53;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.create-invoice-bottom-button-save-as-draft-div-dark-mode:hover {
+    border: 1px solid #7C5DFA;
+    cursor: pointer;    
+}
+
+.create-invoice-bottom-button-save-as-draft-div span {
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+}
+
+.create-invoice-bottom-button-save-as-draft-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2705,8 +2722,8 @@
     color: #DFE3FA;
 }
 
-.edit-invoice-bottom-button-save-div {
-    width: 138px;
+.create-invoice-bottom-button-save-and-send-div {
+    width: 128px;
     height: 48px;
     background: #7C5DFA;
     border-radius: 24px;
@@ -2714,15 +2731,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 8px;
 }
 
-.edit-invoice-bottom-button-save-div:hover {
+.create-invoice-bottom-button-save-and-send-div:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-invoice-bottom-button-save-div-dark-mode {
-    width: 138px;
+.create-invoice-bottom-button-save-and-send-div-dark-mode {
+    width: 128px;
     height: 48px;
     background: #7C5DFA;
     border-radius: 24px;
@@ -2730,14 +2748,15 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-left: 8px;
 }
 
-.edit-invoice-bottom-button-save-div-dark-mode:hover {
+.create-invoice-bottom-button-save-and-send-div-dark-mode:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-invoice-bottom-button-save-div span {
+.create-invoice-bottom-button-save-and-send-div span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2748,7 +2767,7 @@
     color: #FFFFFF;
 }
 
-.edit-invoice-bottom-button-save-div-dark-mode span {
+.create-invoice-bottom-button-save-and-send-div-dark-mode span {
     font-family: Spartan;
     font-style: normal;
     font-weight: bold;
@@ -2759,7 +2778,7 @@
     color: #FFFFFF;
 }
 
-.edit-item-card-div {
+.create-item-card-div {
     width: 100%;
     display: flex;
     margin-top: 16px;
@@ -2767,7 +2786,7 @@
     align-items: center;
 }
 
-.edit-item-card-div-dark-mode {
+.create-item-card-div-dark-mode {
     width: 100%;
     display: flex;
     margin-top: 16px;
@@ -2775,7 +2794,7 @@
     align-items: center;
 }
 
-.edit-item-card-div input {
+.create-item-card-div input {
     background: #FFFFFF;
     border: 1px solid #DFE3FA;
     box-sizing: border-box;
@@ -2791,12 +2810,12 @@
     padding-left: 20px;
 }
 
-.edit-item-card-div input:hover {
+.create-item-card-div input:hover {
     border: 1px solid #9277FF;
     cursor: pointer;    
 }
 
-.edit-item-card-div-dark-mode input {
+.create-item-card-div-dark-mode input {
     background: #1E2139;
     border: 1px solid #252945;
     box-sizing: border-box;
@@ -2812,63 +2831,63 @@
     padding-left: 20px;
 }
 
-.edit-item-card-div-dark-mode input:hover {
+.create-item-card-div-dark-mode input:hover {
     border: 1px solid #7C5DFA;
     cursor: pointer;    
 }
 
-.edit-item-card-name-input {
+.create-item-card-name-input {
     width: 200px;
     margin-right: 16px;
 }
 
-.edit-item-card-div .edit-item-card-name-input-error {
-    width: 200px;
-    margin-right: 16px;
-    border: 1px solid #EC5757;
-}
-
-.edit-item-card-div-dark-mode .edit-item-card-name-input-error {
+.create-item-card-div .create-item-card-name-input-error {
     width: 200px;
     margin-right: 16px;
     border: 1px solid #EC5757;
 }
 
-.edit-item-card-quantity-input {
+.create-item-card-div-dark-mode .create-item-card-name-input-error {
+    width: 200px;
+    margin-right: 16px;
+    border: 1px solid #EC5757;
+}
+
+.create-item-card-quantity-input {
     width: 46px;
     margin-right: 16px;
 }
 
-.edit-item-card-div .edit-item-card-quantity-input-error {
+.create-item-card-div .create-item-card-quantity-input-error {
     width: 46px;
     margin-right: 16px;
     border: 1px solid #EC5757;
 }
 
-.edit-item-card-div-dark-mode .edit-item-card-quantity-input-error {
+.create-item-card-div-dark-mode .create-item-card-quantity-input-error {
     width: 46px;
     margin-right: 16px;
     border: 1px solid #EC5757;
 }
 
-.edit-item-card-price-input {
+.create-item-card-price-input {
     width: 100px;
     margin-right: 16px;
 }
 
-.edit-item-card-div .edit-item-card-price-input-error {
-    width: 100px;
-    margin-right: 16px;
-    border: 1px solid #EC5757;
-}
-
-.edit-item-card-div-dark-mode .edit-item-card-price-input-error {
+.create-item-card-div .create-item-card-price-input-error {
     width: 100px;
     margin-right: 16px;
     border: 1px solid #EC5757;
 }
 
-.edit-item-card-total-span {
+.create-item-card-div-dark-mode .create-item-card-price-input-error {
+    width: 100px;
+    margin-right: 16px;
+    border: 1px solid #EC5757;
+}
+
+.create-item-card-total-span {
     width: 70px;
     font-family: Spartan;
     font-style: normal;
@@ -2879,23 +2898,23 @@
     color: #888EB0;
 }
 
-.edit-item-card-div-dark-mode .edit-item-card-total-span {
+.create-item-card-div-dark-mode .create-item-card-total-span {
     color: #DFE3FA;
 }
 
-.edit-item-card-trash-can {
+.create-item-card-trash-can {
     margin-left: auto;
     cursor: pointer;
 }
 
-.edit-invoice-bottom-error-check {
+.create-invoice-bottom-error-check {
     margin-top: 32px;
     margin-bottom:5px;
     display: flex;
     flex-direction: column;
 }
 
-.edit-invoice-bottom-error-check span {
+.create-invoice-bottom-error-check span {
     font-family: Spartan;
     font-style: normal;
     font-weight: 600;
