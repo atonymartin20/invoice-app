@@ -768,8 +768,10 @@ class ViewInvoice extends React.Component {
 	deleteInvoice = (event) => {
 		event.preventDefault();
 		this.context.closeGrayMode();
-		this.context.deleteItem(this.state.id);
-		this.handleRedirect();
+		this.context.deleteInvoice(this.state.id);
+		this.setState({
+            redirect: true
+        })
 	}
 
 	deleteItem = (position) => {

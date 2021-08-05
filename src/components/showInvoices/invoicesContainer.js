@@ -44,7 +44,7 @@ class InvoicesContainer extends React.Component {
 												clientName={invoice.clientName}
 												total={invoice.total}
 												status={invoice.status}
-												type='unfiltered'
+												type='filtered'
 												colorType='dark'
 											/>
 										))}
@@ -179,7 +179,7 @@ class InvoicesContainer extends React.Component {
 												clientName={invoice.clientName}
 												total={invoice.total}
 												status={invoice.status}
-												type='unfiltered'
+												type='filtered'
 												colorType='light'
 											/>
 										))}
