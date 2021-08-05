@@ -379,6 +379,83 @@ export default class AppProvider extends Component {
 							})
 						}
 					},
+					deleteInvoice: (id) => {
+						let invoices = this.state.invoices;
+						let invoiceCount = this.state.invoiceCount - 1;
+						let position = null;
+						let status = '';
+
+						invoices.map((invoice, index) => {
+							if(invoice.id === id) {
+								position = index;
+								status = invoice.status;
+							}
+							return null;
+						})
+						invoices.splice(position, 1);
+					
+						if (status === 'draft') {
+							let draftInvoiceCount = this.state.draftInvoiceCount - 1;
+							let draftPosition = null;
+							let draftInvoices = this.state.draftInvoices;
+
+							draftInvoices.map((invoice, index) => {
+								if(invoice.id === id) {
+									draftPosition = index;
+								}
+								return null;
+							})
+							draftInvoices.splice(draftPosition, 1);
+
+							this.setState({
+								draftInvoices,
+								draftInvoiceCount,
+							})
+						}
+
+						if (status === 'pending') {
+							let pendingInvoiceCount = this.state.pendingInvoiceCount - 1;
+							let pendingPosition = null;
+							let pendingInvoices = this.state.pendingInvoices;
+
+							pendingInvoices.map((invoice, index) => {
+								if(invoice.id === id) {
+									pendingPosition = index;
+								}
+								return null;
+							})
+							pendingInvoices.splice(pendingPosition, 1);
+
+							this.setState({
+								pendingInvoices,
+								pendingInvoiceCount,
+							})
+						}
+
+						if (status === 'paid') {
+							let paidInvoiceCount = this.state.paidInvoiceCount - 1;
+							let paidPosition = null;
+							let paidInvoices = this.state.paidInvoices;
+
+							paidInvoices.map((invoice, index) => {
+								if(invoice.id === id) {
+									paidPosition = index;
+								}
+								return null;
+							})
+							paidInvoices.splice(paidPosition, 1);
+
+							this.setState({
+								paidInvoices,
+								paidInvoiceCount,
+							})
+						}
+
+                        this.setState({
+							invoices,
+							invoiceCount,
+                        })
+					},
 					updateInvoice: (updatedInvoice) => {
 						let invoices = this.state.invoices;
 						let invoiceStatus = updatedInvoice.status;
