@@ -347,13 +347,44 @@ export default class AppProvider extends Component {
 							pendingInvoiceCount: newPendingInvoiceCount
 						})
 					},
+					createInvoice: (newInvoice) => {
+						let invoices = this.state.invoices;
+						let invoiceStatus = newInvoice.status;
+						invoices = invoices.concat(newInvoice);
+						let invoiceCount = this.state.invoiceCount +1;
+
+						if (invoiceStatus === 'draft') {
+							let draftInvoices = this.state.draftInvoices;
+							draftInvoices = draftInvoices.concat(newInvoice);
+							let draftInvoiceCount = this.state.draftInvoiceCount +1;
+							
+							this.setState({
+								invoices,
+								draftInvoices,
+								invoiceCount,
+								draftInvoiceCount
+							})
+						}
+
+						else {
+							let pendingInvoices = this.state.pendingInvoices;
+							pendingInvoices = pendingInvoices.concat(newInvoice)
+							let pendingInvoiceCount = this.state.pendingInvoiceCount +1;
+
+							this.setState({
+								invoices,
+								pendingInvoices,
+								invoiceCount,
+								pendingInvoiceCount,
+							})
+						}
+					},
 					updateInvoice: (updatedInvoice) => {
 						let invoices = this.state.invoices;
 						let invoiceStatus = updatedInvoice.status;
 						invoices.map((invoice, index) => {
 							if (invoice.id === updatedInvoice.id) {
 								invoices[index] = updatedInvoice
-								// invoice = updatedInvoice
 							}
 							return null;
 						})
@@ -361,7 +392,7 @@ export default class AppProvider extends Component {
 						if (invoiceStatus === 'draft') {
 							let draftInvoices = this.state.draftInvoices;
 
-							draftInvoices.map((invoice, index) => {
+							draftInvoices.map((invoice) => {
 								if (invoice.id === updatedInvoice.id) {
 									invoice = updatedInvoice
 								}
@@ -376,7 +407,7 @@ export default class AppProvider extends Component {
 						else if (invoiceStatus === 'paid') {
 							let paidInvoices = this.state.paidInvoices;
 
-							paidInvoices.map((invoice, index) => {
+							paidInvoices.map((invoice) => {
 								if (invoice.id === updatedInvoice.id) {
 									invoice = updatedInvoice
 								}
@@ -391,7 +422,7 @@ export default class AppProvider extends Component {
 						else {
 							let pendingInvoices = this.state.pendingInvoices;
 
-							pendingInvoices.map((invoice, index) => {
+							pendingInvoices.map((invoice) => {
 								if (invoice.id === updatedInvoice.id) {
 									invoice = updatedInvoice
 								}
