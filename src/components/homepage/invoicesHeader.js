@@ -141,10 +141,137 @@ class InvoicesHeader extends React.Component {
                             </>
                         }
                     </div>
+
+                    <div className='invoices-header-left-side-small'>
+                        <h2>Invoices</h2>
+                        {this.props.activeFilter === true ? 
+                            <>
+                            {this.props.draftFilter === true ? 
+                                <>
+                                    {this.context.state.draftInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.draftInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.paidFilter === true ? 
+                                <>
+                                    {this.context.state.paidInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.paidInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.pendingFilter === true ? 
+                                <>
+                                    {this.context.state.pendingInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.pendingInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+                            </>
+                        : 
+                            <>
+                                {this.context.state.invoiceCount === 0 ? 
+                                    <span>
+                                        No invoices
+                                    </span>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount === 1 ?
+                                    <span>
+                                        1 invoice
+                                    </span>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount > 1 ?
+                                    <span>
+                                        {this.context.state.invoiceCount} invoices
+                                    </span>
+                                :
+                                    null
+                                }
+                            </>
+                        }
+                    </div>
                     
                     {this.props.filterStatusContainerOpen === true ? 
                         <div className='filtered-container-div'>
                             <div className='filter-div-true' onClick={this.props.closeFilterStatusMenu}>
+                                <div className='filter-span-small'>
+                                    Filter
+                                </div>
+
                                 <div className='filter-span'>
                                     Filter by status
                                 </div>
@@ -174,6 +301,10 @@ class InvoicesHeader extends React.Component {
                         
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span-small'>
+                                Filter
+                            </div>
+
                             <div className='filter-span'>
                                 Filter by status
                             </div>
@@ -181,6 +312,13 @@ class InvoicesHeader extends React.Component {
                         </div>         
                     }
     
+                    <Button className='header-button-small' onClick={this.props.createNewInvoice}>
+                        <div className='icon-div'>
+                            <img src={PlusIcon} alt='Plus Icon' />
+                        </div>
+                        <span className='header-span'>New</span>
+                    </Button>
+
                     <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />
@@ -318,10 +456,137 @@ class InvoicesHeader extends React.Component {
                             </>
                         }
                     </div>
+
+                    <div className='invoices-header-left-side-dark-mode-small'>
+                        <h2>Invoices</h2>
+                        {this.props.activeFilter === true ? 
+                            <>
+                            {this.props.draftFilter === true ? 
+                                <>
+                                    {this.context.state.draftInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.draftInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.draftInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.paidFilter === true ? 
+                                <>
+                                    {this.context.state.paidInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.paidInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.paidInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+
+                            {this.props.pendingFilter === true ? 
+                                <>
+                                    {this.context.state.pendingInvoiceCount === 0 ?
+                                        <span>
+                                            No invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount === 1 ?
+                                        <span>
+                                            1 invoice
+                                        </span>
+                                    : 
+                                        null
+                                    }
+
+                                    {this.context.state.pendingInvoiceCount > 1 ?
+                                        <span>
+                                        {this.context.state.pendingInvoiceCount} invoices
+                                        </span>
+                                    : 
+                                        null
+                                    }
+                                </>
+                            : 
+                                null
+                            }
+                            </>
+                        : 
+                            <>
+                                {this.context.state.invoiceCount === 0 ? 
+                                    <span>
+                                        No invoices
+                                    </span>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount === 1 ?
+                                    <span>
+                                        1 invoice
+                                    </span>
+                                : 
+                                    null
+                                }
+            
+                                {this.context.state.invoiceCount > 1 ?
+                                    <span>
+                                        {this.context.state.invoiceCount} invoices
+                                    </span>
+                                :
+                                    null
+                                }
+                            </>
+                        }
+                    </div>
                     
                     {this.props.filterStatusContainerOpen === true ? 
                         <div className='filtered-container-div'>
                             <div className='filter-div-true' onClick={this.props.closeFilterStatusMenu}>
+                                <div className='filter-span-dark-mode-small'>
+                                    Filter
+                                </div>
+
                                 <div className='filter-span-dark-mode'>
                                     Filter by status
                                 </div>
@@ -350,6 +615,10 @@ class InvoicesHeader extends React.Component {
                         </div>
                     : 
                         <div className='filter-div' onClick={this.props.openFilterStatusMenu}>
+                            <div className='filter-span-dark-mode-small'>
+                                Filter
+                            </div>
+
                             <div className='filter-span-dark-mode'>
                                 Filter by status
                             </div>
@@ -357,6 +626,13 @@ class InvoicesHeader extends React.Component {
                         </div>      
                     }
     
+                    <Button className='header-button-small' onClick={this.props.createNewInvoice}>
+                        <div className='icon-div'>
+                            <img src={PlusIcon} alt='Plus Icon' />
+                        </div>
+                        <span className='header-span'>New</span>
+                    </Button>
+
                     <Button className='header-button' onClick={this.props.createNewInvoice}>
                         <div className='icon-div'>
                             <img src={PlusIcon} alt='Plus Icon' />

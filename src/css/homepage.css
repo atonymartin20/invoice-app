@@ -41,6 +41,15 @@
     justify-content: space-between;
 }
 
+.invoices-header-left-side-small {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 44px;
+    justify-content: space-between;
+    display: none;
+}
+
 .invoices-header-left-side-dark-mode {
     display: flex;
     flex-direction: column;
@@ -49,7 +58,20 @@
     justify-content: space-between;
 }
 
+.invoices-header-left-side-dark-mode-small {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    height: 44px;
+    justify-content: space-between;
+    display: none;
+}
+
 .invoices-header-left-side span {
+    background: inherit;
+}
+
+.invoices-header-left-side-small span {
     background: inherit;
 }
 
@@ -57,7 +79,16 @@
     color: #FFFFFF;
 }
 
+.invoices-header-left-side-dark-mode-small h2 {
+    color: #FFFFFF;
+}
+
 .invoices-header-left-side-dark-mode span {
+    background: inherit;
+    color: #DFE3FA;
+}
+
+.invoices-header-left-side-dark-mode-small span {
     background: inherit;
     color: #DFE3FA;
 }
@@ -71,7 +102,6 @@
     justify-content: center;
     margin-left: auto;
     margin-right: 40px;
-
 }
 
 .filter-div-true {
@@ -224,6 +254,19 @@
     color: #0C0E16;
 }
 
+.filter-span-small {
+    width: 34px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #0C0E16;
+    display: none;
+}
+
 .filter-span-dark-mode {
     width: 93px;
     height: 15px;
@@ -234,6 +277,19 @@
     line-height: 15px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
+}
+
+.filter-span-dark-mode-small {
+    width: 34px;
+    height: 15px;
+    font-family: Spartan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    display: none;
 }
 
 .down-arrow-icon {
@@ -266,6 +322,22 @@
     background: #9277FF;
 }
 
+.header-button-small {
+    width: 90px;
+    height: 44px;
+    background: #7C5DFA;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.header-button-small:hover {
+    background: #9277FF;
+}
+
 .icon-div {
     width: 32px;
     height: 32px;
@@ -287,4 +359,113 @@
     line-height: 15px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
+}
+
+@media (max-width:875px) {
+    .homepage-container-div {
+        flex-direction: column;
+    }
+
+    .homepage-inside-container-div {
+        justify-content: flex-start;
+        padding: 0px 48px 4px 48px;
+    }
+    
+    .homepage-inside-container-div-dark-mode {
+        justify-content: flex-start;
+        padding: 0px 48px 4px 48px;
+    }
+    
+    .invoices-header {
+        margin-top: 56px;
+    }
+
+    .filter-option-div {
+        top: 195px;
+    }
+    
+    .filter-option-div-dark-mode {
+        top: 195px;
+    }
+    
+}
+@media (max-width:625px) {
+    .homepage-inside-container-div {
+        justify-content: flex-start;
+        padding: 0px 36px 4px 36px;
+    }
+    
+    .homepage-inside-container-div-dark-mode {
+        justify-content: flex-start;
+        padding: 0px 36px 4px 36px;
+    }
+}
+
+@media (max-width:550px) {
+    .homepage-inside-container-div {
+        justify-content: flex-start;
+        padding: 0px 24px 4px 24px;
+    }
+    
+    .homepage-inside-container-div-dark-mode {
+        justify-content: flex-start;
+        padding: 0px 24px 4px 24px;
+    }
+
+    .invoices-header {
+        height: 44px;
+        margin-top: 32px;
+    }
+
+    .invoices-header-left-side {
+        display: none;
+    }
+      
+    .invoices-header-left-side-dark-mode {
+        display: none;
+    }
+
+    .invoices-header-left-side-small {
+        display: flex;
+    }
+
+    .invoices-header-left-side-dark-mode-small {
+        display: flex;
+    }
+
+    .filter-span {
+        display: none;
+    }
+    
+    .filter-span-small {
+        display: block;
+    }
+    
+    .filter-span-dark-mode {
+        display: none;
+    }
+    
+    .filter-span-dark-mode-small {
+        display: block;
+    }
+
+    .filter-div {
+        width: 54px;
+    }
+
+    .header-button {
+        display: none;
+    }
+       
+    .header-button-small {
+        display: flex;
+    }
+
+    .filter-option-div {
+        top: 155px;
+    }
+    
+    .filter-option-div-dark-mode {
+        top: 155px;
+    }
 }
