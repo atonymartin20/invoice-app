@@ -65,9 +65,6 @@ class App extends React.Component {
 									<Homepage />
 								</Route>
 								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
-								{/* <Route path='/view'>
-									<ViewInvoice />
-								</Route> */}
 								<Route>
 									<Homepage />
 								</Route>
@@ -86,9 +83,6 @@ class App extends React.Component {
 									<Homepage />
 								</Route>
 								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
-								{/* <Route path='/view'>
-									<ViewInvoice />
-								</Route> */}
 								<Route>
 									<Homepage />
 								</Route>
@@ -109,9 +103,6 @@ class App extends React.Component {
 									<Homepage />
 								</Route>
 								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
-								{/* <Route path='/view'>
-									<ViewInvoice />
-								</Route> */}
 								<Route>
 									<Homepage />
 								</Route>
@@ -129,9 +120,6 @@ class App extends React.Component {
 									<Homepage />
 								</Route>
 								<Route path='/view' render={(props) => <ViewInvoice {...props} />} />
-								{/* <Route path='/view'>
-									<ViewInvoice />
-								</Route> */}
 								<Route>
 									<Homepage />
 								</Route>
