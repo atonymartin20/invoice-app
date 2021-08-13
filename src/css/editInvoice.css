@@ -8,20 +8,42 @@
     margin: 0 auto;
 }
 
+.navbar-container {
+    width: 103px;
+    position: absolute;
+    background: #FFFFFF;
+    min-height: 1424px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-container-dark-mode {
+    width: 103px;
+    position: absolute;
+    background: #141625;
+    min-height: 1424px;
+    display: flex;
+    flex-direction: row;
+}
+
 .edit-invoice-container-div {
-    width: 719px;
+    width: 100%;
     position: absolute;
     display: flex;
     background: #FFFFFF;
     border-radius: 0px 20px 20px 0px;
+    max-width: 616px;
+    margin-left: 103px;
 }
 
 .edit-invoice-container-div-dark-mode {
-    width: 719px;
+    max-width: 616px;
+    width: 100%;
     position: absolute;
     display: flex;
     background: #141625;
     border-radius: 0px 20px 20px 0px;
+    margin-left: 103px;
 }
 
 .edit-invoice-inside-container-div {
@@ -127,6 +149,10 @@
     height: 73px;
     justify-content: space-between;
     margin-bottom: 24px;
+}
+
+.edit-invoice-bill-from-street-address-div-dark-mode .edit-invoice-right-error-text {
+    display: none;
 }
 
 .edit-invoice-bill-from-street-address-div-dark-mode-error .edit-invoice-right-error-text {
@@ -269,7 +295,7 @@
 
 .edit-invoice-bill-from-city-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -278,7 +304,7 @@
 
 .edit-invoice-bill-from-city-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -299,7 +325,7 @@
 
 .edit-invoice-bill-from-city-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -308,7 +334,7 @@
 
 .edit-invoice-bill-from-city-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -449,7 +475,7 @@
 
 .edit-invoice-bill-from-post-code-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -458,7 +484,7 @@
 
 .edit-invoice-bill-from-post-code-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -479,7 +505,7 @@
 
 .edit-invoice-bill-from-post-code-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -488,7 +514,7 @@
 
 .edit-invoice-bill-from-post-code-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -629,7 +655,7 @@
 
 .edit-invoice-bill-from-country-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -638,7 +664,7 @@
 
 .edit-invoice-bill-from-country-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -659,7 +685,7 @@
 
 .edit-invoice-bill-from-country-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -668,7 +694,7 @@
 
 .edit-invoice-bill-from-country-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1376,7 +1402,7 @@
 
 .edit-invoice-bill-to-city-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1385,7 +1411,7 @@
 
 .edit-invoice-bill-to-city-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1395,7 +1421,7 @@
 
 .edit-invoice-bill-to-city-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1404,7 +1430,7 @@
 
 .edit-invoice-bill-to-city-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1557,7 +1583,7 @@
 
 .edit-invoice-bill-to-post-code-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1566,7 +1592,7 @@
 
 .edit-invoice-bill-to-post-code-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1576,7 +1602,7 @@
 
 .edit-invoice-bill-to-post-code-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1585,7 +1611,7 @@
 
 .edit-invoice-bill-to-post-code-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1738,7 +1764,7 @@
 
 .edit-invoice-bill-to-country-div {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1747,7 +1773,7 @@
 
 .edit-invoice-bill-to-country-div-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -1757,7 +1783,7 @@
 
 .edit-invoice-bill-to-country-div-dark-mode {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: column;
@@ -1766,7 +1792,7 @@
 
 .edit-invoice-bill-to-country-div-dark-mode-error {
     height: 73px;
-    width: 33%;
+    width: 100%;
     max-width: 152px;
     display: flex;
     flex-direction: row;
@@ -2903,4 +2929,148 @@
     line-height: 15px;
     letter-spacing: -0.208333px;
     color: #EC5757;
+}
+
+@media (max-width: 875px) {
+    .edit-invoice-container-div {
+        flex-direction: column;
+    }
+
+    .edit-invoice-container-div {
+        flex-direction: column;
+    }
+    
+    .navbar-container {
+        width: 100%;
+        min-height: 80px;
+    }
+    
+    .navbar-container-dark-mode {
+        width: 100%;
+        min-height: 80px;
+    }
+
+    .edit-invoice-container-div {
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+    
+    .edit-invoice-container-div-dark-mode {
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .edit-invoice-inside-container-div {
+        padding: 24px 24px 0px 24px
+    }
+
+    .edit-invoice-container-div {
+        border-radius: 0px;
+    }
+    
+    .edit-invoice-container-div-dark-mode {
+        border-radius: 0px;
+    }
+
+    .edit-invoice-bill-from-div {
+        height: 306px;
+        margin-top: 24px;
+    }
+
+    .edit-invoice-bill-from-city-post-code-country-div {
+        height: 170px;
+        flex-wrap: wrap;
+    }
+
+    .edit-invoice-bill-from-country-div {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-from-country-div-error {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-from-country-div-dark-mode {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-from-country-div-dark-mode-error {
+        max-width: none;
+        margin-top: 24px;
+    }
+
+    .edit-invoice-bill-to-div {
+        height: 500px;
+        margin-top: 24px;
+    }
+
+    .edit-invoice-bill-to-city-post-code-country-div {
+        height: 170px;
+        flex-wrap: wrap;
+    }
+
+    .edit-invoice-bill-to-country-div {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-to-country-div-error {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-to-country-div-dark-mode {
+        max-width: none;
+        margin-top: 24px;
+    }
+    
+    .edit-invoice-bill-to-country-div-dark-mode-error {
+        max-width: none;
+        margin-top: 24px;
+    }
+
+    .edit-invoice-invoice-date-payment-terms-div {
+        margin-top: 40px;
+        height: 170px;
+        flex-direction: column;
+    }
+
+    .edit-invoice-invoice-date-div {
+        width: 100%;
+        max-width: none;
+    }
+
+    .edit-invoice-invoice-date-div-error {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .edit-invoice-invoice-date-div-dark-mode {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .edit-invoice-invoice-date-div-dark-mode-error {
+        width: 100%;
+        max-width: none;
+    }
+
+    .edit-invoice-payment-terms-div {
+        width: 100%;
+        max-width: none;
+    }
+
+    .edit-invoice-payment-terms-div-dark-mode {
+        width: 100%;
+        max-width: none;
+    }
+
+    .edit-invoice-item-list-div {
+        margin-top: 66px;
+    }
 }
