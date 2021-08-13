@@ -487,130 +487,69 @@ class EditInvoice extends React.Component {
 										<input type='text' id='senderAddressCity' name='senderAddressCity' value={this.props.senderAddressCity} onChange={this.props.inputHandler} />
 									</div>
 
-									{this.props.senderAddressPostCode === '' ? 
-										<div className='edit-invoice-bill-from-post-code-div-error'>
-											<span>Post Code</span>
-											<span className='edit-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.props.senderAddressPostCode} onChange={this.props.inputHandler} />
-										</div>
-									:
-										<div className='edit-invoice-bill-from-post-code-div'>
-											<span>Post Code</span>
-											<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.props.senderAddressPostCode} onChange={this.props.inputHandler} />
-										</div>
-									}
+									<div className={this.props.senderAddressPostCode === '' ? 'edit-invoice-bill-from-post-code-div-error' : 'edit-invoice-bill-from-post-code-div'}>
+										<span>Post Code</span>
+										<span className='edit-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.props.senderAddressPostCode} onChange={this.props.inputHandler} />
+									</div>
 
-									{this.props.senderAddressCountry === '' ? 
-										<div className='edit-invoice-bill-from-country-div-error'>
-											<span>Country</span>
-											<span className='edit-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.props.senderAddressCountry} onChange={this.props.inputHandler} />
-										</div>
-									:
-										<div className='edit-invoice-bill-from-country-div'>
-											<span>Country</span>
-											<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.props.senderAddressCountry} onChange={this.props.inputHandler} />
-										</div>
-									}
+									<div className={this.props.senderAddressCountry === '' ? 'edit-invoice-bill-from-country-div-error' : 'edit-invoice-bill-from-country-div'}>
+										<span>Country</span>
+										<span className='edit-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.props.senderAddressCountry} onChange={this.props.inputHandler} />
+									</div>
 								</div>
 							</div>
 
 							<div className='edit-invoice-bill-to-div'>
 								<h5>Bill To</h5>
-								{this.props.clientName === '' ? 
-									<div className='edit-invoice-bill-to-client-name-div-error'>
-										<span>Client's Name</span>
-										<span className='edit-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientName' name='clientName' value={this.props.clientName} onChange={this.props.inputHandler} />
-									</div>
-								:
-									<div className='edit-invoice-bill-to-client-name-div'>
-										<span>Client's Name</span>
-										<input type='text' id='clientName' name='clientName' value={this.props.clientName} onChange={this.props.inputHandler} />
-									</div>
-								}
 
-								{this.props.clientEmail === '' ? 
-									<div className='edit-invoice-bill-to-client-email-div-error'>
-										<span>Client's Email</span>
-										<span className='edit-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientEmail' name='clientEmail' value={this.props.clientEmail} onChange={this.props.inputHandler} />
-									</div>
-								:
-									<div className='edit-invoice-bill-to-client-email-div'>
-										<span>Client's Email</span>
-										<input type='text' id='clientEmail' name='clientEmail' value={this.props.clientEmail} onChange={this.props.inputHandler} />
-									</div>
-								}
+								<div className={this.props.clientName === '' ? 'edit-invoice-bill-to-client-name-div-error' : 'edit-invoice-bill-to-client-name-div'}>
+									<span>Client's Name</span>
+									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientName' name='clientName' value={this.props.clientName} onChange={this.props.inputHandler} />
+								</div>
 
-								{this.props.clientAddressStreet === '' ? 
-									<div className='edit-invoice-bill-to-street-address-div-error'>
-										<span>Street Address</span>
-										<span className='edit-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.props.clientAddressStreet} onChange={this.props.inputHandler} />
-									</div>
-								:
-									<div className='edit-invoice-bill-to-street-address-div'>
-										<span>Street Address</span>
-										<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.props.clientAddressStreet} onChange={this.props.inputHandler} />
-									</div>
-								}
+								<div className={this.props.clientEmail === '' ? 'edit-invoice-bill-to-client-email-div-error' : 'edit-invoice-bill-to-client-email-div'}>
+									<span>Client's Email</span>
+									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientEmail' name='clientEmail' value={this.props.clientEmail} onChange={this.props.inputHandler} />
+								</div>
+
+								<div className={this.props.clientAddressStreet === '' ? 'edit-invoice-bill-to-street-address-div-error' : 'edit-invoice-bill-to-street-address-div'}>
+									<span>Street Address</span>
+									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.props.clientAddressStreet} onChange={this.props.inputHandler} />
+								</div>
+
 
 								<div className='edit-invoice-bill-to-city-post-code-country-div'>
-									{this.props.clientAddressCity === '' ? 
-										<div className='edit-invoice-bill-to-city-div-error'>
-											<span>City</span>
-											<span className='edit-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.props.clientAddressCity} onChange={this.props.inputHandler} />
-										</div>
-									:
-										<div className='edit-invoice-bill-to-city-div'>
-											<span>City</span>
-											<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.props.clientAddressCity} onChange={this.props.inputHandler} />
-										</div>
-									}
+									<div className={this.props.clientAddressCity === '' ? 'edit-invoice-bill-to-city-div-error' : 'edit-invoice-bill-to-city-div'}>
+										<span>City</span>
+										<span className='edit-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.props.clientAddressCity} onChange={this.props.inputHandler} />
+									</div>
 
-									{this.props.clientAddressPostCode === '' ? 
-										<div className='edit-invoice-bill-to-post-code-div-error'>
-											<span>Post Code</span>
-											<span className='edit-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.props.clientAddressPostCode} onChange={this.props.inputHandler} />
-										</div>
-									:
-										<div className='edit-invoice-bill-to-post-code-div'>
-											<span>Post Code</span>
-											<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.props.clientAddressPostCode} onChange={this.props.inputHandler} />
-										</div>
-									}
+									<div className={this.props.clientAddressPostCode === '' ? 'edit-invoice-bill-to-post-code-div-error' : 'edit-invoice-bill-to-post-code-div'}>
+										<span>Post Code</span>
+										<span className='edit-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.props.clientAddressPostCode} onChange={this.props.inputHandler} />
+									</div>
 
-									{this.props.clientAddressCountry === '' ? 
-										<div className='edit-invoice-bill-to-country-div-error'>
-											<span>Country</span>
-											<span className='edit-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.props.clientAddressCountry} onChange={this.props.inputHandler} />
-										</div>
-									:
-										<div className='edit-invoice-bill-to-country-div'>
-											<span>Country</span>
-											<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.props.clientAddressCountry} onChange={this.props.inputHandler} />
-										</div>
-									}
+									<div className={this.props.clientAddressCountry === '' ? 'edit-invoice-bill-to-country-div-error' : 'edit-invoice-bill-to-country-div'}>
+										<span>Country</span>
+										<span className='edit-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.props.clientAddressCountry} onChange={this.props.inputHandler} />
+									</div>
 								</div>
 							</div>
 
 							<div className='edit-invoice-invoice-date-payment-terms-div'>
-								{this.props.createdAt === '' ? 
-									<div className='edit-invoice-invoice-date-div-error'>
-										<span>Invoice Date</span>
-										<span className='edit-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.props.createdAt} onChange={this.props.inputHandler} />
-									</div>
-								:
-									<div className='edit-invoice-invoice-date-div'>
-										<span>Invoice Date</span>
-										<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.props.createdAt} onChange={this.props.inputHandler} />
-									</div>
-								}
+								<div className={this.props.createdAt === '' ? 'edit-invoice-invoice-date-div-error' : 'edit-invoice-invoice-date-div'}>
+									<span>Invoice Date</span>
+									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.props.createdAt} onChange={this.props.inputHandler} />
+								</div>
 
 								<div className='edit-invoice-payment-terms-div'>
 									<span>Payment Terms</span>
@@ -645,18 +584,11 @@ class EditInvoice extends React.Component {
 								</div>
 							</div>
 
-							{this.props.description === '' ? 
-								<div className='edit-invoice-project-description-div-error'>
-									<span>Project Description</span>
-									<span className='edit-invoice-right-error-text'>can't be empty</span>
-									<input type='text' id='description' name='description' value={this.props.description} onChange={this.props.inputHandler} />
-								</div>
-							:
-								<div className='edit-invoice-project-description-div'>
-									<span>Project Description</span>
-									<input type='text' id='description' name='description' value={this.props.description} onChange={this.props.inputHandler} />
-								</div>
-							}
+							<div className={this.props.description === '' ? 'edit-invoice-project-description-div-error' : 'edit-invoice-project-description-div'}>
+								<span>Project Description</span>
+								<span className='edit-invoice-right-error-text'>can't be empty</span>
+								<input type='text' id='description' name='description' value={this.props.description} onChange={this.props.inputHandler} />
+							</div>
 							
 							{this.props.items.length === 0 ? 
 								<div className='edit-invoice-item-list-div'>
