@@ -104,9 +104,9 @@ class EditInvoice extends React.Component {
 							</div>
 
 							<div className='edit-invoice-invoice-date-payment-terms-div'>
-								<div className={this.props.createdAt === '' ? 'edit-invoice-invoice-date-div-dark-mode-error' : 'edit-invoice-invoice-date-div-dark-mode'}>
+								<div className={this.props.createdAt === '' || this.props.createdAt.length !== 10 ? 'edit-invoice-invoice-date-div-dark-mode-error' : 'edit-invoice-invoice-date-div-dark-mode'}>
 									<span>Invoice Date</span>
-									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<span className='edit-invoice-right-error-text'>YYYY-MM-DD</span>
 									<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.props.createdAt} onChange={this.props.inputHandler} />
 								</div>
 								
@@ -827,16 +827,16 @@ class EditInvoice extends React.Component {
 							:
 								null
 							}
+						</div>
 
-							<div className='edit-invoice-bottom-buttons-gradient-div-dark-mode' />
+						<div className='edit-invoice-bottom-buttons-gradient-div-dark-mode' />
 
-							<div className='edit-invoice-bottom-buttons-div-dark-mode'>
-								<div className='edit-invoice-bottom-button-cancel-div-dark-mode' onClick={this.cancelUpdates}>
-									<span>Cancel</span>
-								</div>
-								<div className='edit-invoice-bottom-button-save-div-dark-mode' onClick={this.saveUpdates}>
-									<span>Save Changes</span>
-								</div>
+						<div className='edit-invoice-bottom-buttons-div-dark-mode'>
+							<div className='edit-invoice-bottom-button-cancel-div-dark-mode' onClick={this.cancelUpdates}>
+								<span>Cancel</span>
+							</div>
+							<div className='edit-invoice-bottom-button-save-div-dark-mode' onClick={this.saveUpdates}>
+								<span>Save Changes</span>
 							</div>
 						</div>
 					</div>
@@ -930,9 +930,9 @@ class EditInvoice extends React.Component {
 							</div>
 
 							<div className='edit-invoice-invoice-date-payment-terms-div'>
-								<div className={this.props.createdAt === '' ? 'edit-invoice-invoice-date-div-error' : 'edit-invoice-invoice-date-div'}>
+								<div className={this.props.createdAt === '' || this.props.createdAt.length !== 10 ? 'edit-invoice-invoice-date-div-error' : 'edit-invoice-invoice-date-div'}>
 									<span>Invoice Date</span>
-									<span className='edit-invoice-right-error-text'>can't be empty</span>
+									<span className='edit-invoice-right-error-text'>YYYY-MM-DD</span>
 									<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.props.createdAt} onChange={this.props.inputHandler} />
 								</div>
 
@@ -1655,16 +1655,16 @@ class EditInvoice extends React.Component {
 							:
 								null
 							}
+						</div>
 
-							<div className='edit-invoice-bottom-buttons-gradient-div' />
-								
-							<div className='edit-invoice-bottom-buttons-div'>
-								<div className='edit-invoice-bottom-button-cancel-div' onClick={this.cancelUpdates}>
-									<span>Cancel</span>
-								</div>
-								<div className='edit-invoice-bottom-button-save-div' onClick={this.saveUpdates}>
-									<span>Save Changes</span>
-								</div>
+						<div className='edit-invoice-bottom-buttons-gradient-div' />
+							
+						<div className='edit-invoice-bottom-buttons-div'>
+							<div className='edit-invoice-bottom-button-cancel-div' onClick={this.cancelUpdates}>
+								<span>Cancel</span>
+							</div>
+							<div className='edit-invoice-bottom-button-save-div' onClick={this.saveUpdates}>
+								<span>Save Changes</span>
 							</div>
 						</div>
 					</div>

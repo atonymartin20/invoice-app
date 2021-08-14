@@ -3303,7 +3303,7 @@
         flex-direction: column;
     }
 
-    .edit-invoice-container-div {
+    .edit-invoice-container-div-dark-mode {
         flex-direction: column;
     }
     
@@ -3487,5 +3487,15 @@
         background: #1E2139;
         box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
         align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    .edit-invoice-bottom-buttons-div {
+        padding: 0px 24px;
+    }
+
+    .edit-invoice-bottom-buttons-div-dark-mode {
+        padding: 0px 24px;
     }
 }
