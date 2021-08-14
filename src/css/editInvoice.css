@@ -1324,7 +1324,6 @@
     color: #EC5757;
 }
 
-
 .edit-invoice-bill-to-street-address-div span{
     font-family: Spartan;
     font-style: normal;
@@ -1707,7 +1706,6 @@
     letter-spacing: -0.208333px;
     color: #EC5757;
 }
-
 
 .edit-invoice-bill-to-post-code-div span {
     font-family: Spartan;
@@ -2822,6 +2820,7 @@
 
 .edit-invoice-bottom-button-cancel-div-dark-mode:hover {
     border: 1px solid #7C5DFA;
+    cursor: pointer;    
 }
 
 .edit-invoice-bottom-button-cancel-div span {
@@ -3489,20 +3488,4 @@
         box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
         align-items: center;
     }
-
-    /* .edit-invoice-bottom-buttons-div {
-        width: 100%;
-        height: 48px;
-        margin-top: 39px;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    .edit-invoice-bottom-buttons-div-dark-mode {
-        width: 100%;
-        height: 48px;
-        margin-top: 39px;
-        display: flex;
-        justify-content: flex-end;
-    } */
 }
