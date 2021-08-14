@@ -1619,18 +1619,19 @@ class CreateInvoice extends React.Component {
 								null
 							}
 
-							<div className='create-invoice-bottom-buttons-gradient-div-dark-mode' />
+						</div>
 
-							<div className='create-invoice-bottom-buttons-div-dark-mode'>
-                                <div className='create-invoice-bottom-button-discard-div-dark-mode' onClick={this.cancelInvoice}>
-									<span>Discard</span>
-								</div>
-                                <div className='create-invoice-bottom-button-save-as-draft-div-dark-mode' onClick={this.saveAsDraft}>
-									<span>Save as Draft</span>
-								</div>
-								<div className='create-invoice-bottom-button-save-and-send-div-dark-mode' onClick={this.saveAsPending}>
-									<span>Save &amp; Send</span>
-								</div>
+						<div className='create-invoice-bottom-buttons-gradient-div-dark-mode' />
+
+						<div className='create-invoice-bottom-buttons-div-dark-mode'>
+							<div className='create-invoice-bottom-button-discard-div-dark-mode' onClick={this.cancelInvoice}>
+								<span>Discard</span>
+							</div>
+							<div className='create-invoice-bottom-button-save-as-draft-div-dark-mode' onClick={this.saveAsDraft}>
+								<span>Save as Draft</span>
+							</div>
+							<div className='create-invoice-bottom-button-save-and-send-div-dark-mode' onClick={this.saveAsPending}>
+								<span>Save &amp; Send</span>
 							</div>
 						</div>
 					</div>
@@ -1641,177 +1642,91 @@ class CreateInvoice extends React.Component {
 		else {
 			return (
 				<div className='create-invoice-outside-div'>
-					<div className='create-invoice-container-div'>
+					<div className='navbar-container'>
 						<Navbar />
+					</div>
+					<div className='create-invoice-container-div'>
 						<div className='create-invoice-inside-container-div'>
 							<span className='create-invoice-id-span'>New Invoice</span>
 
 							<div className='create-invoice-bill-from-div'>
 								<h5>Bill From</h5>
-								{this.state.senderAddressStreet === '' ? 
-									<div className='create-invoice-bill-from-street-address-div-error'>
-										<span>Street Address</span>
-										<span className='create-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='senderAddressStreet' name='senderAddressStreet' value={this.state.senderAddressStreet} onChange={this.inputHandler} />
-									</div>
-								:
-									<div className='create-invoice-bill-from-street-address-div'>
-										<span>Street Address</span>
-										<input type='text' id='senderAddressStreet' name='senderAddressStreet' value={this.state.senderAddressStreet} onChange={this.inputHandler} />
-									</div>
-								}
+
+								<div className={this.state.senderAddressStreet === '' ? 'create-invoice-bill-from-street-address-div-error' : 'create-invoice-bill-from-street-address-div'}>
+									<span>Street Address</span>
+									<span className='create-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='senderAddressStreet' name='senderAddressStreet' value={this.state.senderAddressStreet} onChange={this.inputHandler} />
+								</div>
 
 								<div className='create-invoice-bill-from-city-post-code-country-div'>
-									{this.state.senderAddressCity === '' ? 
-										<div className='create-invoice-bill-from-city-div-error'>
-											<span>City</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='senderAddressCity' name='senderAddressCity' value={this.state.senderAddressCity} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-from-city-div'>
-											<span>City</span>
-											<input type='text' id='senderAddressCity' name='senderAddressCity' value={this.state.senderAddressCity} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.senderAddressCity === '' ? 'create-invoice-bill-from-city-div-error' : 'create-invoice-bill-from-city-div'}>
+										<span>City</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='senderAddressCity' name='senderAddressCity' value={this.state.senderAddressCity} onChange={this.inputHandler} />
+									</div>
 
-									{this.state.senderAddressPostCode === '' ? 
-										<div className='create-invoice-bill-from-post-code-div-error'>
-											<span>Post Code</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.state.senderAddressPostCode} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-from-post-code-div'>
-											<span>Post Code</span>
-											<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.state.senderAddressPostCode} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.senderAddressPostCode === '' ? 'create-invoice-bill-from-post-code-div-error' : 'create-invoice-bill-from-post-code-div'}>
+										<span>Post Code</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='senderAddressPostCode' name='senderAddressPostCode' value={this.state.senderAddressPostCode} onChange={this.inputHandler} />
+									</div>
 
-									{this.state.senderAddressCountry === '' ? 
-										<div className='create-invoice-bill-from-country-div-error'>
-											<span>Country</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.state.senderAddressCountry} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-from-country-div'>
-											<span>Country</span>
-											<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.state.senderAddressCountry} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.senderAddressCountry === '' ? 'create-invoice-bill-from-country-div-error' : 'create-invoice-bill-from-country-div'}>
+										<span>Country</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='senderAddressCountry' name='senderAddressCountry' value={this.state.senderAddressCountry} onChange={this.inputHandler} />
+									</div>
 								</div>
 							</div>
 
 							<div className='create-invoice-bill-to-div'>
 								<h5>Bill To</h5>
-								{this.state.clientName === '' ? 
-									<div className='create-invoice-bill-to-client-name-div-error'>
-										<span>Client's Name</span>
-										<span className='create-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientName' name='clientName' value={this.state.clientName} onChange={this.inputHandler} />
-									</div>
-								:
-									<div className='create-invoice-bill-to-client-name-div'>
-										<span>Client's Name</span>
-										<input type='text' id='clientName' name='clientName' value={this.state.clientName} onChange={this.inputHandler} />
-									</div>
-								}
 
-								{this.state.clientEmail === '' ? 
-									<div className='create-invoice-bill-to-client-email-div-error'>
-										<span>Client's Email</span>
-										<span className='create-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientEmail' name='clientEmail' value={this.state.clientEmail} onChange={this.inputHandler} />
-									</div>
-								:
-									<div className='create-invoice-bill-to-client-email-div'>
-										<span>Client's Email</span>
-										<input type='text' id='clientEmail' name='clientEmail' value={this.state.clientEmail} onChange={this.inputHandler} />
-									</div>
-								}
+								<div className={this.state.clientName === '' ? 'create-invoice-bill-to-client-name-div-error' : 'create-invoice-bill-to-client-name-div'}>
+									<span>Client's Name</span>
+									<span className='create-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientName' name='clientName' value={this.state.clientName} onChange={this.inputHandler} />
+								</div>
 
-								{this.state.clientAddressStreet === '' ? 
-									<div className='create-invoice-bill-to-street-address-div-error'>
-										<span>Street Address</span>
-										<span className='create-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.state.clientAddressStreet} onChange={this.inputHandler} />
-									</div>
-								:
-									<div className='create-invoice-bill-to-street-address-div'>
-										<span>Street Address</span>
-										<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.state.clientAddressStreet} onChange={this.inputHandler} />
-									</div>
-								}
+								<div className={this.state.clientEmail === '' ? 'create-invoice-bill-to-client-email-div-error' : 'create-invoice-bill-to-client-email-div'}>
+									<span>Client's Email</span>
+									<span className='create-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientEmail' name='clientEmail' value={this.state.clientEmail} onChange={this.inputHandler} />
+								</div>
+
+								<div className={this.state.clientAddressStreet === '' ? 'create-invoice-bill-to-street-address-div-error' : 'create-invoice-bill-to-street-address-div'}>
+									<span>Street Address</span>
+									<span className='create-invoice-right-error-text'>can't be empty</span>
+									<input type='text' id='clientAddressStreet' name='clientAddressStreet' value={this.state.clientAddressStreet} onChange={this.inputHandler} />
+								</div>
 
 								<div className='create-invoice-bill-to-city-post-code-country-div'>
-									{this.state.clientAddressCity === '' ? 
-										<div className='create-invoice-bill-to-city-div-error'>
-											<span>City</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.state.clientAddressCity} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-to-city-div'>
-											<span>City</span>
-											<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.state.clientAddressCity} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.clientAddressCity === '' ? 'create-invoice-bill-to-city-div-error' : 'create-invoice-bill-to-city-div'}>
+										<span>City</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressCity' name='clientAddressCity' value={this.state.clientAddressCity} onChange={this.inputHandler} />
+									</div>
 
-									{this.state.clientAddressPostCode === '' ? 
-										<div className='create-invoice-bill-to-post-code-div-error'>
-											<span>Post Code</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.state.clientAddressPostCode} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-to-post-code-div'>
-											<span>Post Code</span>
-											<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.state.clientAddressPostCode} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.clientAddressPostCode === '' ? 'create-invoice-bill-to-post-code-div-error' : 'create-invoice-bill-to-post-code-div'}>
+										<span>Post Code</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressPostCode' name='clientAddressPostCode' value={this.state.clientAddressPostCode} onChange={this.inputHandler} />
+									</div>
 
-									{this.state.clientAddressCountry === '' ? 
-										<div className='create-invoice-bill-to-country-div-error'>
-											<span>Country</span>
-											<span className='create-invoice-right-error-text'>can't be empty</span>
-											<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.state.clientAddressCountry} onChange={this.inputHandler} />
-										</div>
-									:
-										<div className='create-invoice-bill-to-country-div'>
-											<span>Country</span>
-											<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.state.clientAddressCountry} onChange={this.inputHandler} />
-										</div>
-									}
+									<div className={this.state.clientAddressCountry === '' ? 'create-invoice-bill-to-country-div-error' : 'create-invoice-bill-to-country-div'}>
+										<span>Country</span>
+										<span className='create-invoice-right-error-text'>can't be empty</span>
+										<input type='text' id='clientAddressCountry' name='clientAddressCountry' value={this.state.clientAddressCountry} onChange={this.inputHandler} />
+									</div>
 								</div>
 							</div>
 													
 							<div className='create-invoice-invoice-date-payment-terms-div'>
-								{this.state.createdAt === '' ? 
-									<div className='create-invoice-invoice-date-div-error'>
-										<span>Invoice Date</span>
-										<span className='create-invoice-right-error-text'>can't be empty</span>
-										<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.state.createdAt} onChange={this.inputHandler} />
-									</div>
-								: null
-								}
-
-								{this.state.createdAt !== '' && this.state.createdAt.length !== 10 ? 
-									<div className='create-invoice-invoice-date-div-error'>
-										<span>Invoice Date</span>
-										<span className='create-invoice-right-error-text'>YYYY-MM-DD</span>
-										<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.state.createdAt} onChange={this.inputHandler} />
-									</div>
-								: null
-								}
-
-								{this.state.createdAt.length === 10 ?
-									<div className='create-invoice-invoice-date-div'>
-										<span>Invoice Date</span>
-										<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.state.createdAt} onChange={this.inputHandler} />
-									</div>
-								: null
-								}
+								<div className={this.state.createdAt === '' || this.state.createdAt.length !== 10 ? 'create-invoice-invoice-date-div-error': 'create-invoice-invoice-date-div'}>
+									<span>Invoice Date</span>
+									<span className='create-invoice-right-error-text'>YYYY-MM-DD</span>
+									<input type='text' id='createdAt' name='createdAt' placeholder='YYYY-MM-DD' value={this.state.createdAt} onChange={this.inputHandler} />
+								</div>
 
 								<div className='create-invoice-payment-terms-div'>
 									<span>Payment Terms</span>
@@ -1846,28 +1761,16 @@ class CreateInvoice extends React.Component {
 								</div>
 							</div>
 
-							{this.state.description === '' ? 
-								<div className='create-invoice-project-description-div-error'>
-									<span>Project Description</span>
-									<span className='create-invoice-right-error-text'>can't be empty</span>
-									<input type='text' id='description' name='description' value={this.state.description} onChange={this.inputHandler} />
-								</div>
-							:
-								<div className='create-invoice-project-description-div'>
-									<span>Project Description</span>
-									<input type='text' id='description' name='description' value={this.state.description} onChange={this.inputHandler} />
-								</div>
-							}
+							<div className={this.state.description === '' ? 'create-invoice-project-description-div-error' : 'create-invoice-project-description-div'}>
+								<span>Project Description</span>
+								<span className='create-invoice-right-error-text'>can't be empty</span>
+								<input type='text' id='description' name='description' value={this.state.description} onChange={this.inputHandler} />
+							</div>
 							
 							{this.state.items.length === 0 ? 
 								<div className='create-invoice-item-list-div'>
 									<h2>Item List</h2>
-									<div className='create-invoice-item-list-labels-div'>
-										<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
-										<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
-										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
-										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
-									</div>
+
 									<div className='create-invoice-add-new-item-div' onClick={this.addItem}>
 										<span>+ Add New Item</span>	
 									</div>
@@ -1884,27 +1787,41 @@ class CreateInvoice extends React.Component {
 										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
 										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
 									</div>
+
 									<div className='create-item-card-div'>
-										{this.state.item0name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item0quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item0price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item0name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item0price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(0)}/>
 									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item0name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item0price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(0)}/>
+										</div>
+									</div>
+
 									<div className='create-invoice-add-new-item-div' onClick={this.addItem}>
 										<span>+ Add New Item</span>	
 									</div>
@@ -1921,49 +1838,75 @@ class CreateInvoice extends React.Component {
 										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
 										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
 									</div>
+
 									<div className='create-item-card-div'>
-										{this.state.item0name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item0quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item0price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item0name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item0price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(0)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item1name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item1quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item1price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item1name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item1price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(1)}/>
 									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item0name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item0price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item1name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item1price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(1)}/>
+										</div>
+									</div>
+
 									<div className='create-invoice-add-new-item-div' onClick={this.addItem}>
 										<span>+ Add New Item</span>	
 									</div>
@@ -1980,71 +1923,109 @@ class CreateInvoice extends React.Component {
 										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
 										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
 									</div>
+
 									<div className='create-item-card-div'>
-										{this.state.item0name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item0quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item0price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item0name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item0price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(0)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item1name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item1quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item1price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item1name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item1price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(1)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item2name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item2quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item2price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item2name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item2price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(2)}/>
 									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item0name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item0price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item1name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item1price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item2name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item2price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(2)}/>
+										</div>
+									</div>
+
 									<div className='create-invoice-add-new-item-div' onClick={this.addItem}>
 										<span>+ Add New Item</span>	
 									</div>
@@ -2061,93 +2042,143 @@ class CreateInvoice extends React.Component {
 										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
 										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
 									</div>
+
 									<div className='create-item-card-div'>
-										{this.state.item0name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item0quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item0price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item0name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item0price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(0)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item1name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item1quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item1price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item1name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item1price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(1)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item2name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item2quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item2price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item2name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item2price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(2)}/>
 									</div>
-									
+
 									<div className='create-item-card-div'>
-										{this.state.item3name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item3quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item3price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item3name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
+										<input className={this.state.item3quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item3price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item3total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(3)}/>
 									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item0name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item0price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item1name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item1price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item2name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item2price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(2)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item3name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item3quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item3price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(3)}/>
+										</div>
+									</div>
+
 									<div className='create-invoice-add-new-item-div' onClick={this.addItem}>
 										<span>+ Add New Item</span>	
 									</div>
@@ -2164,114 +2195,175 @@ class CreateInvoice extends React.Component {
 										<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
 										<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
 									</div>
+
 									<div className='create-item-card-div'>
-										{this.state.item0name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item0quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item0price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item0name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item0price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(0)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item1name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item1quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item1price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item1name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item1price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(1)}/>
 									</div>
 
 									<div className='create-item-card-div'>
-										{this.state.item2name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item2quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item2price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item2name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item2price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(2)}/>
 									</div>
-									
+
 									<div className='create-item-card-div'>
-										{this.state.item3name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
-										}
-
-										{this.state.item3quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item3price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item3name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
+										<input className={this.state.item3quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item3price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item3total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(3)}/>
 									</div>
-																		
+
 									<div className='create-item-card-div'>
-										{this.state.item4name === '' ? 
-											<input className='create-item-card-name-input-error' type='text' id={this.state.id + 4 + 'name'} name='item4name' value={this.state.item4name} onChange={this.inputHandler} />
-										:
-											<input className='create-item-card-name-input' type='text' id={this.state.id + 4 + 'name'} name='item4name' value={this.state.item4name} onChange={this.inputHandler} />
-											}
-
-										{this.state.item4quantity === '' ?
-											<input className='create-item-card-quantity-input-error' type='text' id={this.state.id + 4 + 'quantity'} name='item4quantity' value={this.state.item4quantity} onChange={this.itemQuantityInputHandler} />
-										:
-											<input className='create-item-card-quantity-input' type='text' id={this.state.id + 4 + 'quantity'} name='item4quantity' value={this.state.item4quantity} onChange={this.itemQuantityInputHandler} />
-										}
-
-										{this.state.item4price === '' ?
-											<input className='create-item-card-price-input-error' type='text' id={this.state.id + 4 + 'price'} name='item4price' value={this.state.item4price} onChange={this.itemPriceInputHandler} />
-										:
-											<input className='create-item-card-price-input' type='text' id={this.state.id + 4 + 'price'} name='item4price' value={this.state.item4price} onChange={this.itemPriceInputHandler} />
-										}
+										<input className={this.state.item4name === '' ? 'create-item-card-name-input-error' : 'create-item-card-name-input'} type='text' id={this.state.id + 4 + 'name'} name='item4name' value={this.state.item4name} onChange={this.inputHandler} />
+										<input className={this.state.item4quantity === '' ? 'create-item-card-quantity-input-error' : 'create-item-card-quantity-input'} type='text' id={this.state.id + 4 + 'quantity'} name='item4quantity' value={this.state.item4quantity} onChange={this.itemQuantityInputHandler} />
+										<input className={this.state.item4price === '' ? 'create-item-card-price-input-error' : 'create-item-card-price-input'} type='text' id={this.state.id + 4 + 'price'} name='item4price' value={this.state.item4price} onChange={this.itemPriceInputHandler} />
 										<span className='create-item-card-total-span'>{Number(this.state.item4total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can' onClick={() => this.deleteItem(4)}/>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item0name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 0 + 'name'} name='item0name' value={this.state.item0name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item0quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 0 + 'quantity'} name='item0quantity' value={this.state.item0quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item0price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 0 + 'price'} name='item0price' value={this.state.item0price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item1name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 1 + 'name'} name='item1name' value={this.state.item1name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item1quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 1 + 'quantity'} name='item1quantity' value={this.state.item1quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item1price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 1 + 'price'} name='item1price' value={this.state.item1price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item2name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 2 + 'name'} name='item2name' value={this.state.item2name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item2quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 2 + 'quantity'} name='item2quantity' value={this.state.item2quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item2price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 2 + 'price'} name='item2price' value={this.state.item2price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(2)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item3name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 3 + 'name'} name='item3name' value={this.state.item3name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item3quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 3 + 'quantity'} name='item3quantity' value={this.state.item3quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item3price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 3 + 'price'} name='item3price' value={this.state.item3price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(3)}/>
+										</div>
+									</div>
+
+									<div className='create-invoice-card-small'>
+										<div className='create-invoice-card-small-name-container'>
+											<span className='create-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.state.item4name === '' ? 'create-item-card-name-input-small-error' : 'create-item-card-name-input-small'} type='text' id={this.state.id + 4 + 'name'} name='item4name' value={this.state.item4name} onChange={this.inputHandler} />
+										</div>
+
+										<div className='create-invoice-card-small-bottom-container'>
+											<div className='create-invoice-card-small-bottom-container-quantity'>
+												<span className='create-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.state.item4quantity === '' ? 'create-item-card-quantity-input-small-error' : 'create-item-card-quantity-input-small'} type='text' id={this.state.id + 4 + 'quantity'} name='item4quantity' value={this.state.item4quantity} onChange={this.itemQuantityInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-price'>
+												<span className='create-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.state.item4price === '' ? 'create-item-card-price-input-small-error': 'create-item-card-price-input-small'} type='text' id={this.state.id + 4 + 'price'} name='item4price' value={this.state.item4price} onChange={this.itemPriceInputHandler} />
+											</div>
+
+											<div className='create-invoice-card-small-bottom-container-total'>
+												<span className='create-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='create-item-card-total-span'>{Number(this.state.item4total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='create-item-card-trash-can-small' onClick={() => this.deleteItem(4)}/>
+										</div>
 									</div>
 								</div>
 							: null			
@@ -2356,16 +2448,18 @@ class CreateInvoice extends React.Component {
 								null
 							}
 
-							<div className='create-invoice-bottom-buttons-div'>
-								<div className='create-invoice-bottom-button-discard-div' onClick={this.cancelInvoice}>
-                                    <span>Discard</span>
-								</div>
-                                <div className='create-invoice-bottom-button-save-as-draft-div' onClick={this.saveAsDraft}>
-									<span>Save as Draft</span>
-								</div>
-								<div className='create-invoice-bottom-button-save-and-send-div' onClick={this.saveAsPending}>
-									<span>Save &amp; Send</span>
-								</div>
+						</div>
+						<div className='create-invoice-bottom-buttons-gradient-div' />
+
+						<div className='create-invoice-bottom-buttons-div'>
+							<div className='create-invoice-bottom-button-discard-div' onClick={this.cancelInvoice}>
+								<span>Discard</span>
+							</div>
+							<div className='create-invoice-bottom-button-save-as-draft-div' onClick={this.saveAsDraft}>
+								<span>Save as Draft</span>
+							</div>
+							<div className='create-invoice-bottom-button-save-and-send-div' onClick={this.saveAsPending}>
+								<span>Save &amp; Send</span>
 							</div>
 						</div>
 					</div>
