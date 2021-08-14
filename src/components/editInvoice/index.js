@@ -152,12 +152,6 @@ class EditInvoice extends React.Component {
 							{this.props.items.length === 0 ? 
 								<div className='edit-invoice-item-list-div'>
 									<h2>Item List</h2>
-									<div className='edit-invoice-item-list-labels-div-dark-mode'>
-										<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
-										<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
-										<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
-										<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
-									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										<span>+ Add New Item</span>	
@@ -182,6 +176,32 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item0price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div-dark-mode' onClick={this.props.addItem}>
@@ -215,6 +235,58 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item1price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div-dark-mode' onClick={this.props.addItem}>
@@ -256,6 +328,84 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item2price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(2)}/>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div-dark-mode' onClick={this.props.addItem}>
@@ -304,6 +454,110 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item3price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(3)}/>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item3name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 3 + 'name'} name='item3name' value={this.props.item3name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item3quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item3price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(3)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div-dark-mode' onClick={this.props.addItem}>
@@ -360,7 +614,137 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item4price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 4 + 'price'} name='item4price' value={this.props.item4price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item4total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(4)}/>
-									</div>									
+									</div>			
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item3name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 3 + 'name'} name='item3name' value={this.props.item3name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item3quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item3price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(3)}/>
+										</div>
+									</div>			
+
+									<div className='edit-invoice-card-small-dark-mode'>
+										<div className='edit-invoice-card-small-name-container-dark-mode'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item4name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 4 + 'name'} name='item4name' value={this.props.item4name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container-dark-mode'>
+											<div className='edit-invoice-card-small-bottom-container-quantity-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item4quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 4 + 'quantity'} name='item4quantity' value={this.props.item4quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item4price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 4 + 'price'} name='item4price' value={this.props.item4price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total-dark-mode'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item4total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(4)}/>
+										</div>
+									</div>					
 								</div>
 							: null			
 							}
@@ -444,7 +828,9 @@ class EditInvoice extends React.Component {
 								null
 							}
 
-							<div className='edit-invoice-bottom-buttons-div'>
+							<div className='edit-invoice-bottom-buttons-gradient-div-dark-mode' />
+
+							<div className='edit-invoice-bottom-buttons-div-dark-mode'>
 								<div className='edit-invoice-bottom-button-cancel-div-dark-mode' onClick={this.cancelUpdates}>
 									<span>Cancel</span>
 								</div>
@@ -465,7 +851,6 @@ class EditInvoice extends React.Component {
 						<Navbar />
 					</div>
 					<div className='edit-invoice-container-div'>
-						{/* <Navbar /> */}
 						<div className='edit-invoice-inside-container-div'>
 							<span className='edit-invoice-id-span'>
 								Edit <span className='edit-invoice-id-span-gray'>#</span>{this.props.id}
@@ -593,12 +978,6 @@ class EditInvoice extends React.Component {
 							{this.props.items.length === 0 ? 
 								<div className='edit-invoice-item-list-div'>
 									<h2>Item List</h2>
-									<div className='edit-invoice-item-list-labels-div'>
-										<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
-										<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
-										<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
-										<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
-									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
 										<span>+ Add New Item</span>	
@@ -623,6 +1002,32 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item0price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(0)}/>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
@@ -656,6 +1061,58 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item1price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(1)}/>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
@@ -697,6 +1154,84 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item2price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(2)}/>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
@@ -746,6 +1281,110 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item3price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(3)}/>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
+									</div>
+									
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item3name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 3 + 'name'} name='item3name' value={this.props.item3name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item3quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item3price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(3)}/>
+										</div>
 									</div>
 
 									<div className='edit-invoice-add-new-item-div' onClick={this.props.addItem}>
@@ -803,6 +1442,136 @@ class EditInvoice extends React.Component {
 										<input className={this.props.item4price === '' ? 'edit-item-card-price-input-error': 'edit-item-card-price-input'} type='text' id={this.props.id + 4 + 'price'} name='item4price' value={this.props.item4price} onChange={this.props.itemPriceInputHandler} />
 										<span className='edit-item-card-total-span'>{Number(this.props.item4total).toFixed(2)}</span>
 										<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can' onClick={() => this.props.deleteItem(4)}/>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item0name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 0 + 'name'} name='item0name' value={this.props.item0name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item0quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 0 + 'quantity'} name='item0quantity' value={this.props.item0quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item0price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 0 + 'price'} name='item0price' value={this.props.item0price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item0total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(0)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item1name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 1 + 'name'} name='item1name' value={this.props.item1name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item1quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 1 + 'quantity'} name='item1quantity' value={this.props.item1quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item1price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 1 + 'price'} name='item1price' value={this.props.item1price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item1total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(1)}/>
+										</div>
+									</div>
+
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item2name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 2 + 'name'} name='item2name' value={this.props.item2name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item2quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 2 + 'quantity'} name='item2quantity' value={this.props.item2quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item2price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 2 + 'price'} name='item2price' value={this.props.item2price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item2total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(2)}/>
+										</div>
+									</div>
+									
+									<div className='edit-invoice-card-small'>
+										<div className='edit-invoice-card-small-name-container'>
+											<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+											<input className={this.props.item3name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 3 + 'name'} name='item3name' value={this.props.item3name} onChange={this.props.inputHandler} />
+										</div>
+
+										<div className='edit-invoice-card-small-bottom-container'>
+											<div className='edit-invoice-card-small-bottom-container-quantity'>
+												<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+												<input className={this.props.item3quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 3 + 'quantity'} name='item3quantity' value={this.props.item3quantity} onChange={this.props.itemQuantityInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-price'>
+												<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+												<input className={this.props.item3price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 3 + 'price'} name='item3price' value={this.props.item3price} onChange={this.props.itemPriceInputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container-total'>
+												<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+												<span className='edit-item-card-total-span'>{Number(this.props.item3total).toFixed(2)}</span>
+											</div>
+
+											<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(3)}/>
+										</div>
+																			
+										<div className='edit-invoice-card-small'>
+											<div className='edit-invoice-card-small-name-container'>
+												<span className='edit-invoice-item-list-labels-div-name-span'>Item Name</span>
+												<input className={this.props.item4name === '' ? 'edit-item-card-name-input-small-error' : 'edit-item-card-name-input-small'} type='text' id={this.props.id + 4 + 'name'} name='item4name' value={this.props.item4name} onChange={this.props.inputHandler} />
+											</div>
+
+											<div className='edit-invoice-card-small-bottom-container'>
+												<div className='edit-invoice-card-small-bottom-container-quantity'>
+													<span className='edit-invoice-item-list-labels-div-qty-span'>Qty.</span>
+													<input className={this.props.item4quantity === '' ? 'edit-item-card-quantity-input-small-error' : 'edit-item-card-quantity-input-small'} type='text' id={this.props.id + 4 + 'quantity'} name='item4quantity' value={this.props.item4quantity} onChange={this.props.itemQuantityInputHandler} />
+												</div>
+
+												<div className='edit-invoice-card-small-bottom-container-price'>
+													<span className='edit-invoice-item-list-labels-div-price-span'>Price</span>
+													<input className={this.props.item4price === '' ? 'edit-item-card-price-input-small-error': 'edit-item-card-price-input-small'} type='text' id={this.props.id + 4 + 'price'} name='item4price' value={this.props.item4price} onChange={this.props.itemPriceInputHandler} />
+												</div>
+
+												<div className='edit-invoice-card-small-bottom-container-total'>
+													<span className='edit-invoice-item-list-labels-div-total-span'>Total</span>
+													<span className='edit-item-card-total-span'>{Number(this.props.item4total).toFixed(2)}</span>
+												</div>
+
+												<img src={DeleteIcon} alt='Trash Can' className='edit-item-card-trash-can-small' onClick={() => this.props.deleteItem(4)}/>
+											</div>
+										</div>
 									</div>
 								</div>
 							: null			
@@ -887,6 +1656,8 @@ class EditInvoice extends React.Component {
 								null
 							}
 
+							<div className='edit-invoice-bottom-buttons-gradient-div' />
+								
 							<div className='edit-invoice-bottom-buttons-div'>
 								<div className='edit-invoice-bottom-button-cancel-div' onClick={this.cancelUpdates}>
 									<span>Cancel</span>
