@@ -111,10 +111,11 @@
     border-radius: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 875px) {
     .light-navbar {
         width: 100%;
         height: 80px;
+        min-height: 0px;
         border-radius: 0px;
         flex-direction: row;
         padding: 0px;
@@ -123,6 +124,7 @@
     .dark-navbar {
         width: 100%;
         height: 80px;
+        min-height: 0px;
         border-radius: 0px;
         flex-direction: row;
         padding: 0px;

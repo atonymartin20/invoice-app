@@ -768,8 +768,10 @@ class ViewInvoice extends React.Component {
 	deleteInvoice = (event) => {
 		event.preventDefault();
 		this.context.closeGrayMode();
-		this.context.deleteItem(this.state.id);
-		this.handleRedirect();
+		this.context.deleteInvoice(this.state.id);
+		this.setState({
+            redirect: true
+        })
 	}
 
 	deleteItem = (position) => {
@@ -1507,6 +1509,11 @@ class ViewInvoice extends React.Component {
 									</div>
 								</div>
 
+								<div className='view-invoices-info-sepearte-email-container-dark-mode'>
+									<span>Sent to</span>
+									<span className='view-invoices-info-middle-container-right-div-client-email-span'>{this.state.clientEmail}</span>
+								</div>
+
 								<div className='view-invoices-info-bottom-outside-div-dark-mode'>
 									{this.state.items.length > 0 ? 
 										<div className='view-invoices-info-bottom-container-div'>
@@ -1517,14 +1524,15 @@ class ViewInvoice extends React.Component {
 												<span className='view-invoices-info-bottom-container-labels-total-span'>Total</span>
 											</div>
 
-
-											{this.state.items.map((item, index) => (
-												<ItemCard
-													key={this.state.id + item['quantity'] + item['price'] + index}
-													item={item}
-													colorType='dark'
-												/>
-											))}
+											<div className='view-invoices-info-bottom-container-item-cards-container-div'>
+												{this.state.items.map((item, index) => (
+													<ItemCard
+														key={this.state.id + item['quantity'] + item['price'] + index}
+														item={item}
+														colorType='dark'
+													/>
+												))}
+											</div>
 								
 											<div className='view-invoices-info-bottom-container-total-div-dark-mode'>
 												<span>Amount Due</span>
@@ -1540,6 +1548,12 @@ class ViewInvoice extends React.Component {
 									}
 								</div>
 							</div>
+						</div>
+						<div className='view-invoices-bottom-buttons-dark-mode'>
+							<div className='edit-button-dark-mode' onClick={this.openEditInvoice}>Edit</div>
+							<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
+							{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+							{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 						</div>
 					</div>
 				) : (
@@ -1606,6 +1620,11 @@ class ViewInvoice extends React.Component {
 									</div>
 								</div>
 
+								<div className='view-invoices-info-sepearte-email-container'>
+									<span>Sent to</span>
+									<span className='view-invoices-info-middle-container-right-div-client-email-span'>{this.state.clientEmail}</span>
+								</div>
+
 								<div className='view-invoices-info-bottom-outside-div'>
 									{this.state.items.length > 0 ? 
 										<div className='view-invoices-info-bottom-container-div'>
@@ -1616,14 +1635,16 @@ class ViewInvoice extends React.Component {
 												<span className='view-invoices-info-bottom-container-labels-total-span'>Total</span>
 											</div>
 
-											{this.state.items.map((item, index) => (
-												<ItemCard
-													key={this.state.id + item['quantity'] + item['price'] + index}
-													item={item}
-													colorType='light'
-												/>
-											))}
-								
+											<div className='view-invoices-info-bottom-container-item-cards-container-div'>
+												{this.state.items.map((item, index) => (
+													<ItemCard
+														key={this.state.id + item['quantity'] + item['price'] + index}
+														item={item}
+														colorType='light'
+														/>
+												))}
+											</div>
+							
 											<div className='view-invoices-info-bottom-container-total-div'>
 												<span>Amount Due</span>
 												<span className='view-invoices-info-bottom-container-total-span'>£ {this.state.fancyTotal}</span>
@@ -1638,6 +1659,13 @@ class ViewInvoice extends React.Component {
 									}
 								</div>
 							</div>
+
+						</div>
+						<div className='view-invoices-bottom-buttons'>
+							<div className='edit-button' onClick={this.openEditInvoice}>Edit</div>
+							<div className='delete-button' onClick={this.openDeleteModal}>Delete</div>
+							{this.state.invoice.status === 'draft' ? <div className='mark-pending-button' onClick={this.markInvoiceAsPending}>Mark as Pending</div>: null }
+							{this.state.invoice.status === 'pending' ? <div className='mark-paid-button' onClick={this.markInvoiceAsPaid}>Mark as Paid</div>: null }
 						</div>
 					</div>
 				)}

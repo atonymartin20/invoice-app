@@ -24,7 +24,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 48px;
-    width: 480px;
+    max-width: 480px;
     height: 249px;
     background: #FFFFFF;
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
@@ -39,7 +39,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 48px;
-    width: 480px;
+    max-width: 480px;
     height: 249px;
     background: #1E2139;
     box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
@@ -160,4 +160,20 @@
     line-height: 15px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
+}
+
+@media (max-width: 540px) {
+    .delete-modal-container-div {
+        padding: 0px 24px;
+    }
+
+    .delete-modal-inside-container-div {
+        padding: 32px;
+        height: 220px;
+    }
+
+    .delete-modal-inside-container-div-dark-mode {
+        padding: 32px;
+        height: 220px;
+    }
 }

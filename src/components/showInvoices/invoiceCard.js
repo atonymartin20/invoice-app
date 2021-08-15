@@ -43,7 +43,7 @@ class InvoiceCard extends React.Component {
             return (
                 <div className="card-outside-div" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
-                    <div className="card-inside-div-dark">
+                    <div className="card-inside-div-dark-mode">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span-dark-mode'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
                         <span className='client-name-span-dark-mode'>{this.props.clientName}</span>
@@ -81,7 +81,7 @@ class InvoiceCard extends React.Component {
             return (
                 <div className="card-outside-div-filtered" onClick={this.handleRedirect}>
                     {this.state.redirect ? <Redirect to={{ pathname:'/view', state: {id: this.props.id} }} /> : null}
-                    <div className="card-inside-div-dark">
+                    <div className="card-inside-div-dark-mode">
                         <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
                         <span className='due-date-span-dark-mode'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
                         <span className='client-name-span-dark-mode'>{this.props.clientName}</span>
@@ -91,6 +91,22 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
                         <img src={RightArrowIcon} alt='right arrow' />
+                    </div>
+
+                    <div className="card-inside-div-dark-mode-small">
+                        <div className='card-inside-div-small-top-portion'>
+                            <span className='id-span'>#<span className='white-font-span'>{this.props.id}</span></span>
+                            <span className='client-name-span-dark-mode'>{this.props.clientName}</span>
+                        </div>
+                        <div className='card-inside-div-small-bottom-portion'>
+                            <div className='card-inside-div-small-bottom-portion-left-side'>
+                                <span className='due-date-span-dark-mode'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
+                                <span className='totals-span-dark-mode'>£ {this.state.total}</span>
+                            </div>
+                            {this.props.status === 'draft' ? <div className='draft-status-div-dark-mode'><span className='status-span-draft-dark-mode'><div className='draft-ball-div-dark-mode' />{this.props.status}</span></div>: null }
+                            {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
+                            {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
+                        </div>
                     </div>
                 </div>
             );
@@ -110,6 +126,22 @@ class InvoiceCard extends React.Component {
                         {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
                         
                         <img src={RightArrowIcon} alt='right arrow' />
+                    </div>
+
+                    <div className="card-inside-div-small">
+                        <div className='card-inside-div-small-top-portion'>
+                            <span className='id-span'>#<span className='black-font-span'>{this.props.id}</span></span>
+                            <span className='client-name-span'>{this.props.clientName}</span>
+                        </div>
+                        <div className='card-inside-div-small-bottom-portion'>
+                            <div className='card-inside-div-small-bottom-portion-left-side'>
+                                <span className='due-date-span'>Due {this.state.day.toString().padStart(2,0)} {this.state.months[this.state.month]} {this.state.year}</span>
+                                <span className='totals-span'>£ {this.state.total}</span>
+                            </div>
+                            {this.props.status === 'draft' ? <div className='draft-status-div-dark-mode'><span className='status-span-draft'><div className='draft-ball-div' />{this.props.status}</span></div>: null }
+                            {this.props.status === 'pending' ? <div className='pending-status-div'><span className='status-span-pending'><div className='pending-ball-div' />{this.props.status}</span></div>: null }
+                            {this.props.status === 'paid' ? <div className='paid-status-div'><span className='status-span-paid'><div className='paid-ball-div' />{this.props.status}</span></div> : null }
+                        </div>
                     </div>
                 </div>
             );

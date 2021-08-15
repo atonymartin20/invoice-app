@@ -43,3 +43,13 @@
     font-style: normal;
     font-weight: 500;
 }
+
+@media(max-width: 875px){
+    .app-outside-container-gray-mode {
+        min-height: 1504px;
+    }
+   
+    .app-outside-container-dark-mode-gray-mode {
+        min-height: 1504px;
+    }
+}

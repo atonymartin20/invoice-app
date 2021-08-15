@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
 
 .invoices-container-div {
-    width: 730px;
-    height: 600px;
+    max-width: 730px;
+    width: 100%;
+    min-height: 600px;
     box-sizing: border-box;
     background-color: inherit;
 }
 
 .invoices-inside-container-div {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,16 +18,14 @@
 
 .card-container-div-all-invoices {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .card-container-div-filtered-invoices {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -35,13 +33,16 @@
 }
 
 .card-outside-div {
-    width: 730px;
+    max-width: 730px;
+    width: 100%;
     height: 72px;
+    margin-bottom: 16px;
     cursor: pointer;
 }
 
 .card-outside-div-filtered {
-    width: 730px;
+    max-width: 730px;
+    width: 100%;
     height: 72px;
     margin-bottom: 16px;
     cursor: pointer;
@@ -60,7 +61,21 @@
     border-radius: 8px;
 }
 
-.card-inside-div-dark {
+.card-inside-div-small {
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    display: none;
+    padding: 24px 48px 24px 48px;
+}
+
+.card-inside-div-dark-mode {
     width: 100%;
     height: 100%;
     background: #1E2139;
@@ -71,6 +86,40 @@
     padding-left: 32px;
     padding-right: 24px;
     border-radius: 8px;
+}
+
+.card-inside-div-dark-mode-small {
+    width: 100%;
+    height: 100%;
+    background: #1E2139;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    display: none;
+    padding: 24px 48px 24px 48px;
+}
+
+.card-inside-div-small-top-portion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-inside-div-small-bottom-portion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 47px;
+}
+
+.card-inside-div-small-bottom-portion-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .id-span {
@@ -145,6 +194,10 @@
     text-align: left;
 }
 
+.card-inside-div-small-top-portion .client-name-span {
+    text-align: right;
+}
+
 .client-name-span-dark-mode {
     width: 110px;
     height: 15px;
@@ -156,6 +209,10 @@
     letter-spacing: -0.25px;
     color: #FFFFFF;
     text-align: left;
+}
+
+.card-inside-div-small-top-portion .client-name-span-dark-mode {
+    text-align: right;
 }
 
 .totals-span {
@@ -172,6 +229,10 @@
     text-align: right;
 }
 
+.card-inside-div-small-bottom-portion .totals-span {
+    text-align: left;
+}
+
 .totals-span-dark-mode {
     width: 99px;
     height: 24px;
@@ -184,6 +245,10 @@
     letter-spacing: -0.8px;
     color: #FFFFFF;
     text-align: right;
+}
+
+.card-inside-div-small-bottom-portion .totals-span-dark-mode {
+    text-align: left;
 }
 
 .british-pound-span {
@@ -205,6 +270,10 @@
     margin-right: -22px;
 }
 
+.card-inside-div-small-bottom-portion .draft-status-div {
+    margin-right: 0px;
+}
+
 .draft-status-div-dark-mode {
     width: 104px;
     height: 40px;
@@ -215,6 +284,10 @@
     justify-content: center;
     align-items: center;
     margin-right: -22px;
+}
+
+.card-inside-div-small-bottom-portion .draft-status-div-dark-mode {
+    margin-right: 0px;
 }
 
 .status-span-draft {
@@ -273,6 +346,10 @@
     margin-right: -22px;
 }
 
+.card-inside-div-small-bottom-portion .pending-status-div {
+    margin-right: 0px;
+}
+
 .status-span-pending {
     font-family: 'Spartan', sans-serif;
     font-style: normal;
@@ -305,6 +382,10 @@
     justify-content: center;
     align-items: center;
     margin-right: -22px;
+}
+
+.card-inside-div-small-bottom-portion .paid-status-div {
+    margin-right: 0px;
 }
 
 .status-span-paid {
@@ -380,7 +461,6 @@
     margin-bottom: 24px;
 }
 
-
 .empty-invoices-p {
     width: 220px;
     height: 31px;
@@ -427,4 +507,52 @@
     text-align: center;
     letter-spacing: -0.25px;
     color: #dfe3fa;
+}
+
+@media (max-width: 875px) {
+    .invoices-container-div {
+        margin-top: 56px;
+    }
+}
+
+@media (max-width: 750px) {
+    .card-outside-div {
+        height: 134px;
+    }
+
+    .card-outside-div-filtered {
+        height: 134px;
+    }
+
+    .card-inside-div {
+        display: none;
+    }
+
+    .card-inside-div-small {
+        display: flex;
+    }
+
+    .card-inside-div-dark-mode {
+        display: none;
+    }
+
+    .card-inside-div-dark-mode-small {
+        display: flex;
+    }
+}
+
+@media (max-width: 550px) {
+    .invoices-container-div {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 450px) {
+    .card-inside-div-small {
+        padding: 24px;
+    }
+    
+    .card-inside-div-dark-mode-small {
+        padding: 24px;
+    }
 }
