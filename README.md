@@ -1,6 +1,6 @@
 # Invoice App
 
-<!-- Coffeeroasters is a simple online coffee retailer that specializes in quick and efficient delivery of our premium roast coffee. -->
+Invoice App is an invoice tracker that can keep track of a companies invoices and easily show all active invoices.
 
 This repository uses frontend infomation that can be found in the [Front End Mentor README](./frontendMentorREADME.md)
 
@@ -8,12 +8,12 @@ Design files for this repository were provided by frontendMentor.  Design files 
 
 # Resources
 
-<!-- - [Front End Site - Hosted on Netlify](https://coffeeroasters-adm.netlify.app/) -->
+- [Front End Site - Hosted on Netlify](https://invoice-app-adm.netlify.app/)
 
 <br />
 
 ## Tech Stack
 ### Frontend
-<!-- * React
-* Redux
-* SASS Styling -->
+* React
+* Context
+* Vanilla CSS
