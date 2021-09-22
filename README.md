@@ -1,6 +1,6 @@
 # Invoice App
 
-Invoice App is an invoice tracker that can keep track of a companies invoices and easily show all active invoices.
+Invoice App is an invoice tracker that can keep track of a company's invoices and easily show all active invoices.
 
 This repository uses frontend infomation that can be found in the [Front End Mentor README](./frontendMentorREADME.md)
 
